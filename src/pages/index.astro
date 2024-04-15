@@ -1,19 +1,23 @@
 ---
-import Welcome from "../components/Welcome.astro"
-import "../App.css"
+import Welcome from "../components/Welcome.astro";
+import Knowledges from "../components/Knowledges.astro";
+import "../App.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<meta name="description"
-        content="This is my portfolio, that can help people that is interested in to know who I am, where I studied, also some of my skills and projects that I had developed.">
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio - ValenciaArcega</title>
-	</head>
-	<body>
-		<Welcome />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta
+      name="description"
+      content="This is my portfolio, that can help people that is interested in to know who I am, where I studied, also some of my skills and projects that I had developed."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Portfolio - ValenciaArcega</title>
+  </head>
+  <body>
+    <Welcome />
+    <Knowledges />
+  </body>
 </html>

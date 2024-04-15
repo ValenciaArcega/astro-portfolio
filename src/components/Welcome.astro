@@ -1,3 +1,40 @@
+---
+import "../css/Welcome.css";
+---
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector(".welcome-img");
+    const height = img.clientHeight;
+    const width = img.clientWidth;
+
+    img.addEventListener("mousemove", function (e) {
+      // get the axis of the mouse
+      const { layerX, layerY } = e;
+      // calc the horizontal rotation
+      const yRotation = ((layerX - width / 2) / width) * 46;
+      // calc the vertical rotation
+      const xRotation = ((layerY - height / 2) / height) * 46;
+
+      const string = `
+		perspective(500px)
+		scale(1.1)
+		rotateX(${xRotation}deg)
+		rotateY(${yRotation}deg)`;
+
+      img.style.transform = string;
+    });
+
+    img.addEventListener("mouseout", function () {
+      img.style.transform = `
+		perspective(500px)
+		scale(1)
+		rotateX(0)
+		rotateY(0)`;
+    });
+  });
+</script>
+
 <main class="main-welcome">
   <article class="container-welcome">
     <img src="./user.webp" alt="User" class="welcome-img" />
@@ -13,105 +50,3 @@
     </div>
   </article>
 </main>
-
-<style>
-  .main-welcome {
-    height: 100dvh;
-    /* margin-top: 10rem; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .container-welcome {
-    width: 35rem;
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .welcome-img {
-    height: 162px;
-    width: 162px;
-    border-radius: 300px;
-    transition:
-      box-shadow 0.2s,
-      transform;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
-  }
-
-  .welcome-img:hover {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-  }
-
-  .wrapper-welcome-text {
-    height: 60%;
-    width: 95%;
-    text-align: center;
-    color: var(--black);
-  }
-
-  .welcome-text-h1 {
-    font-size: 2.7rem;
-    letter-spacing: -1.3px;
-  }
-
-  .welcome-text-p {
-    margin-top: 8px;
-    font-size: 1.45rem;
-    letter-spacing: -1px;
-    line-height: 1.7;
-  }
-
-  .textBlue {
-    color: var(--mainColor);
-  }
-
-  .animated-text {
-    position: relative;
-    border-radius: 0.6rem;
-    display: inline-block;
-  }
-
-  .animated-text:before {
-    content: "";
-    width: 12rem;
-    height: 1.5rem;
-    position: absolute;
-    border-radius: 0.6rem;
-    filter: blur(22px);
-    opacity: 0.6;
-    z-index: 0;
-  }
-
-  .animated-text:before,
-  .animated-text {
-    animation: color-animation 2s linear infinite;
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    background-image: linear-gradient(
-      -225deg,
-      #609af8 30%,
-      #35c4dc 60%,
-      #b975f9 80%
-    );
-  }
-
-  .animated-text {
-    position: relative;
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  @keyframes color-animation {
-    40%,
-    to {
-      background-position: -200%;
-    }
-  }
-</style>
