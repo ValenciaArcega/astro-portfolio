@@ -1,0 +1,46 @@
+.navBar-desktop {
+	height: 4rem;
+	width: 100%;
+	padding: 0 1rem;
+	border-bottom: 1.4px solid var(--borderCardContact);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: grid;
+	grid-template-columns: 10% 80%;
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	background-color: var(--bg-navbar-desktop);
+	z-index: var(--z-index-navbar);
+}
+
+.navBar-desktop>img {
+	align-self: center;
+	justify-self: center;
+	height: 40px;
+}
+
+.navBar-desktop-options {
+	display: flex;
+	justify-self: flex-end;
+	align-items: center;
+	gap: 32px;
+}
+
+.navBar-desktop-options>a {
+	font-weight: 500;
+	color: var(--black12) !important;
+}
+
+.navbar-desktop-ion {
+	font-size: 24px;
+	color: var(--black12);
+	/* color: #f6ed2f; */
+	--ionicon-stroke-width: 36px;
+}
+
+.navBar-desktop-btnLight,
+.navBar-desktop-btnDark {
+	border: none;
+	background: none;
+}

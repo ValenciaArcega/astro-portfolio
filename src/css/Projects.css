@@ -15,7 +15,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: #121212;
+	background-color: #101010;
 }
 
 .projects-h1 {
@@ -41,8 +41,7 @@
 	width: 100%;
 	align-items: center;
 	justify-items: center;
-	background-color: #121212;
-	background: conic-gradient(from 90deg at 50% 50%, #121212 50%, #121212 50%), radial-gradient(rgba(255, 255, 255, 0.529) 0%, transparent 80%);
+	background: conic-gradient(from 90deg at 50% 50%, #101010 50%, #101010 50%), radial-gradient(rgba(255, 255, 255, 0.529) 0%, transparent 80%);
 }
 
 .cardKnowledgesBorder {
@@ -132,7 +131,7 @@
 	display: flex;
 	padding-bottom: 4rem;
 	flex-direction: column;
-	background-color: #121212;
+	background-color: #101010;
 }
 
 .containerProjects p {
@@ -150,7 +149,6 @@
 	line-height: .85;
 	text-align: center;
 	color: #fff;
-	background-color: rgb(18, 18, 18);
 }
 
 .textBlue-onBlack {

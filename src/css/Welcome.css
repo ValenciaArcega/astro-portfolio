@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: radial-gradient(#00000010 3%, transparent 0);
+	background-image: var(--colorDots);
 	background-size: 7rem 7rem;
 }
 
@@ -35,7 +35,7 @@
 	height: 60%;
 	width: 95%;
 	text-align: center;
-	color: var(--black);
+	color: var(--black12);
 }
 
 .welcome-text-h1 {

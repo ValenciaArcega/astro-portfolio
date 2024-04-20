@@ -1,0 +1,64 @@
+.topBar {
+	height: 3.3rem;
+	width: 18rem;
+	margin: 0;
+	padding-top: 2px;
+	border: 1px solid var(--borderNavBar);
+	border-radius: 12px;
+	position: fixed;
+	top: 7px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+	justify-items: center;
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.065);
+	z-index: var(--z-index-navbar);
+}
+
+/* ANKERS */
+.topBar-anker {
+	margin-top: -2px;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.topBar-btnSVG {
+	font-size: 24px;
+	color: var(--mainColor);
+	--ionicon-stroke-width: 36px;
+}
+
+.navbar-desktop-ion {
+	font-size: 24px;
+	color: var(--black12);
+	/* color: #f6ed2f; */
+	--ionicon-stroke-width: 36px;
+}
+
+/* BUTTONS */
+.topBar-btnDark,
+.topBar-btnLight {
+	border: none;
+	background: none;
+	margin-top: -2px;
+}
+
+.navBar-desktop-btnLight,
+.navBar-desktop-btnDark {
+	border: none;
+	background: none;
+}
+
+.topBar-btn-p,
+.topBar-anker-p {
+	font-family: 'Inter';
+	font-size: 12px;
+	font-weight: 500;
+	margin-top: -3px;
+	color: var(--mainColor);
+}

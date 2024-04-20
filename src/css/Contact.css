@@ -1,7 +1,6 @@
 .section-contact {
 	margin-top: 15rem;
 	padding-bottom: 1rem;
-	background-color: var(--white);
 }
 
 .section-contact h1 {
@@ -11,7 +10,6 @@
 	letter-spacing: -1px;
 	line-height: .9;
 	text-align: center;
-	color: var(--black);
 }
 
 .wrapper-contact-cards {
@@ -23,7 +21,7 @@
 	justify-items: center;
 }
 
-.card-contact {
+.cardContact {
 	height: 7.8rem;
 	width: 17rem;
 	margin: 0 1rem;
@@ -32,7 +30,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: var(--black);
+	color: var(--black12);
+	background: var(--bgWhite);
 }
 
 .title-contact-container {
@@ -44,7 +43,7 @@
 	justify-items: center;
 }
 
-.card-contact h2 {
+.cardContact h2 {
 	width: 75%;
 	font-size: 1.7rem;
 	font-weight: 600;
@@ -62,8 +61,8 @@
 	font-size: 1.1rem;
 }
 
-.card-contact button,
-.card-contact a {
+.cardContact button,
+.cardContact a {
 	height: 2.3rem;
 	width: 75%;
 	border-radius: 8px;
@@ -78,13 +77,13 @@
 	transition: transform .7s;
 }
 
-.card-contact a {
+.cardContact a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.card-contact button:hover,
-.card-contact a:hover {
+.cardContact button:hover,
+.cardContact a:hover {
 	transform: scale(.96, .96);
 }

@@ -21,7 +21,7 @@
 	left: 50%;
 	transform: translate(-80%, -30%);
 	border-radius: 50%;
-	background-color: var(--bg-firstCircle);
+	background-color: var(--bgFirstCircle);
 	animation: moveCircle 9s linear infinite alternate;
 }
 
@@ -37,7 +37,7 @@
 
 .circle:last-child {
 	transform: translate(-10%, -70%);
-	background-color: var(--bg-secondCircle);
+	background-color: var(--bgSecondCircle);
 	animation: moveCircleTwo 9s linear infinite alternate;
 }
 
@@ -62,12 +62,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	-webkit-backdrop-filter: blur(96px);
-	-o-backdrop-filter: blur(96px);
-	-moz-backdrop-filter: blur(96px);
-	backdrop-filter: blur(96px);
+	-webkit-backdrop-filter: blur(144px);
+	-o-backdrop-filter: blur(144px);
+	-moz-backdrop-filter: blur(144px);
+	backdrop-filter: blur(144px);
 	z-index: 2;
-	background-image: radial-gradient(#00000010 3%, transparent 0);
+	background-image: var(--colorDots);
 	background-size: 7rem 7rem;
 }
 
@@ -92,13 +92,14 @@
 	height: 21rem;
 	align-self: flex-start;
 	border-radius: 1.5rem;
-	border: 2px solid var(--border-cardSkill);
+	border: 2px solid var(--borderCardSkill);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	align-items: center;
 	justify-items: center;
-	background: var(--bg-cardSkill);
+	color: var(--frCardSkill);
+	background: var(--bgCardSkill);
 
 	& div {
 		display: grid;
@@ -129,7 +130,6 @@
 }
 
 .knowledges-h1 {
-	color: var(--black);
 	font-weight: 500;
 }
 
