@@ -4,6 +4,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-image: radial-gradient(#00000010 3%, transparent 0);
+	background-size: 7rem 7rem;
 }
 
 .container-welcome {
@@ -46,10 +48,6 @@
 	font-size: 1.45rem;
 	letter-spacing: -1px;
 	line-height: 1.7;
-}
-
-.textBlue {
-	color: var(--mainColor);
 }
 
 .animated-text {

@@ -3,6 +3,9 @@ import Welcome from "../components/Welcome.astro";
 import Knowledges from "../components/Knowledges.astro";
 import "../App.css";
 import Projects from "../components/Projects.astro";
+import Experience from "../components/Experience.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -15,11 +18,21 @@ import Projects from "../components/Projects.astro";
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Portfolio - ValenciaArcega</title>
   </head>
   <body>
     <Welcome />
     <Knowledges />
     <Projects />
+    <Experience />
+    <Contact />
+    <Footer />
   </body>
 </html>

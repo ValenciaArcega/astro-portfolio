@@ -35,3 +35,11 @@ body {
 
 	--z-index-navbar: 5;
 }
+
+.textBlue {
+	color: var(--mainColor);
+}
+
+.hidden {
+	display: none;
+}
