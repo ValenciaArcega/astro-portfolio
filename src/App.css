@@ -19,16 +19,22 @@
 	--bgFirstCircle: #a3b5ff;
 	--bgSecondCircle: pink;
 	--bgCardSkill: #ffffff53;
+	--bgIconCardExperience: #ceffce;
+	--bgCardExperience: #fff;
 
 	--borderCardSkill: #ffffff4b;
 	--borderCardContact: #d9d9d9;
 
+	--frText: #181818;
 	--frCardSkill: #121212;
+	--frCardExperience: #bcbcbc;
+	--frEmphasisGreen: #00ba00;
+
+	--strokeIconCardExperience: #00b200;
 
 	--colorDots: radial-gradient(#00000010 3%, transparent 0);
 
 	--white: white;
-	--frText: #181818;
 }
 
 #rootDarkMode {
@@ -39,11 +45,17 @@
 	--bgFirstCircle: #24437b;
 	--bgSecondCircle: #2e0e36;
 	--bgCardSkill: #28282853;
+	--bgCardExperience: linear-gradient(to top, black, #171717);
+	--bgIconCardExperience: #005200;
+
+	--strokeIconCardExperience: #99ff99;
 
 	--borderCardSkill: #45454553;
 	--borderCardContact: #4a4a4a;
 
 	--frCardSkill: #fff;
+	--frCardExperience: #6a6a6a;
+	--frEmphasisGreen: #aaffaa;
 
 	--frText: #fff;
 	--colorDots: radial-gradient(#ffffff1a 3%, transparent 0);
