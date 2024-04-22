@@ -41,7 +41,7 @@
 	width: 100%;
 	align-items: center;
 	justify-items: center;
-	background: conic-gradient(from 90deg at 50% 50%, #101010 50%, #101010 50%), radial-gradient(rgba(255, 255, 255, 0.529) 0%, transparent 80%);
+	background: linear-gradient(to top, #101010, #151515);
 }
 
 .cardKnowledgesBorder {
@@ -65,7 +65,7 @@
 	pointer-events: none;
 	position: absolute;
 	translate: (1/2, 1/2);
-	background: conic-gradient(from 90deg at 50% 50%, #00000000 50%, #23222200 50%), radial-gradient(rgb(193 193 193 / 10%) 0%, transparent 80%);
+	/* background: conic-gradient(from 90deg at 50% 50%, #00000000 50%, #23222200 50%), radial-gradient(rgb(193 193 193 / 10%) 0%, transparent 80%); */
 }
 
 .projectMain {
@@ -187,14 +187,14 @@
 
 .projectInSliderRight,
 .projectInSliderLeft {
-	-webkit-animation: slide-to-right 12s linear infinite alternate;
-	animation: slide-to-right 12s linear infinite alternate;
+	-webkit-animation: slide-to-right 20s linear infinite alternate;
+	animation: slide-to-right 20s linear infinite alternate;
 	max-height: 400px;
 }
 
 .projectInSliderLeft {
-	-webkit-animation: slide-to-left 12s linear infinite alternate;
-	animation: slide-to-left 12s linear infinite alternate;
+	-webkit-animation: slide-to-left 20s linear infinite alternate;
+	animation: slide-to-left 20s linear infinite alternate;
 }
 
 @keyframes slide-to-right {

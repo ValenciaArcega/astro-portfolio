@@ -21,16 +21,21 @@
 	--bgCardSkill: #ffffff53;
 	--bgIconCardExperience: #ceffce;
 	--bgCardExperience: #fff;
+	--bgCardExperienceBag: #ffe4e9;
+	--bgCardExperienceBook: #ccd1ff;
 
 	--borderCardSkill: #ffffff4b;
 	--borderCardContact: #d9d9d9;
 
 	--frText: #181818;
 	--frCardSkill: #121212;
-	--frCardExperience: #bcbcbc;
+	--frCardExperience: #aeaeae;
 	--frEmphasisGreen: #00ba00;
+	--frWhite: #fff;
 
 	--strokeIconCardExperience: #00b200;
+	--strokeIconCardExperienceBag: #ff617c;
+	--strokeIconCardExperienceBook: #7a61ff;
 
 	--colorDots: radial-gradient(#00000010 3%, transparent 0);
 
@@ -47,8 +52,12 @@
 	--bgCardSkill: #28282853;
 	--bgCardExperience: linear-gradient(to top, black, #171717);
 	--bgIconCardExperience: #005200;
+	--bgCardExperienceBag: #6c0012a1;
+	--bgCardExperienceBook: #330074;
 
 	--strokeIconCardExperience: #99ff99;
+	--strokeIconCardExperienceBag: #ff617c;
+	--strokeIconCardExperienceBook: #c58eff;
 
 	--borderCardSkill: #45454553;
 	--borderCardContact: #4a4a4a;
@@ -56,8 +65,9 @@
 	--frCardSkill: #fff;
 	--frCardExperience: #6a6a6a;
 	--frEmphasisGreen: #aaffaa;
-
 	--frText: #fff;
+	--frWhite: #181818;
+
 	--colorDots: radial-gradient(#ffffff1a 3%, transparent 0);
 }
 
@@ -74,6 +84,11 @@ body {
 
 html {
 	scroll-behavior: smooth;
+}
+
+::selection {
+	background-color: var(--bgBlack12);
+	color: var(--frWhite);
 }
 
 h1,

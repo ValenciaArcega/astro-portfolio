@@ -1,5 +1,6 @@
 .main-welcome {
 	height: 100dvh;
+	height: 100vh;
 	/* margin-top: 10rem; */
 	display: flex;
 	justify-content: center;
@@ -69,6 +70,9 @@
 
 .animated-text:before,
 .animated-text {
+	-moz-animation: color-animation 2s linear infinite;
+	-o-animation: color-animation 2s linear infinite;
+	-webkit-animation: color-animation 2s linear infinite;
 	animation: color-animation 2s linear infinite;
 	background-size: auto auto;
 	background-clip: border-box;
