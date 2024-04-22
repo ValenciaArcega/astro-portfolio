@@ -2,9 +2,9 @@ let root = document.documentElement
 const btnMobileDark = document.querySelector(".topBar-btnDark")
 const btnMobileLight = document.querySelector(".topBar-btnLight")
 
-const btnDesktopDark = document.querySelector(".navBar-desktop-btnDark")
+const btnDesktopDark = document.querySelector(".navBarBtnDark")
 const btnDesktopLight = document.querySelector(
-	".navBar-desktop-btnLight"
+	".navBarBtnSun"
 )
 
 function makeDark() {

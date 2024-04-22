@@ -77,8 +77,7 @@
 	align-items: center;
 	justify-items: center;
 	gap: .5rem;
-	background: linear-gradient(to bottom right, #1b1b1b, transparent);
-	box-shadow: 1px 7px 14px 0px #0000001f;
+	background: linear-gradient(355deg, #101010, #1b1b1b);
 }
 
 .projectMain img {
@@ -115,12 +114,15 @@
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	color: var(--white);
+	color: var(--frWhite);
 }
 
 .wrapperBtnsProjectMain a:last-child {
 	color: #fff;
-	background-color: #252525;
+	height: fit-content;
+	align-self: center;
+	width: fit-content;
+	background: none !important;
 }
 
 .wrapperBtnsProjectMain a:hover {

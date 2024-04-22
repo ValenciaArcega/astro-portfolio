@@ -1,21 +1,21 @@
 .topBar {
-	height: 3.3rem;
-	width: 18rem;
+	height: 3.6rem;
+	width: 19rem;
 	margin: 0;
 	padding-top: 2px;
 	border: 1px solid var(--borderNavBar);
-	border-radius: 12px;
+	border-radius: .5rem;
 	position: fixed;
-	top: 7px;
+	top: .9rem;
 	left: 50%;
 	transform: translateX(-50%);
 	display: none;
 	grid-template-columns: repeat(4, 1fr);
 	align-items: center;
 	justify-items: center;
-	-webkit-backdrop-filter: blur(8px);
-	backdrop-filter: blur(8px);
-	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.065);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	box-shadow: 0px 22px 20px -20px #0000001f;
 	z-index: var(--z-index-navbar);
 }
 
@@ -29,13 +29,13 @@
 
 .topBar-btnSVG {
 	font-size: 24px;
-	color: var(--mainColor);
+	color: gray !important;
 	--ionicon-stroke-width: 36px;
 }
 
 .navbar-desktop-ion {
 	font-size: 24px;
-	color: var(--black12);
+	color: gray;
 	/* color: #f6ed2f; */
 	--ionicon-stroke-width: 36px;
 }
@@ -48,8 +48,8 @@
 	margin-top: -2px;
 }
 
-.navBar-desktop-btnLight,
-.navBar-desktop-btnDark {
+.navBarBtnSun,
+.navBarBtnDark {
 	border: none;
 	background: none;
 }
@@ -60,5 +60,5 @@
 	font-size: 12px;
 	font-weight: 500;
 	margin-top: -3px;
-	color: var(--mainColor);
+	color: gray;
 }
