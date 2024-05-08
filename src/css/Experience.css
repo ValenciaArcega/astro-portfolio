@@ -24,7 +24,7 @@
 	width: 80%;
 	margin-top: 2rem;
 	display: grid;
-	gap: 3rem 1rem;
+	gap: 3rem;
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 	align-items: center;
 	justify-items: center;
