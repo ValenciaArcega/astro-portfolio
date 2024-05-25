@@ -1,10 +1,13 @@
 ---
 import "../css/Projects.css";
+import Star from "./icons/Star.astro";
 ---
 
 <section class="container-knowledgesCards" id="sp">
   <section class="sectionKnowledges">
-    <h1 class="projects-h1">My personal projects</h1>
+    <h1 class="projects-h1">
+      My personal <span class="textBlue-onBlack">projects</span>.
+    </h1>
     <article class="cardKnowledges">
       <div class="cardKnowledgesBorder"></div>
       <!-- <div class="cardKnowledgesBg"></div> -->
@@ -20,7 +23,7 @@ import "../css/Projects.css";
             >Discover Fare</a
           >
           <a target="_blank" href="https://github.com/ValenciaArcega/fare"
-            >Give a star in Github</a
+            >Give <Star /> in Github</a
           >
         </footer>
       </article>
@@ -41,7 +44,7 @@ import "../css/Projects.css";
             >Discover Tolescro</a
           >
           <a target="_blank" href="https://github.com/ValenciaArcega/tolescro"
-            >Give a star in Github</a
+            >Give <Star />in Github</a
           >
         </footer>
       </article>
