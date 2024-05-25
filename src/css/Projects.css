@@ -165,7 +165,8 @@
 	justify-content: center;
 	gap: 0 3rem;
 	position: relative;
-	overflow: hidden;
+	overflow: scroll;
+	scrollbar-width: none;
 }
 
 .sideLeftBlur,
@@ -180,10 +181,8 @@
 }
 
 .sideRightBlur {
-	position: absolute;
-	top: 0;
-	right: -10px;
 	left: auto;
+	right: 0;
 	background: linear-gradient(to left, #121212 4%, transparent);
 }
 
@@ -227,61 +226,24 @@
 
 	.projectInSliderRight,
 	.projectInSliderLeft {
-		-webkit-animation: slide-to-right 18s linear infinite alternate;
-		animation: slide-to-right 18s linear infinite alternate;
+		-webkit-animation: none;
+		animation: none;
 		max-height: 400px;
 	}
 
 	.projectInSliderLeft {
-		-webkit-animation: slide-to-left 14s linear infinite alternate;
-		animation: slide-to-left 14s linear infinite alternate;
+		-webkit-animation: none;
+		animation: none;
 	}
 
-	@-webkit-keyframes slide-to-right {
-		0% {
-			left: 0;
-			transform: translateX(480%);
-		}
-
-		100% {
-			left: 100%;
-			transform: translateX(-480%);
-		}
+	.wrapperSlider {
+		gap: 0 1.3rem;
+		padding-inline: 3rem;
+		justify-content: flex-start;
 	}
 
-	@keyframes slide-to-right {
-		0% {
-			left: 0;
-			transform: translateX(480%);
-		}
-
-		100% {
-			left: 100%;
-			transform: translateX(-480%);
-		}
-	}
-
-	@-webkit-keyframes slide-to-left {
-		0% {
-			left: 0;
-			transform: translateX(-300%);
-		}
-
-		100% {
-			left: 100%;
-			transform: translateX(300%);
-		}
-	}
-
-	@keyframes slide-to-left {
-		0% {
-			left: 0;
-			transform: translateX(-300%);
-		}
-
-		100% {
-			left: 100%;
-			transform: translateX(300%);
-		}
+	.sideLeftBlur,
+	.sideRightBlur {
+		display: none;
 	}
 }
