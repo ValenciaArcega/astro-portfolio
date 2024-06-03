@@ -1,12 +1,14 @@
 ---
 import "../css/Knowledges.css";
-import JavaScript from "../components/icons/JavaScript.astro";
-import TypeScript from "../components/icons/TypeScript.astro";
-import CSS from "../components/icons/CSS.astro";
-import HTML from "../components/icons/HTML.astro";
-import React from "../components/icons/React.astro";
-import Electron from "../components/icons/Electron.astro";
-import Git from "../components/icons/Git.astro";
+import {
+  IconCSS,
+  IconHTML,
+  IconTypescript,
+  IconJavascript,
+  IconReact,
+  IconCSharp,
+  IconGit,
+} from "./icons/technologies";
 ---
 
 <section class="containerSkills" id="sk">
@@ -21,44 +23,44 @@ import Git from "../components/icons/Git.astro";
     <main class="skills">
       <article class="skill">
         <div>
-          <JavaScript />
+          <IconJavascript />
           JavaScript
         </div>
 
         <div>
-          <TypeScript />
+          <IconTypescript />
           TypeScript
         </div>
 
         <div>
-          <CSS />
+          <IconCSS />
           CSS
         </div>
 
         <div>
-          <HTML />
+          <IconHTML />
           HTML
         </div>
       </article>
 
       <article class="skill">
         <div>
-          <React />
-          ReactJS
+          <IconReact />
+          React
         </div>
         <div>
-          <React />
+          <IconReact />
           React Native
         </div>
 
         <div>
-          <Git />
+          <IconGit />
           Git
         </div>
 
         <div>
-          <Electron />
-          Electron
+          <IconCSharp />
+          C# & .NET
         </div>
       </article>
     </main>

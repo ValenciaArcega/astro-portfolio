@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
+import react from '@astrojs/react'
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://valenciaarcega.github.io',
 	// base: 'astro-portfolio',
@@ -9,4 +9,5 @@ export default defineConfig({
 		open: false,
 		port: 4321
 	},
+	integrations: [react()],
 })
