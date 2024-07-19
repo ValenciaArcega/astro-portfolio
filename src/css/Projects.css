@@ -247,3 +247,9 @@
 		display: none;
 	}
 }
+
+.wrapperGradientTitle {
+	width: 100%;
+	background-color: #9dacea;
+	height: 6rem;
+}

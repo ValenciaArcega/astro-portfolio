@@ -1,0 +1,26 @@
+---
+import "../css/Certificates.css"
+import { IconClose } from "./icons/generals";
+---
+<section class="overlayCertificates">
+	<main class="containerCertificates">
+		<button class="closeCertificates">
+			<IconClose height={22} stroke="black" />
+		</button>
+		<div id = "cloud">
+			<span class='shadow'></span>
+		</div>
+
+		<h1 class="certificatesTitle">Certificates</h1>
+	</main>
+</section>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+	const btnClose = document.querySelector(".overlayCertificates button");
+
+	btnClose.addEventListener("click", function () {
+		document.querySelector(".overlayCertificates").classList.add("hidden");
+	});
+});
+</script>
