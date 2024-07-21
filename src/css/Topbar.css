@@ -19,7 +19,6 @@
 	z-index: var(--z-index-navbar);
 }
 
-/* ANKERS */
 .topBar-anker {
 	margin-top: -2px;
 	display: inline-block;
@@ -41,11 +40,9 @@
 .navbar-desktop-ion {
 	font-size: 24px;
 	color: gray;
-	/* color: #f6ed2f; */
 	--ionicon-stroke-width: 36px;
 }
 
-/* BUTTONS */
 .topBar-btnDark,
 .topBar-btnLight {
 	border: none;

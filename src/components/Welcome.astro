@@ -9,18 +9,14 @@ import "../css/Welcome.css";
     const width = img.clientWidth;
 
     img.addEventListener("mousemove", function (e) {
-      // get the axis of the mouse
       const { layerX, layerY } = e;
-      // calc the horizontal rotation
       const yRotation = ((layerX - width / 2) / width) * 46;
-      // calc the vertical rotation
       const xRotation = ((layerY - height / 2) / height) * 46;
-
       const string = `
-		perspective(500px)
-		scale(1.1)
-		rotateX(${xRotation}deg)
-		rotateY(${yRotation}deg)`;
+        perspective(500px)
+        scale(1.1)
+        rotateX(${xRotation}deg)
+        rotateY(${yRotation}deg)`;
 
       img.style.transform = string;
     });

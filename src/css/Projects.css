@@ -65,7 +65,6 @@
 	pointer-events: none;
 	position: absolute;
 	translate: (1/2, 1/2);
-	/* background: conic-gradient(from 90deg at 50% 50%, #00000000 50%, #23222200 50%), radial-gradient(rgb(193 193 193 / 10%) 0%, transparent 80%); */
 }
 
 .projectMain {
@@ -249,9 +248,10 @@
 }
 
 .wrapperGradientTitle {
-	font-size: 6rem;
+	font-size: 5rem;
 	background: #E5E5E5;
-	background: radial-gradient(circle farthest-corner at center center, #E5E5E5 0%, #181818 100%);
+	background: radial-gradient(circle farthest-corner at center center, #898989 0%, #181818 100%);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
