@@ -18,6 +18,6 @@ export const experience = [
 		title: "Self-taught",
 		description: "Udemy",
 		footer:
-			'Courses and <span class="textEmphasis">+3</span> meaningful certificates',
+			'Many courses and <span class="btnOpenCertificates">meaningful certificates</span>',
 	},
 ]

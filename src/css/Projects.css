@@ -249,7 +249,9 @@
 }
 
 .wrapperGradientTitle {
-	width: 100%;
-	background-color: #9dacea;
-	height: 6rem;
+	font-size: 6rem;
+	background: #E5E5E5;
+	background: radial-gradient(circle farthest-corner at center center, #E5E5E5 0%, #181818 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

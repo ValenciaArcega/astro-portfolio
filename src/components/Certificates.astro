@@ -1,26 +1,68 @@
 ---
-import "../css/Certificates.css"
+import "../css/Certificates.css";
 import { IconClose } from "./icons/generals";
 ---
-<section class="overlayCertificates">
+
+<section class="overlayCertificates hidden">
 	<main class="containerCertificates">
 		<button class="closeCertificates">
 			<IconClose height={22} stroke="black" />
 		</button>
-		<div id = "cloud">
-			<span class='shadow'></span>
-		</div>
+
+		<article class="wrapperCloud">
+			<div class="cloudIllustration">
+				<span class="shadowCloudIllustration"></span>
+			</div>
+		</article>
+
+		<article class="wrapperCloud secondCloud">
+			<div class="cloudIllustration">
+				<span class="shadowCloudIllustration"></span>
+			</div>
+		</article>
+
+		<!-- <article class="wrapperCloud thirdCloud">
+			<div class="cloudIllustration">
+				<span class="shadowCloudIllustration"></span>
+			</div>
+		</article> -->
+
+		<img
+			src="/assets/certificate-js.png"
+			alt="Certificate JavaScript Course"
+			class="certificateImg"
+		/>
+		<img
+			src="/assets/certificate-css.png"
+			alt="Certificate HTML/CSS Course"
+			class="certificateImg secondCertificateImg"
+		/>
+		<img
+			src="/assets/certificate-english.png"
+			alt="Certificate JavaScript Course"
+			class="certificateImg thirdCertificateImg"
+		/>
 
 		<h1 class="certificatesTitle">Certificates</h1>
 	</main>
 </section>
 
 <script>
-window.addEventListener("DOMContentLoaded", () => {
-	const btnClose = document.querySelector(".overlayCertificates button");
+	window.addEventListener("DOMContentLoaded", () => {
+		const btnClose = document.querySelector(".overlayCertificates button");
 
-	btnClose.addEventListener("click", function () {
-		document.querySelector(".overlayCertificates").classList.add("hidden");
+		btnClose.addEventListener("click", function () {
+			document
+				.querySelector(".overlayCertificates")
+				.classList.add("hidden");
+		});
+
+		document
+			.querySelector(".btnOpenCertificates")
+			.addEventListener("click", () => {
+				document
+					.querySelector(".overlayCertificates")
+					.classList.remove("hidden");
+			});
 	});
-});
 </script>

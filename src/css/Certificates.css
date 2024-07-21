@@ -20,6 +20,10 @@
 	transform: translate(-50%, -50%);
 	background-color: #fff;
 	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.05);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
 }
 
 .closeCertificates {
@@ -28,13 +32,18 @@
 	right: 12px;
 	border: none;
 	cursor: pointer;
-	background-color: var(--bg);
+	background-color: #f2f2f7;
 	border-radius: 50px;
 	height: 2.2rem;
 	width: 2.2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: all .6s;
+}
+
+.closeCertificates:hover {
+	scale: 1.1;
 }
 
 .certificatesTitle {
@@ -43,9 +52,81 @@
 	font-weight: 600;
 	letter-spacing: -1px;
 	text-align: center;
+	z-index: 3;
+	color: #181818;
 }
 
-#cloud {
+.certificateImg,
+.thirdCertificateImg,
+.secondCertificateImg {
+	width: 26rem;
+	border-radius: 10px;
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	transition: all 1s;
+}
+
+.certificateImg:hover,
+.secondCertificateImg:hover,
+.thirdCertificateImg:hover {
+	scale: 1.20;
+	rotate: 10deg;
+	border-radius: 2rem;
+}
+
+.secondCertificateImg:hover {
+	rotate: -10deg;
+}
+
+.thirdCertificateImg:hover {
+	rotate: 10deg;
+	scale: 1.5;
+}
+
+.secondCertificateImg {
+	top: auto;
+	right: auto;
+	bottom: 2rem !important;
+	left: 2rem !important;
+}
+
+.thirdCertificateImg {
+	top: auto;
+	left: auto;
+	bottom: 6rem !important;
+	right: 2rem;
+	z-index: 1;
+}
+
+.certificateImg:nth-child(1) {
+	bottom: 1rem !important;
+	right: 1rem !important;
+}
+
+
+.wrapperCloud {
+	scale: .7;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(32%, -85%);
+	z-index: 3;
+}
+
+.secondCloud {
+	scale: .5;
+	transform: translate(-232%, -58%);
+	z-index: 4;
+}
+
+.thirdCloud {
+	scale: .3;
+	transform: translate(-172%, 0%);
+	z-index: 3;
+}
+
+.cloudIllustration {
 	width: 350px;
 	height: 120px;
 
@@ -57,18 +138,17 @@
 
 	border-radius: 100px;
 	position: relative;
-	margin: 180px auto 100px;
 }
 
-#cloud:after,
-#cloud:before {
+.cloudIllustration:after,
+.cloudIllustration:before {
 	content: "";
 	position: absolute;
 	background: #f2f9fe;
 	z-index: -1;
 }
 
-#cloud:after {
+.cloudIllustration:after {
 	width: 100px;
 	height: 100px;
 	top: -50px;
@@ -76,7 +156,7 @@
 	border-radius: 100px;
 }
 
-#cloud:before {
+.cloudIllustration:before {
 	width: 180px;
 	height: 180px;
 	top: -90px;
@@ -84,7 +164,7 @@
 	border-radius: 200px;
 }
 
-.shadow {
+.shadowCloudIllustration {
 	width: 300px;
 	position: absolute;
 	bottom: -10px;
@@ -94,4 +174,10 @@
 	-webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
 	box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.3);
 	border-radius: 50%;
+}
+
+.btnOpenCertificates {
+	text-decoration: underline;
+	color: var(--mainColor);
+	cursor: pointer;
 }
