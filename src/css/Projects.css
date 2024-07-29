@@ -16,6 +16,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: #101010;
+	container-type: inline-size;
 }
 
 .projects-h1 {
@@ -105,7 +106,7 @@
 
 .wrapperBtnsProjectMain a {
 	height: 50px;
-	width: 12.6rem;
+	width: 15rem;
 	display: flex;
 	border-radius: 50px;
 	background-color: #eee;
@@ -117,7 +118,7 @@
 
 .ankerDiscover {
 	display: flex;
-	gap: .3rem;
+	gap: .7rem;
 }
 
 .wrapperBtnsProjectMain a:last-child {
@@ -258,4 +259,10 @@
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+@container (max-width: 600px) {
+	.wrapperGradientTitle {
+		margin-top: 12rem;
+	}
 }
