@@ -104,16 +104,20 @@
 }
 
 .wrapperBtnsProjectMain a {
-	height: 44px;
-	display: inline-block;
-	width: 16rem;
+	height: 50px;
+	width: 12.6rem;
 	display: flex;
-	border-radius: .4rem;
-	background-color: var(--mainColor);
+	border-radius: 50px;
+	background-color: #eee;
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	color: var(--frWhite);
+	color: #181818;
+}
+
+.ankerDiscover {
+	display: flex;
+	gap: .3rem;
 }
 
 .wrapperBtnsProjectMain a:last-child {
