@@ -103,6 +103,7 @@
 	justify-items: center;
 	color: var(--frCardSkill);
 	background: var(--bgCardSkill);
+	box-shadow: var(--shadowNewMorphis);
 
 	& div {
 		display: grid;

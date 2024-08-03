@@ -39,6 +39,9 @@
 	--colorDots: radial-gradient(#00000010 3%, transparent 0);
 
 	--white: white;
+
+	--shadowNewMorphis: 12px 12px 12px rgb(148 148 148 / 8%),
+		-7px -7px 10px #ffffff78;
 }
 
 #rootDarkMode {
@@ -68,6 +71,8 @@
 	--frWhite: #181818;
 
 	--colorDots: radial-gradient(#ffffff1a 3%, transparent 0);
+	--shadowNewMorphis: 12px 12px 12px rgb(69 69 69 / 7%) inset,
+		-7px -7px 10px #4f4f4f1a inset;
 }
 
 * {
