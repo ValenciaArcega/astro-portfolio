@@ -1,4 +1,6 @@
-
 ## Comming next
 
-[ 🚀 ] Add and type icon props on technologies.tsx
+[ 🚀 ] Toogle label "Download CV" onto a close icon when is checked
+[ 🚀 ] Add new react native screens
+
+[ 🚀 ]
