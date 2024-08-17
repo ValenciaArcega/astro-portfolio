@@ -22,9 +22,11 @@
 	--bgCardExperience: #fff;
 	--bgCardExperienceBag: #ffe4e9;
 	--bgCardExperienceBook: #ccd1ff;
+	--bgPocketCard: #fff;
 
 	--borderCardSkill: #ffffff4b;
 	--borderCardContact: #d9d9d9;
+	--borderPocketCard: #e7e7e7;
 
 	--frText: #181818;
 	--frCardSkill: #121212;
@@ -56,6 +58,7 @@
 	--bgIconCardExperience: #005200;
 	--bgCardExperienceBag: #6c0012a1;
 	--bgCardExperienceBook: #330074;
+	--bgPocketCard: linear-gradient(0deg, #0c0c0c, #212121);
 
 	--strokeIconCardExperience: #99ff99;
 	--strokeIconCardExperienceBag: #ff617c;
@@ -63,6 +66,7 @@
 
 	--borderCardSkill: #45454553;
 	--borderCardContact: #4a4a4a;
+	--borderPocketCard: #212121;
 
 	--frCardSkill: #fff;
 	--frCardExperience: #6a6a6a;
