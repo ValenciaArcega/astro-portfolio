@@ -1,10 +1,16 @@
 ---
 import "../css/Welcome.css";
+import {
+  IconCSS,
+  IconJavascript,
+  IconReact,
+  IconTypescript,
+} from "./icons/technologies";
 ---
 
 <script>
   window.addEventListener("DOMContentLoaded", function () {
-    const img: HTMLImageElement = document.querySelector(".welcome-img");
+    const img: HTMLElement = document.querySelector(".welcomeUserImg");
     const height = img.clientHeight;
     const width = img.clientWidth;
 
@@ -30,10 +36,29 @@ import "../css/Welcome.css";
     });
   });
 </script>
-
 <main class="main-welcome">
   <article class="container-welcome">
-    <img src="./user.webp" alt="User" class="welcome-img" />
+    <div class="welcomeUserImg">
+      <div class="wrapperBubbleWelcome">
+        <div class="bubble">
+          <IconTypescript height="28" />
+        </div>
+      </div>
+
+      <div class="wrapperBubbleWelcome">
+        <div class="bubble">
+          <IconReact height="28" />
+        </div>
+      </div>
+
+      <div class="wrapperBubbleWelcome">
+        <div class="bubble">
+          <IconCSS height="30" />
+        </div>
+      </div>
+    </div>
+
+    <!-- <img src="./user.webp" alt="User" class="welcome-img" /> -->
     <div class="wrapper-welcome-text">
       <h1 class="welcome-text-h1">
         I<span class="textBlue">'</span>m <span class="textBlue">Angel</span>.
