@@ -2,6 +2,7 @@
 import "../css/Projects.css";
 import Rocket from "./icons/Rocket.astro";
 import Star from "./icons/Star.astro";
+import { IconReact } from "./icons/technologies";
 ---
 
 <section class="container-knowledgesCards" id="sp">
@@ -94,6 +95,23 @@ import Star from "./icons/Star.astro";
     </article>
   </section>
 </section>
+
+<section class="relative flex justify-center h-[100dvh] w-full bg-[#101010]">
+  <div class="scale-md h-16 w-16 mt-64 bg-[#04ddff] rounded-full"></div>
+  <div class="scale-md h-16 w-16 mt-64 bg-[#1899ff] rounded-full"></div>
+  <div
+    class="absolute pt-64 flex top-0 left-0 h-[100%] w-full backdrop-blur-2xl bg-zinc-950/50 flex-col"
+  >
+    <IconReact className="spin-scale" height="92" />
+    <h1 class="mt-4 text-3xl text-center text-[#fff] font-medium">
+      The
+      <span class="text-[#00D8FF]">React</span> magic<span
+        class="text-[#00D8FF]">.</span
+      >
+    </h1>
+  </div>
+</section>
+
 <section class="containerProjects">
   <h2 class="projects-h2">
     The <span class="textBlue-onBlack">big ones</span>.

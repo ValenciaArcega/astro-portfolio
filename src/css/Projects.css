@@ -312,3 +312,33 @@
 		margin-top: 12rem;
 	}
 }
+
+.spin-scale {
+	animation: spinAndScale infinite 10s alternate-reverse;
+}
+
+.scale-md {
+	animation: scaleMd infinite 4s alternate-reverse;
+}
+
+@keyframes scaleMd {
+	from {
+		scale: 1.4;
+	}
+
+	to {
+		scale: .6;
+	}
+}
+
+@keyframes spinAndScale {
+	from {
+		scale: 0.7;
+		rotate: 0deg;
+	}
+
+	to {
+		scale: 1;
+		rotate: 360deg;
+	}
+}
