@@ -1,20 +1,28 @@
 ---
-import "../css/Navbar.css";
-import { IconMoon } from "./generals";
+import { IconMoon, IconSun } from "./generals";
 import FlagMX from "./icons/FlagMX.astro";
 import FlagUS from "./icons/FlagUS.astro";
+
+const ankerCVBtn =
+  "border-none outline-none bg-transparent no-underline text-base font-normal text-gray-500 hover:cursor-pointer hover:underline hover:!text-black hover:dark:!text-white";
 ---
 
-<nav class="navBar-desktop">
-  <img src="./favicon.webp" alt="navigation bar icon" />
+<nav
+  class="h-12 w-full px-4 fixed top-0 left-0 grid-cols-[10%_80%] backdrop-blur-sm z-[5] border-b-2 border-transparent border-solid border-b-gray-300 dark:border-b-[#212121] md:!grid hidden"
+>
+  <img
+    src="./favicon.webp"
+    class="self-center justify-self-center h-7"
+    alt="Navigation bar my logo"
+  />
 
-  <section class="navBar-desktop-options">
+  <section class="flex justify-self-end items-center" style="gap: 32px;">
     <input type="checkbox" id="toggleBannerCV" title="hey" />
-    <label for="toggleBannerCV" class="btnDownloadCV">Download CV</label>
+    <label for="toggleBannerCV" class="btnDownloadCV"> Download CV </label>
 
     <article class="wrapperModalCV">
       <a
-        class="btnCV"
+        class={ankerCVBtn}
         href="/assets/valenciaarcega-cv-es.pdf"
         download="valenciaarcega-cv-es.pdf"
       >
@@ -22,7 +30,7 @@ import FlagUS from "./icons/FlagUS.astro";
         Versión en Español
       </a>
       <a
-        class="btnCV"
+        class={ankerCVBtn}
         href="/assets/valenciaarcega-cv-en.pdf"
         download="valenciaarcega-cv-en.pdf"
       >
@@ -30,28 +38,37 @@ import FlagUS from "./icons/FlagUS.astro";
         English version
       </a>
     </article>
-    <a class="inline-block no-underline hover:underline" href="#sp">
+
+    <a
+      class="inline-block no-underline font-normal text-gray-500 dark:text-gray-200 hover:underline"
+      href="#sp"
+    >
       Projects
     </a>
 
-    <a class="inline-block no-underline hover:underline" href="#ss">
+    <a
+      class="inline-block no-underline font-normal text-gray-500 dark:text-gray-200 hover:underline"
+      href="#ss"
+    >
       Experience
     </a>
 
     <button
+      id="btnLightDesktop"
       type="button"
       title="Button turn the dark mode"
-      class="navBarBtnDark"
+      class="border-none bg-transparent"
     >
-      <IconMoon height={28} color="purple" />
+      <IconMoon height={28} color="#4263eb" />
     </button>
 
     <button
+      id="btnDarkDesktop"
       type="button"
       title="Button turn the light mode"
-      class="navBarBtnSun hidden"
+      class="border-none bg-transparent hidden"
     >
-      <ion-icon class="navbar-desktop-ion" name="sunny-outline"></ion-icon>
+      <IconSun height={28} />
     </button>
   </section>
 </nav>

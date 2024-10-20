@@ -4,7 +4,7 @@ import { IconSun, IconMoon } from "./generals";
 const btnAppearance = "border-none bg-transparent h-full w-full";
 ---
 
-<div class="fixed right-6 top-6 z-10 wrBtnsAppearance hidden">
+<div class="fixed right-6 top-6 z-10 md:!hidden flex">
   <div class="bubble shadow-[0px_4px_12px_0px_#0000002e]">
     <button
       id="btnDarkMobile"
@@ -12,7 +12,7 @@ const btnAppearance = "border-none bg-transparent h-full w-full";
       title="Button to toogle the dark mode"
       class={btnAppearance}
     >
-      <IconMoon height={28} color="purple" />
+      <IconMoon height={28} color="#4263eb" />
     </button>
     <button
       id="btnLightMobile"
