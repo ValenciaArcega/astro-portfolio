@@ -45,7 +45,6 @@
 	height: 11rem;
 	padding: 1rem;
 	border-radius: .85rem;
-	box-shadow: 0 2px 4px 0px #00000029;
 	position: relative;
 	display: grid;
 	align-items: center;
@@ -91,7 +90,8 @@
 }
 
 .cardExperience h3 {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+	font-weight: 600;
 }
 
 .cardExperience p {

@@ -35,6 +35,7 @@
 .cardKnowledges {
 	height: 80%;
 	padding: 4.4rem 0;
+	padding-bottom: 0;
 	position: relative;
 	display: grid;
 	gap: 2.2rem 1rem;
@@ -342,3 +343,30 @@
 		rotate: 360deg;
 	}
 }
+
+.wrSliderScreens {
+	max-width: 13rem;
+	height: 120%;
+	margin-top: -3.6%;
+	display: flex;
+	gap: 2rem;
+	overflow: scroll;
+	scroll-snap-type: x mandatory;
+}
+
+.sliderImg {
+	max-width: 16rem;
+	scroll-snap-align: center;
+}
+
+/* .sliderImg::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	inset: 0;
+	background: inherit;
+	filter:
+		blur(40px) saturate(400%);
+	z-index: -1;
+} */

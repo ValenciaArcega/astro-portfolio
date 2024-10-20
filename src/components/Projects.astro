@@ -1,8 +1,68 @@
 ---
 import "../css/Projects.css";
+import "../css/Slider.css";
 import Rocket from "./icons/Rocket.astro";
 import Star from "./icons/Star.astro";
-import { IconReact } from "./icons/technologies";
+import { IconReact, IconExpo } from "./icons/technologies";
+
+type ImagesReactNative = {
+  uri: string;
+  alt: string;
+  position: string;
+};
+
+const reactNativeImages: ImagesReactNative[] = [
+  {
+    uri: "/interfaces-mobile/rn-credit-light.webp",
+    alt: "Screenshot of react native app with a credit card in light mode",
+    position: "--position: 1",
+  },
+  {
+    uri: "/interfaces-mobile/rn-credit-dark.webp",
+    alt: "Screenshot of react native app with a credit card in dark mode",
+    position: "--position: 2",
+  },
+  {
+    uri: "/interfaces-mobile/rn-form-light.webp",
+    alt: "Screenshot of react native app with a form in light mode",
+    position: "--position: 3",
+  },
+  {
+    uri: "/interfaces-mobile/rn-form-dark.webp",
+    alt: "Screenshot of react native app with a form in dark mode",
+    position: "--position: 4",
+  },
+  {
+    uri: "/interfaces-mobile/rn-tracking-light.webp",
+    alt: "Screenshot of react native app with a product tracking in light mode",
+    position: "--position: 5",
+  },
+  {
+    uri: "/interfaces-mobile/rn-tracking-dark.webp",
+    alt: "Screenshot of react native app with a product tracking in dark mode",
+    position: "--position: 6",
+  },
+  {
+    uri: "/interfaces-mobile/rn-map-blur.webp",
+    alt: "Screenshot of react native app with a map blured in light mode",
+    position: "--position: 7",
+  },
+  {
+    uri: "/interfaces-mobile/rn-map-dark.webp",
+    alt: "Screenshot of react native app with a map an nearby branches in dark mode",
+    position: "--position: 8",
+  },
+  {
+    uri: "/interfaces-mobile/rn-routine.webp",
+    alt: "Screenshot of react native app with a workout week schedule in light mode",
+    position: "--position: 9",
+  },
+  {
+    uri: "/interfaces-mobile/rn-alert.webp",
+    alt: "Screenshot of react native app with an alert",
+    position: "--position: 10",
+  },
+];
 ---
 
 <section class="container-knowledgesCards" id="sp">
@@ -96,20 +156,55 @@ import { IconReact } from "./icons/technologies";
   </section>
 </section>
 
-<section class="relative flex justify-center h-[100dvh] w-full bg-[#101010]">
-  <div class="scale-md h-16 w-16 mt-64 bg-[#04ddff] rounded-full"></div>
-  <div class="scale-md h-16 w-16 mt-64 bg-[#1899ff] rounded-full"></div>
+<section class="relative flex justify-center h-[70dvh] w-full bg-[#101010]">
+  <div class="scale-md h-12 w-12 mt-48 bg-[#04ddff] rounded-full"></div>
+  <div class="scale-md h-12 w-12 mt-48 bg-[#1899ff] rounded-full"></div>
   <div
-    class="absolute pt-64 flex top-0 left-0 h-[100%] w-full backdrop-blur-2xl bg-zinc-950/50 flex-col"
+    class="absolute pt-48 flex top-0 left-0 h-[100%] w-full backdrop-blur-2xl flex-col"
   >
     <IconReact className="spin-scale" height="92" />
     <h1 class="mt-4 text-3xl text-center text-[#fff] font-medium">
       The
-      <span class="text-[#00D8FF]">React</span> magic<span
+      <span class="text-[#00D8FF]">React Native</span> magic<span
         class="text-[#00D8FF]">.</span
       >
     </h1>
   </div>
+</section>
+
+<!-- <section
+  class="containerRNIntro w-full h-[100dvh] flex flex-col items-center justify-center bg-[#fff]"
+>
+  <main
+    class="w-[94vw] md:w-[76vw] h-[50vh] border-2 border-gray-400 rounded-xl bg-gradient-to-r from-[#EFD9FA] via-[#DDEBFB] to-[#CEF0E9] px-8 flex gap-x-14"
+  >
+    <aside
+      class="h-[110%] bg-[#fff] rounded-xl mt-[-2%] w-[24%] shadow-[0_10px_60px_-15px_rgba(0,0,0,0.2)] flex flex-col items-center justify-center"
+    >
+      <div class="flex gap-x-2">
+        <IconReact height={48} />
+        <IconExpo height={40} />
+      </div>
+      <p class="font-medium text-gray-300 tracking-tight">
+        <span class="text-[#000020]">Expo</span> +
+        <span class="text-[#00D8FF]">React Native</span>
+      </p>
+    </aside>
+  </main>
+</section> -->
+
+<section
+  class="w-full h-[120dvh] bg-[#101010] text-center overflow-hidden relative"
+>
+  <main class="slider" style={`--quantity: ${reactNativeImages.length}`}>
+    {
+      reactNativeImages.map((item) => (
+        <article class="item" style={item.position}>
+          <img src={item.uri} alt={item.alt} />
+        </article>
+      ))
+    }
+  </main>
 </section>
 
 <section class="containerProjects">
