@@ -9,8 +9,6 @@
 	--borderBottomNavBarDesktop: #ddd;
 	--btnExpand: #f0f0f0;
 
-	--z-index-navbar: 5;
-
 	--mainColor: #4263eb;
 	--bg: #f2f2f7;
 	--bgWhite: #fff;
@@ -131,7 +129,7 @@ p {
 		display: none !important;
 	}
 
-	.topBar {
-		display: grid !important;
+	.wrBtnsAppearance {
+		display: flex !important;
 	}
 }

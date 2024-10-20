@@ -1,12 +1,6 @@
 ---
 import "../css/Welcome.css";
-import {
-  IconCSS,
-  IconJavascript,
-  IconReact,
-  IconTailwind,
-  IconTypescript,
-} from "./icons/technologies";
+import { IconReact, IconTailwind, IconTypescript } from "./icons/technologies";
 ---
 
 <script>
@@ -37,23 +31,24 @@ import {
     });
   });
 </script>
+
 <main class="main-welcome">
   <article class="container-welcome">
     <div class="welcomeUserImg">
       <div class="wrapperBubbleWelcome">
-        <div class="bubble">
+        <div class="bubble shadow-[4px_4px_8px_1px_#0000003d]">
           <IconTypescript height="28" />
         </div>
       </div>
 
       <div class="wrapperBubbleWelcome">
-        <div class="bubble">
+        <div class="bubble shadow-[5px_8px_12px_1px_#0000003d]">
           <IconReact height="28" />
         </div>
       </div>
 
       <div class="wrapperBubbleWelcome">
-        <div class="bubble">
+        <div class="bubble shadow-[5px_8px_12px_1px_#0000003d]">
           <IconTailwind height="30" />
         </div>
       </div>
@@ -66,9 +61,11 @@ import {
       </h1>
       <p class="welcome-text-p">
         <span class="animated-text"> Software Engineer</span>
-        <span class="font-mono text-base text-gray-400 mx-1.5">&&</span> Frontend
-        developer, that loves to build gorgeous <span class="textBlue"
-          >software</span
+        <span
+          class="font-mono text-base text-gray-400 dark:text-gray-500 mx-1.5"
+          >&&</span
+        > Frontend developer, that loves to build gorgeous <span
+          class="textBlue">software</span
         >
         experiences<span class="textBlue">;</span>
       </p>

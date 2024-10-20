@@ -1,38 +1,26 @@
 ---
-import "../css/Topbar.css";
+import { IconSun, IconMoon } from "./generals";
+
+const btnAppearance = "border-none bg-transparent h-full w-full";
 ---
 
-<nav class="topBar">
-  <button
-    type="button"
-    title="Button turn the dark mode"
-    class="topBar-btnDark"
-  >
-    <ion-icon class="topBar-btnSVG" name="moon-outline"></ion-icon>
-    <p class="topBar-btn-p">Night</p>
-  </button>
-
-  <button
-    type="button"
-    title="Button turn the light mode"
-    class="topBar-btnLight hidden"
-  >
-    <ion-icon class="topBar-btnSVG" name="sunny-outline"></ion-icon>
-    <p class="topBar-btn-p">Day</p>
-  </button>
-
-  <a class="topBar-anker" href="#sk">
-    <ion-icon class="topBar-btnSVG" name="code-slash-outline"></ion-icon>
-    <p class="topBar-anker-p">Skills</p>
-  </a>
-
-  <a class="topBar-anker" href="#sp">
-    <ion-icon class="topBar-btnSVG" name="folder-outline"></ion-icon>
-    <p class="topBar-anker-p">Projects</p>
-  </a>
-
-  <a class="topBar-anker" href="#ss">
-    <ion-icon class="topBar-btnSVG" name="color-filter-outline"></ion-icon>
-    <p class="topBar-anker-p">Experience</p>
-  </a>
-</nav>
+<div class="fixed right-6 top-6 z-10 wrBtnsAppearance hidden">
+  <div class="bubble shadow-[0px_4px_12px_0px_#0000002e]">
+    <button
+      id="btnDarkMobile"
+      type="button"
+      title="Button to toogle the dark mode"
+      class={btnAppearance}
+    >
+      <IconMoon height={28} color="purple" />
+    </button>
+    <button
+      id="btnLightMobile"
+      type="button"
+      title="Button to toogle the light mode"
+      class={`${btnAppearance} hidden`}
+    >
+      <IconSun height={28} />
+    </button>
+  </div>
+</div>

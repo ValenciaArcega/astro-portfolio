@@ -12,7 +12,7 @@
 	-moz-backdrop-filter: blur(6px);
 	-o-backdrop-filter: blur(6px);
 	backdrop-filter: blur(6px);
-	z-index: var(--z-index-navbar);
+	z-index: 5;
 }
 
 .navBar-desktop>img {
@@ -31,12 +31,6 @@
 .navBar-desktop-options>a {
 	font-weight: 500;
 	color: gray !important;
-}
-
-.navbar-desktop-ion {
-	font-size: 24px;
-	color: gray;
-	--ionicon-stroke-width: 36px;
 }
 
 .navBarBtnSun,

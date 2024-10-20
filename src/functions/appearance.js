@@ -1,15 +1,17 @@
 let root = document.documentElement
-const btnMobileDark = document.querySelector(".topBar-btnDark")
-const btnMobileLight = document.querySelector(".topBar-btnLight")
+const btnMobileDark = document.querySelector("#btnDarkMobile")
+const btnMobileLight = document.querySelector("#btnLightMobile")
 
 const btnDesktopDark = document.querySelector(".navBarBtnDark")
 const btnDesktopLight = document.querySelector(
 	".navBarBtnSun"
 )
+const htmlTag = document.querySelector("html")
 
 function makeDark() {
 	root.id = "rootDarkMode"
 
+	htmlTag.classList.add("dark")
 	btnMobileDark.classList.add("hidden")
 	btnMobileLight.classList.remove("hidden")
 
@@ -19,6 +21,8 @@ function makeDark() {
 
 function makeLight() {
 	root.removeAttribute("id")
+
+	htmlTag.classList.remove("dark")
 
 	btnMobileLight.classList.add("hidden")
 	btnMobileDark.classList.remove("hidden")
