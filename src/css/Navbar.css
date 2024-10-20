@@ -1,8 +1,8 @@
 .navBar-desktop {
-	height: 4rem;
+	height: 3rem;
 	width: 100%;
 	padding: 0 1rem;
-	border-bottom: 1.4px solid var(--borderCardContact);
+	border-bottom: 1.5px solid var(--borderBottomNavBarDesktop);
 	position: fixed;
 	top: 0;
 	left: 0;

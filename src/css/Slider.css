@@ -23,7 +23,7 @@
 
 .slider .item {
 	position: absolute;
-	inset: 0 0 0 0;
+	inset: 0;
 	transform:
 		rotateY(calc((var(--position) - 1) * (360 / var(--quantity))* 1deg)) translateZ(600px);
 }
