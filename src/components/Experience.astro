@@ -3,26 +3,36 @@ import "../css/Experience.css";
 import { experience } from "../constants/experience";
 ---
 
-<section class="sectionExperience" id="ss">
-  <h1>Education <span class="textBlue"> & </span>Experience.</h1>
-  <p class="sectionExperienceDescription">
-    Where study and experience are <span class="hightlightExperienceDescription"
+<section
+  class="mt-[16.3rem] grid place-items-center gap-y-[1rem] px-[1rem]"
+  id="ss"
+>
+  <h1 class="tracking-[-1px] text-5xl text-center">
+    Education <span class="textBlue"> & </span>Experience.
+  </h1>
+  <p class="text-center text-gray-500 leading-7">
+    Where study and experience are <span class="text-black dark:text-white"
       >enhanced</span
-    >. The places where the <span class="hightlightExperienceDescription"
+    >. The places where the <span class="text-black dark:text-white"
       >mind
-    </span> is <span style="text-decoration: underline;">formed</span>.
+    </span> is <span class="underline">formed</span>.
   </p>
-  <main class="wrapperExperience">
+  <main
+    class="h-fit w-full md:w-[90%] mt-8 grid gap-12 items-center justify-items-center grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]"
+  >
     {
       experience.map((item) => (
         <article class="cardExperience">
           <header class="cardExperienceFancyBorderTop" />
           <Fragment set:html={item.icon} />
-          <p>
+          <p class="text-[#aeaeae] dark:text-[#6a6a6a]">
             <strong>{item.title}</strong>
           </p>
-          <h3>{item.description}</h3>
-          <p set:html={item.footer} />
+          <h3 class="text-lg font-medium">{item.description}</h3>
+          <p
+            class="text-[#aeaeae] dark:text-[#6a6a6a]"
+            set:html={item.footer}
+          />
         </article>
       ))
     }
