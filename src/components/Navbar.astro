@@ -5,6 +5,8 @@ import FlagUS from "./icons/FlagUS.astro";
 
 const ankerCVBtn =
   "border-none outline-none bg-transparent no-underline text-base font-normal text-gray-500 hover:cursor-pointer hover:underline hover:!text-black hover:dark:!text-white";
+const ankerNav =
+  "inline-block no-underline font-normal text-gray-500 dark:text-gray-200 hover:underline";
 ---
 
 <nav
@@ -39,19 +41,9 @@ const ankerCVBtn =
       </a>
     </article>
 
-    <a
-      class="inline-block no-underline font-normal text-gray-500 dark:text-gray-200 hover:underline"
-      href="#sp"
-    >
-      Projects
-    </a>
+    <a class={ankerNav} href="#sp"> Projects </a>
 
-    <a
-      class="inline-block no-underline font-normal text-gray-500 dark:text-gray-200 hover:underline"
-      href="#ss"
-    >
-      Experience
-    </a>
+    <a class={ankerNav} href="#ss"> Experience </a>
 
     <button
       id="btnLightDesktop"

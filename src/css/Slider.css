@@ -21,6 +21,22 @@
 	}
 }
 
+@keyframes autoRunMobile {
+	from {
+		transform: perspective(5000px) rotateX(0deg) rotateY(360deg);
+	}
+
+	to {
+		transform: perspective(5000px) rotateX(0deg) rotateY(0deg);
+	}
+}
+
+@media (max-width: 732px) {
+	.slider {
+		animation: autoRunMobile 60s linear infinite;
+	}
+}
+
 .slider .item {
 	position: absolute;
 	inset: 0;
