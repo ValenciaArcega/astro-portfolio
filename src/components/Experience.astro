@@ -1,6 +1,19 @@
 ---
 import "../css/Experience.css";
-import { experience } from "../constants/experience";
+import {
+  HiOutlineAcademicCap,
+  HiOutlineBriefcase,
+  HiOutlineBookOpen,
+} from "react-icons/hi2";
+
+const card =
+  "w-80 p-4 py-8 rounded-2xl relative flex-col bg-white dark:bg-gradient-to-t dark:from-black dark:to-[#171717]";
+const wrIcon =
+  "absolute top-3 right-3 h-12 w-12 rounded-3xl flex items-center justify-center";
+const emphasis = "text-green-500 dark:text-green-200";
+const txtTitle = "text-[#aeaeae] font-medium text-sm dark:text-[#6a6a6a]";
+const txtDesc = "text-lg font-semibold mt-4";
+const txtFooter = "text-[#aeaeae] text-sm dark:text-gray-500 mt-1";
 ---
 
 <section
@@ -20,21 +33,56 @@ import { experience } from "../constants/experience";
   <main
     class="h-fit w-full md:w-[90%] mt-8 grid gap-12 items-center justify-items-center grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]"
   >
-    {
-      experience.map((item) => (
-        <article class="cardExperience">
-          <header class="cardExperienceFancyBorderTop" />
-          <Fragment set:html={item.icon} />
-          <p class="text-[#aeaeae] dark:text-[#6a6a6a]">
-            <strong>{item.title}</strong>
-          </p>
-          <h3 class="text-lg font-medium">{item.description}</h3>
-          <p
-            class="text-[#aeaeae] dark:text-[#6a6a6a]"
-            set:html={item.footer}
-          />
-        </article>
-      ))
-    }
+    <article class={card}>
+      <header class="cardExperienceFancyBorderTop"></header>
+
+      <div class={wrIcon + " bg-green-100 dark:bg-[#103529]"}>
+        <HiOutlineAcademicCap
+          size={26}
+          className="text-green-600 dark:text-[#D9FDD3]"
+        />
+      </div>
+
+      <p class={txtTitle}>University</p>
+      <h3 class={txtDesc}>Tecnológico de Coacalco</h3>
+      <p class={txtFooter}>
+        Final score <span class={emphasis}>9.6</span> and
+        <span class={emphasis}>260</span>/260 credits.
+      </p>
+    </article>
+
+    <article class={card}>
+      <header class="cardExperienceFancyBorderTop"></header>
+
+      <div class={wrIcon + " bg-orange-100 dark:bg-[#34130f]"}>
+        <HiOutlineBriefcase
+          size={26}
+          className="text-orange-400 dark:text-[#ffc8c8]"
+        />
+      </div>
+
+      <p class={txtTitle}>Current job</p>
+      <h3 class={txtDesc}>BAACC Systems</h3>
+      <p class={txtFooter}>
+        <span class={emphasis}>1</span> year and 7 months as Frontend developer.
+      </p>
+    </article>
+
+    <article class={card}>
+      <header class="cardExperienceFancyBorderTop"></header>
+
+      <div class={wrIcon + " bg-indigo-100 dark:bg-[#102135]"}>
+        <HiOutlineBookOpen
+          size={26}
+          className="text-indigo-400 dark:text-[#c8deff]"
+        />
+      </div>
+
+      <p class={txtTitle}>Self-taught</p>
+      <h3 class={txtDesc}>Udemy, Platzi, Egghead, ...</h3>
+      <p class={txtFooter}>
+        Courses and <span class={emphasis}>meaningful</span> certificates.
+      </p>
+    </article>
   </main>
 </section>
