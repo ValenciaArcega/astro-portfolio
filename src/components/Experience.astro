@@ -1,5 +1,4 @@
 ---
-import "../css/Experience.css";
 import {
   HiOutlineAcademicCap,
   HiOutlineBriefcase,
@@ -14,6 +13,8 @@ const emphasis = "text-green-500 dark:text-green-200";
 const txtTitle = "text-[#aeaeae] font-medium text-sm dark:text-[#6a6a6a]";
 const txtDesc = "text-lg font-semibold mt-4";
 const txtFooter = "text-[#aeaeae] text-sm dark:text-gray-500 mt-1";
+const gradientCard =
+  "absolute left-1/2 top-0 w-[70%] h-[1px] select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-gradient-to-r from-transparent via-gray-200 dark:via-green-900 to-transparent";
 ---
 
 <section
@@ -34,7 +35,7 @@ const txtFooter = "text-[#aeaeae] text-sm dark:text-gray-500 mt-1";
     class="h-fit w-full md:w-[90%] mt-8 grid gap-12 items-center justify-items-center grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]"
   >
     <article class={card}>
-      <header class="cardExperienceFancyBorderTop"></header>
+      <header class={gradientCard}></header>
 
       <div class={wrIcon + " bg-green-100 dark:bg-[#103529]"}>
         <HiOutlineAcademicCap
@@ -52,7 +53,7 @@ const txtFooter = "text-[#aeaeae] text-sm dark:text-gray-500 mt-1";
     </article>
 
     <article class={card}>
-      <header class="cardExperienceFancyBorderTop"></header>
+      <header class={gradientCard + " dark:via-orange-900"}></header>
 
       <div class={wrIcon + " bg-orange-100 dark:bg-[#34130f]"}>
         <HiOutlineBriefcase
@@ -69,7 +70,7 @@ const txtFooter = "text-[#aeaeae] text-sm dark:text-gray-500 mt-1";
     </article>
 
     <article class={card}>
-      <header class="cardExperienceFancyBorderTop"></header>
+      <header class={gradientCard + " dark:via-sky-900"}></header>
 
       <div class={wrIcon + " bg-indigo-100 dark:bg-[#102135]"}>
         <HiOutlineBookOpen
