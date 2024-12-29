@@ -26,16 +26,18 @@ export function Project({
 			<span className="text-indigo-300 font-medium">{name}</span>{" "}{description}.
 		</p>
 
-		<footer className="wrapperBtnsProjectMain">
+		<footer className="mt-0 flex flex-col gap-4">
 			<a
-				className="flex max-h-10 gap-[.7rem]"
+				className="flex max-h-10 py-2 w-60 rounded-xl bg-white items-center justify-center decoration-transparent text-black gap-x-2 hover:underline hover:decoration-black hover:cursor-pointer"
 				target="_blank"
 				href={urlSite}
 			>
 				<SVGRocket />
 				Discover {name}
 			</a>
-			<a target="_blank" href={urlRepo}>
+			<a
+				className="decoration-transparent self-center text-white bg-none hover:underline hover:decoration-white"
+				target="_blank" href={urlRepo}>
 				Give <SVGStar /> in Github
 			</a>
 		</footer>
