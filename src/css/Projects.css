@@ -1,75 +1,4 @@
-.container-knowledgesCards {
-	margin-top: 14rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.sectionKnowledges {
-	width: 100%;
-	min-height: 60rem;
-	padding: 3rem 0 8rem 0;
-	display: flex;
-	gap: 2rem 0;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: #101010;
-	container-type: inline-size;
-}
-
-.projects-h1 {
-	padding-top: 2rem;
-	margin: 4rem 0 8px 0;
-	letter-spacing: -1.2px;
-	line-height: 1.1;
-	text-align: center;
-	grid-column: -1/1;
-	width: 100%;
-	font-size: 3rem;
-	font-weight: 500;
-	color: #efeaea;
-}
-
-.cardKnowledges {
-	height: 80%;
-	padding: 4.4rem 0;
-	padding-bottom: 0;
-	position: relative;
-	display: grid;
-	gap: 2.2rem 1rem;
-	grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
-	width: 100%;
-	align-items: center;
-	justify-items: center;
-	background: linear-gradient(to top, #101010, #151515);
-}
-
-.cardKnowledgesBorder {
-	left: 1/2;
-	top: 0;
-	width: 90%;
-	height: 1px;
-	user-select: none;
-	pointer-events: none;
-	position: absolute;
-	translate: (1/2, 1/2);
-	background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.0) 0%, rgba(198, 198, 198, 0.67) 50%, rgba(0, 0, 0, 0) 100%);
-}
-
-.cardKnowledgesBg {
-	left: 1/2;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	user-select: none;
-	pointer-events: none;
-	position: absolute;
-	translate: (1/2, 1/2);
-}
-
-.projectMain {
+/* .projectMain {
 	height: fit-content;
 	width: 21rem;
 	padding: 2rem 1.2rem;
@@ -79,24 +8,7 @@
 	justify-items: center;
 	gap: .5rem;
 	background: linear-gradient(355deg, #101010, #1b1b1b);
-}
-
-.projectMain img {
-	border-radius: 1rem;
-	box-shadow: 0px 4px 14px #00000036;
-}
-
-.projectMain p {
-	line-height: 1.7;
-	font-size: 1rem;
-	text-align: center;
-	color: #aaa9a9;
-}
-
-.projectMain span {
-	color: #9dacea;
-	font-weight: 500;
-}
+} */
 
 .wrapperBtnsProjectMain {
 	margin-top: 1rem;
@@ -115,11 +27,6 @@
 	justify-content: center;
 	text-decoration: none;
 	color: #181818;
-}
-
-.ankerDiscover {
-	display: flex;
-	gap: .7rem;
 }
 
 .wrapperBtnsProjectMain a:last-child {
