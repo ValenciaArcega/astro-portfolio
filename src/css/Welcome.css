@@ -1,154 +1,153 @@
 .main-welcome {
-	height: 100dvh;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-image: var(--colorDots);
-	background-size: 7rem 7rem;
+  height: 100dvh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--colorDots);
+  background-size: 7rem 7rem;
 }
 
 .container-welcome {
-	width: 35rem;
-	display: flex;
-	gap: 0.5rem;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  width: 35rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcomeUserImg {
-	height: 182px;
-	width: 182px;
-	border-radius: 300px;
-	background-size: contain;
-	background-image: url("../../public/user.webp");
-	position: relative;
+  height: 182px;
+  width: 182px;
+  border-radius: 300px;
+  background-size: contain;
+  background-image: url("../../public/user.webp");
+  position: relative;
 }
 
 .wrapperBubbleWelcome {
-	position: absolute;
-	top: -1.8rem;
-	left: 50%;
-	translate: -50% 0;
+  position: absolute;
+  top: -1.8rem;
+  left: 50%;
+  translate: -50% 0;
 }
 
 .wrapperBubbleWelcome:nth-child(1) {
-	bottom: 1rem;
-	left: 0;
-	translate: -50% 0;
-	top: auto;
+  bottom: 1rem;
+  left: 0;
+  translate: -50% 0;
+  top: auto;
 }
 
 .wrapperBubbleWelcome:nth-child(3) {
-	/* translate: -50% 0; */
-	top: auto;
-	left: auto;
-	bottom: 1rem;
-	right: -2rem;
+  /* translate: -50% 0; */
+  top: auto;
+  left: auto;
+  bottom: 1rem;
+  right: -2rem;
 }
 
 .bubble {
-	height: 3rem;
-	width: 3rem;
-	background-image: var(--gradientConicWelcomeBubble);
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 64px;
+  height: 3rem;
+  width: 3rem;
+  background-image: var(--gradientConicWelcomeBubble);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 64px;
 }
 
 .bubble::after {
-	content: '';
-	height: 100%;
-	width: 100%;
-	border-radius: 64px;
-	padding: 1px;
-	position: absolute;
-	z-index: -1;
-	background-image: var(--borderGradientConicWelcomeBubble);
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 64px;
+  padding: 1px;
+  position: absolute;
+  z-index: -1;
+  background-image: var(--borderGradientConicWelcomeBubble);
 }
 
 .welcome-img {
-	height: 162px;
-	width: 162px;
-	border-radius: 300px;
-	transition:
-		box-shadow 0.2s,
-		transform;
-	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
+  height: 162px;
+  width: 162px;
+  border-radius: 300px;
+  transition: box-shadow 0.2s, transform;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 .welcome-img:hover,
 .welcomeUserImg:hover {
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .wrapper-welcome-text {
-	height: 60%;
-	width: 95%;
-	margin-top: .5rem;
-	text-align: center;
-	color: var(--black12);
+  height: 60%;
+  width: 95%;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: var(--black12);
 }
 
 .welcome-text-h1 {
-	font-size: 2.7rem;
-	letter-spacing: -1.3px;
+  font-size: 2.7rem;
+  letter-spacing: -1.3px;
 }
 
 .welcome-text-p {
-	margin-top: 8px;
-	font-size: 1.45rem;
-	letter-spacing: -1px;
-	line-height: 1.7;
+  margin-top: 8px;
+  font-size: 1.45rem;
+  letter-spacing: -1px;
+  line-height: 1.7;
 }
 
 .animated-text {
-	position: relative;
-	border-radius: 0.6rem;
-	display: inline-block;
+  position: relative;
+  border-radius: 0.6rem;
+  display: inline-block;
 }
 
 .animated-text:before {
-	content: "";
-	width: 12rem;
-	height: 1.5rem;
-	position: absolute;
-	border-radius: 0.6rem;
-	filter: blur(22px);
-	opacity: 0.6;
-	z-index: 0;
+  content: "";
+  width: 12rem;
+  height: 1.5rem;
+  position: absolute;
+  border-radius: 0.6rem;
+  filter: blur(22px);
+  opacity: 0.6;
+  z-index: 0;
 }
 
 .animated-text:before,
 .animated-text {
-	-moz-animation: color-animation 2s linear infinite;
-	-o-animation: color-animation 2s linear infinite;
-	-webkit-animation: color-animation 2s linear infinite;
-	animation: color-animation 2s linear infinite;
-	background-size: auto auto;
-	background-clip: border-box;
-	background-size: 200% auto;
-	background-image: linear-gradient(-225deg,
-			#609af8 30%,
-			#35c4dc 60%,
-			#b975f9 80%);
+  -moz-animation: color-animation 2s linear infinite;
+  -o-animation: color-animation 2s linear infinite;
+  -webkit-animation: color-animation 2s linear infinite;
+  animation: color-animation 2s linear infinite;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    -225deg,
+    #609af8 30%,
+    #35c4dc 60%,
+    #b975f9 80%
+  );
 }
 
 .animated-text {
-	position: relative;
-	background-clip: text;
-	text-fill-color: transparent;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  position: relative;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes color-animation {
-
-	40%,
-	to {
-		background-position: -200%;
-	}
+  40%,
+  to {
+    background-position: -200%;
+  }
 }
