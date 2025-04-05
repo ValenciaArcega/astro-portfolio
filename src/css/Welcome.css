@@ -24,6 +24,7 @@
   background-size: contain;
   background-image: url("../../public/user.webp");
   position: relative;
+  border-radius: 30% 70% 24% 76% / 65% 28% 72% 35%;
 }
 
 .wrapperBubbleWelcome {
@@ -129,12 +130,10 @@
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
-  background-image: linear-gradient(
-    -225deg,
-    #609af8 30%,
-    #35c4dc 60%,
-    #b975f9 80%
-  );
+  background-image: linear-gradient(-225deg,
+      #609af8 30%,
+      #35c4dc 60%,
+      #b975f9 80%);
 }
 
 .animated-text {
@@ -146,6 +145,7 @@
 }
 
 @keyframes color-animation {
+
   40%,
   to {
     background-position: -200%;

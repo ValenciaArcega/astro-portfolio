@@ -10,7 +10,7 @@ const ankerNav =
 ---
 
 <nav
-  class="h-12 w-full px-4 fixed top-0 left-0 grid-cols-[10%_80%] backdrop-blur-sm z-[5] border-b-2 border-transparent border-solid border-b-gray-300 dark:border-b-[#212121] md:!grid hidden"
+  class="h-12 w-full px-4 fixed top-0 left-0 grid-cols-[10%_80%] backdrop-blur-sm z-[5] border-b-[1px] border-transparent border-solid border-b-gray-300 dark:border-b-[#212121] md:!grid hidden"
 >
   <img
     src="./favicon.webp"
@@ -19,10 +19,10 @@ const ankerNav =
   />
 
   <section class="flex justify-self-end items-center" style="gap: 32px;">
-    <input type="checkbox" id="toggleBannerCV" title="hey" />
-    <label for="toggleBannerCV" class="btnDownloadCV"> Download CV </label>
+    <!-- <input type="checkbox" id="toggleBannerCV" title="hey" />
+    <label for="toggleBannerCV" class="btnDownloadCV"> Download CV </label> -->
 
-    <article class="wrapperModalCV">
+    <!-- <article class="wrapperModalCV">
       <a
         class={ankerCVBtn}
         href="/assets/resume-es.pdf"
@@ -39,7 +39,7 @@ const ankerNav =
         <FlagUS />
         Version - English
       </a>
-    </article>
+    </article> -->
 
     <a class={ankerNav} href="#sp"> Projects </a>
 
@@ -51,7 +51,7 @@ const ankerNav =
       title="Button turn the dark mode"
       class="border-none bg-transparent"
     >
-      <IconMoon height={28} color="#4263eb" />
+      <IconMoon height={24} color="#4263eb" />
     </button>
 
     <button
@@ -60,7 +60,7 @@ const ankerNav =
       title="Button turn the light mode"
       class="border-none bg-transparent hidden"
     >
-      <IconSun height={28} />
+      <IconSun height={24} />
     </button>
   </section>
 </nav>
