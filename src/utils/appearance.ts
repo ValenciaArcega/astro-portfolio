@@ -1,10 +1,10 @@
 let root = document.documentElement;
+
+const htmlTag = document.querySelector("html");
 const btnMobileDark = document.querySelector("#btnDarkMobile");
 const btnMobileLight = document.querySelector("#btnLightMobile");
 const btnDesktopDark = document.querySelector("#btnLightDesktop");
 const btnDesktopLight = document.querySelector("#btnDarkDesktop");
-
-const htmlTag = document.querySelector("html");
 
 function makeDark() {
 	htmlTag.classList.add("dark");

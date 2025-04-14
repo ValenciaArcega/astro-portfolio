@@ -7,7 +7,6 @@ export default {
 	},
 	plugins: [],
 	corePlugins: {
-		// Desactiva las utilidades de Tailwind que no quieras usar
-		preflight: false, // Esto desactiva los estilos base de Tailwind
+		preflight: false,
 	},
-}
+};
