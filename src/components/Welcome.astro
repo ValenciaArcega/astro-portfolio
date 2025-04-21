@@ -32,41 +32,47 @@ import { IconReact, IconTailwind, IconTypescript } from "./icons/technologies";
   });
 </script>
 
-<main class="main-welcome">
-  <article class="container-welcome">
-    <div class="welcomeUserImg">
-      <div class="wrapperBubbleWelcome">
+<main
+  class="h-screen flex justify-center items-center bg-[radial-gradient(#00000010_3%,transparent_0)] bg-[length:7rem_7rem] dark:bg-[radial-gradient(#ffffff1a_3%,transparent_0)]"
+>
+  <article class="w-[35rem] flex flex-col gap-2 justify-center items-center">
+    <div
+      class={`h-[182px] w-[182px] bg-contain bg-[url("../../public/user.webp")] relative rounded-[30%_70%_24%76%/_65%_28%_72%_35%] welcomeUserImg`}
+    >
+      <div class="absolute bottom-4 left-0 -translate-x-1/2 top-auto">
         <div class="bubble shadow-[4px_4px_8px_1px_#0000003d]">
           <IconTypescript height="28" />
         </div>
       </div>
 
-      <div class="wrapperBubbleWelcome">
+      <div class="absolute top-[-1.8rem] left-1/2 -translate-x-1/2">
         <div class="bubble shadow-[5px_8px_12px_1px_#0000003d]">
           <IconReact height="28" />
         </div>
       </div>
 
-      <div class="wrapperBubbleWelcome">
+      <div class="absolute top-auto left-auto bottom-4 right-[-.5rem]">
         <div class="bubble shadow-[5px_8px_12px_1px_#0000003d]">
           <IconTailwind height="30" />
         </div>
       </div>
     </div>
 
-    <div class="wrapper-welcome-text">
-      <h1 class="welcome-text-h1">
-        I<span class="textBlue">'</span>m <span class="textBlue">Angel</span>.
+    <div class="h-[60%] w-[95%] mt-2 text-center">
+      <h1 class="text-[2.7rem] tracking-[-1.3px]">
+        I<span class="text-p500 dark:text-p100">'</span>m <span
+          class="text-p500 dark:text-p100">Angel</span
+        >.
       </h1>
-      <p class="welcome-text-p">
+      <p class="mt-2 text-[1.45rem] tracking-[-1px] leading-[1.7]">
         <span class="animated-text"> Software Engineer</span>
         <span
           class="font-mono text-base text-gray-400 dark:text-gray-500 mx-1.5"
           >&&</span
         > Frontend developer, that loves to build gorgeous <span
-          class="textBlue">software</span
+          class="text-p500 dark:text-p100">software</span
         >
-        experiences<span class="textBlue">;</span>
+        experiences<span class="text-p500 dark:text-p100">;</span>
       </p>
     </div>
   </article>

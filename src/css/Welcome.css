@@ -1,54 +1,3 @@
-.main-welcome {
-  height: 100dvh;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: var(--colorDots);
-  background-size: 7rem 7rem;
-}
-
-.container-welcome {
-  width: 35rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.welcomeUserImg {
-  height: 182px;
-  width: 182px;
-  border-radius: 300px;
-  background-size: contain;
-  background-image: url("../../public/user.webp");
-  position: relative;
-  border-radius: 30% 70% 24% 76% / 65% 28% 72% 35%;
-}
-
-.wrapperBubbleWelcome {
-  position: absolute;
-  top: -1.8rem;
-  left: 50%;
-  translate: -50% 0;
-}
-
-.wrapperBubbleWelcome:nth-child(1) {
-  bottom: 1rem;
-  left: 0;
-  translate: -50% 0;
-  top: auto;
-}
-
-.wrapperBubbleWelcome:nth-child(3) {
-  /* translate: -50% 0; */
-  top: auto;
-  left: auto;
-  bottom: 1rem;
-  right: -2rem;
-}
-
 .bubble {
   height: 3rem;
   width: 3rem;
@@ -69,39 +18,6 @@
   position: absolute;
   z-index: -1;
   background-image: var(--borderGradientConicWelcomeBubble);
-}
-
-.welcome-img {
-  height: 162px;
-  width: 162px;
-  border-radius: 300px;
-  transition: box-shadow 0.2s, transform;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
-}
-
-.welcome-img:hover,
-.welcomeUserImg:hover {
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-}
-
-.wrapper-welcome-text {
-  height: 60%;
-  width: 95%;
-  margin-top: 0.5rem;
-  text-align: center;
-  color: var(--black12);
-}
-
-.welcome-text-h1 {
-  font-size: 2.7rem;
-  letter-spacing: -1.3px;
-}
-
-.welcome-text-p {
-  margin-top: 8px;
-  font-size: 1.45rem;
-  letter-spacing: -1px;
-  line-height: 1.7;
 }
 
 .animated-text {

@@ -1,26 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-	--black12: #121212;
-	--bgCardKnowledges: #fff;
-
-	--border: #D9D9D9;
-	--borderNavBar: #transparent;
-	--btnExpand: #f0f0f0;
-
 	--mainColor: #4263eb;
 	--bg: #f2f2f7;
 	--bgWhite: #fff;
-	--bgBlack12: #121212;
+
+	--text-selection-background: #121212;
+	--text-selection-foreground: #fff;
+
 	--bgFirstCircle: #a3b5ff;
 	--bgSecondCircle: pink;
 	--bgCardSkill: #ffffff53;
-	--bgIconCardExperience: #ceffce;
-	--bgCardExperienceBag: #ffe4e9;
 	--bgPocketCard: #fff;
 
-	--gradientConicWelcomeBubble: conic-gradient(from 120deg,
-			#ddd 10%, #fff, #ddd 99%);
+	--gradientConicWelcomeBubble: #ffffff3c;
 	--borderGradientConicWelcomeBubble: none;
 
 	--borderCardSkill: #ffffff4b;
@@ -28,8 +21,6 @@
 
 	--frText: #181818;
 	--frCardSkill: #121212;
-	--frEmphasisGreen: #00ba00;
-	--frWhite: #fff;
 
 	--colorDots: radial-gradient(#00000010 3%, transparent 0);
 
@@ -43,12 +34,13 @@
 	--mainColor: #B1BFF7;
 	--bg: #101010;
 	--bgWhite: #1c1c1c;
-	--bgBlack12: #f2f2f7;
+
+	--text-selection-background: #f2f2f7;
+	--text-selection-foreground: #181818;
+
 	--bgFirstCircle: #24437b;
 	--bgSecondCircle: #2e0e36;
 	--bgCardSkill: #28282853;
-	--bgIconCardExperience: #005200;
-	--bgCardExperienceBag: #6c0012a1;
 	--bgPocketCard: linear-gradient(0deg, #0c0c0c, #212121);
 
 	--gradientConicWelcomeBubble: conic-gradient(from -45deg,
@@ -61,9 +53,7 @@
 	--borderPocketCard: #212121;
 
 	--frCardSkill: #fff;
-	--frEmphasisGreen: #aaffaa;
 	--frText: #fff;
-	--frWhite: #181818;
 
 	--colorDots: radial-gradient(#ffffff1a 3%, transparent 0);
 	--shadowNewMorphis: 12px 12px 12px rgb(69 69 69 / 7%) inset,
@@ -86,8 +76,8 @@ html {
 }
 
 ::selection {
-	background-color: var(--bgBlack12);
-	color: var(--frWhite);
+	background-color: var(--text-selection-background);
+	color: var(--text-selection-foreground);
 }
 
 h1,
@@ -100,20 +90,6 @@ p {
 	color: var(--frText);
 }
 
-.textBlue {
-	color: var(--mainColor);
-}
-
 .hidden {
 	display: none;
-}
-
-@media (max-width: 720px) {
-	.navBar-desktop {
-		display: none !important;
-	}
-
-	.wrBtnsAppearance {
-		display: flex !important;
-	}
 }
