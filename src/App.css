@@ -13,7 +13,9 @@
 	--bgCardSkill: #ffffff53;
 	--bgPocketCard: #fff;
 
-	--gradientConicWelcomeBubble: #ffffff3c;
+	/* --gradientConicWelcomeBubble: #ffffff3c; */
+	--gradientConicWelcomeBubble: conic-gradient(from 120deg,
+			#ddd 10%, #fff, #ddd 99%);
 	--borderGradientConicWelcomeBubble: none;
 
 	--borderCardSkill: #ffffff4b;
