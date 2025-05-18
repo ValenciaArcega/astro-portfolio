@@ -1,112 +1,61 @@
 ---
-import { IconMoon, IconSun } from "./generals";
-import FlagMX from "./icons/FlagMX.astro";
-import FlagUS from "./icons/FlagUS.astro";
-
-const ankerCVBtn =
-  "border-none outline-none bg-transparent no-underline text-base font-normal text-gray-500 hover:cursor-pointer hover:underline hover:!text-black hover:dark:!text-white";
-const ankerNav =
-  "inline-block no-underline font-normal text-gray-500 dark:text-gray-200 hover:underline";
+import {
+  PiBracketsCurlyDuotone,
+  PiBrainDuotone,
+  PiSunDuotone,
+  PiMoonDuotone,
+  PiMoonStarsDuotone,
+} from 'react-icons/pi';
 ---
 
 <nav
-  class="h-12 w-full px-4 fixed top-0 left-0 grid-cols-[10%_80%] backdrop-blur-sm z-[5] border-b-[1px] border-transparent border-solid border-b-gray-300 dark:border-b-[#212121] md:!grid hidden"
+  class='h-12 w-full px-4 fixed top-0 left-0 grid-cols-[10%_80%] backdrop-blur-sm z-[5] border-b-[1px] border-transparent border-solid border-b-gray-300 dark:border-b-[#212121] md:!grid hidden'
 >
   <img
-    src="./favicon.webp"
-    class="self-center justify-self-center h-7"
-    alt="Navigation bar my logo"
+    src='./favicon.webp'
+    class='self-center justify-self-center h-7'
+    alt='Navigation bar my logo'
   />
 
-  <section class="flex justify-self-end items-center" style="gap: 32px;">
-    <!-- <input type="checkbox" id="toggleBannerCV" title="hey" />
-    <label for="toggleBannerCV" class="btnDownloadCV"> Download CV </label> -->
-
-    <!-- <article class="wrapperModalCV">
+  <section class='flex justify-self-end items-center' style='gap: 32px;'>
+    <div class='flex items-center justify-items-center gap-x-2'>
+      <PiBracketsCurlyDuotone
+        className='text-blue-500 dark:text-blue-500 text-xl m-0'
+      />
       <a
-        class={ankerCVBtn}
-        href="/assets/resume-es.pdf"
-        download="resume-es.pdf"
+        class='block no-underline hover:underline text-base text-black dark:text-white'
+        href='#sp'>Projects</a
       >
-        <FlagMX />
-        Version - Spanish
-      </a>
+    </div>
+
+    <div class='flex items-center justify-items-center gap-x-2'>
+      <PiBrainDuotone
+        className='text-blue-500 dark:text-blue-500 text-xl m-0'
+      />
       <a
-        class={ankerCVBtn}
-        href="/assets/resume-en.pdf"
-        download="resume-en.pdf"
+        class='block no-underline hover:underline text-base text-black dark:text-white'
+        href='#ss'
       >
-        <FlagUS />
-        Version - English
+        Experience
       </a>
-    </article> -->
-
-    <a class={ankerNav} href="#sp"> Projects </a>
-
-    <a class={ankerNav} href="#ss"> Experience </a>
+    </div>
 
     <button
-      id="btnLightDesktop"
-      type="button"
-      title="Button turn the dark mode"
-      class="border-none bg-transparent"
+      id='btnLightDesktop'
+      type='button'
+      title='Button turn the dark mode'
+      class='border-none bg-transparent'
     >
-      <IconMoon height={24} color="#4263eb" />
+      <PiMoonStarsDuotone className='text-p500 text-2xl' />
     </button>
 
     <button
-      id="btnDarkDesktop"
-      type="button"
-      title="Button turn the light mode"
-      class="border-none bg-transparent hidden"
+      id='btnDarkDesktop'
+      type='button'
+      title='Button turn the light mode'
+      class='border-none bg-transparent hidden'
     >
-      <IconSun height={24} />
+      <PiSunDuotone className='text-yellow-200 text-2xl' />
     </button>
   </section>
 </nav>
-
-<style>
-  .btnDownloadCV {
-    border: none;
-    outline: none;
-    background: none;
-    color: var(--frText);
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-  }
-  .wrapperModalCV {
-    height: fit-content;
-    width: fit-content;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: var(--bgWhite);
-    position: absolute;
-    top: 3.3rem;
-    right: 20%;
-    z-index: 5;
-    display: none;
-    gap: 1rem;
-    flex-direction: column;
-  }
-
-  .wrapperModalCV a {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-  }
-  #toggleBannerCV {
-    display: none;
-  }
-  #toggleBannerCV:checked ~ .wrapperModalCV {
-    display: flex;
-  }
-</style>
