@@ -64,6 +64,7 @@
 }
 
 @media (max-width: 700px) {
+
   .projectInSliderRight,
   .projectInSliderLeft {
     -webkit-animation: none;
@@ -88,21 +89,6 @@
   }
 }
 
-.wrapperGradientTitle {
-  font-size: 5rem;
-  background: #e5e5e5;
-  background: radial-gradient(
-    circle farthest-corner at center center,
-    #898989 0%,
-    #181818 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .pocketCardFirst,
 .pocketCard,
@@ -140,7 +126,7 @@
 }
 
 @container (max-width: 600px) {
-  .wrapperGradientTitle {
+  .maskProjectsTitleLight {
     margin-top: 12rem;
   }
 }

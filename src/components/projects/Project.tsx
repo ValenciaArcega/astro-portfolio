@@ -1,4 +1,5 @@
-import { SVGStar, SVGRocket } from "../icons/generals";
+import { SVGRocket } from "../icons/generals";
+import { PiStarDuotone } from "react-icons/pi";
 
 interface IProject {
 	description: string;
@@ -15,20 +16,22 @@ export function Project({
 	urlSite,
 	urlRepo
 }: IProject) {
-	return <article className="h-fit w-[21rem] p-8 px-4 rounded-2xl grid items-center justify-items-center gap-2 bg-gradient-to-tl from-[#101010] to-[#1b1b1b]">
+	return <article className="h-fit w-[21rem] p-8 px-4 rounded-2xl grid items-center justify-items-center gap-2 bg-gradient-to-tl from-[#f2f2f7] to-[#fff] dark:bg-gradient-to-tl dark:from-[#101010] dark:to-[#1b1b1b]">
 		<img
-			className="rounded-xl"
+			className="rounded-xl shadow-sm"
 			src={urlImage}
 			alt={`${name} web site logo`}
 			width="64"
 		/>
-		<p className="text-center text-base text-gray-300">
-			<span className="text-indigo-300 font-medium">{name}</span>{" "}{description}.
+		<p className="text-center text-base text-gray-700 dark:text-gray-300">
+			<strong className="text-indigo-400 dark:text-indigo-300 italic">
+				{name}
+			</strong>{" "}{description}.
 		</p>
 
-		<footer className="mt-0 flex flex-col gap-4">
+		<footer className="mt-3 flex flex-col gap-y-6">
 			<a
-				className="flex max-h-10 py-2 w-60 rounded-xl bg-white items-center justify-center decoration-transparent text-black gap-x-2 hover:underline hover:decoration-black hover:cursor-pointer"
+				className="flex max-h-10 py-3 w-60 rounded-xl bg-white shadow-md decoration-transparent hover:shadow-none transition-all duration-[1s] hover:scale-[0.97] items-center justify-center text-black gap-x-3 hover:underline hover:cursor-pointer"
 				target="_blank"
 				href={urlSite}
 			>
@@ -36,10 +39,10 @@ export function Project({
 				Discover {name}
 			</a>
 			<a
-				className="decoration-transparent self-center text-white bg-none hover:underline hover:decoration-white"
+				className="decoration-transparent self-center text-gray-600 hover:text-black dark:text-gray-400 hover:dark:text-white bg-none hover:underline hover:decoration-black hover:dark:decoration-white"
 				target="_blank" href={urlRepo}>
-				Give <SVGStar /> in Github
+				Give <PiStarDuotone fill='orange' size={18} /> in Github
 			</a>
 		</footer>
 	</article>;
-}
+}	

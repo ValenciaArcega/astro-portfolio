@@ -4,12 +4,11 @@ import {
   PiBrainDuotone,
   PiSunDuotone,
   PiMoonDuotone,
-  PiMoonStarsDuotone,
 } from 'react-icons/pi';
 ---
 
 <nav
-  class='h-12 w-full px-4 fixed top-0 left-0 grid-cols-[10%_80%] backdrop-blur-sm z-[5] border-b-[1px] border-transparent border-solid border-b-gray-300 dark:border-b-[#212121] md:!grid hidden'
+  class='h-12 w-full px-4 fixed top-0 left-0 grid-cols-[10%_80%] backdrop-blur-3xl border-b-[1px] border-transparent border-solid border-b-gray-300 dark:border-b-[#212121] md:!grid hidden z-50'
 >
   <img
     src='./favicon.webp'
@@ -23,9 +22,11 @@ import {
         className='text-blue-500 dark:text-blue-500 text-xl m-0'
       />
       <a
+        href='#projects'
         class='block no-underline hover:underline text-base text-black dark:text-white'
-        href='#sp'>Projects</a
       >
+        Projects
+      </a>
     </div>
 
     <div class='flex items-center justify-items-center gap-x-2'>
@@ -34,7 +35,7 @@ import {
       />
       <a
         class='block no-underline hover:underline text-base text-black dark:text-white'
-        href='#ss'
+        href='#experience'
       >
         Experience
       </a>
@@ -46,7 +47,7 @@ import {
       title='Button turn the dark mode'
       class='border-none bg-transparent'
     >
-      <PiMoonStarsDuotone className='text-p500 text-2xl' />
+      <PiMoonDuotone className='text-p500 text-2xl' />
     </button>
 
     <button

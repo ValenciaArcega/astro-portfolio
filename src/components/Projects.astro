@@ -1,8 +1,13 @@
 ---
-import "../css/Projects.css";
-import "../css/Slider.css";
-import { IconReact } from "./icons/technologies";
-import { Project } from "./projects/Project";
+import '../css/Projects.css';
+import '../css/Slider.css';
+import { IconReact } from './icons/technologies';
+import { Project } from './projects/Project';
+import {
+  PiCodeDuotone,
+  PiQrCodeDuotone,
+  PiRocketDuotone,
+} from 'react-icons/pi';
 
 type ImagesReactNative = {
   uri: string;
@@ -12,141 +17,129 @@ type ImagesReactNative = {
 
 const reactNativeImages: ImagesReactNative[] = [
   {
-    uri: "/interfaces-mobile/rn-credit-light.webp",
-    alt: "Screenshot of react native app with a credit card in light mode",
-    position: "--position: 1",
+    uri: '/interfaces-mobile/rn-credit-light.webp',
+    alt: 'Screenshot of react native app with a credit card in light mode',
+    position: '--position: 1',
   },
   {
-    uri: "/interfaces-mobile/rn-credit-dark.webp",
-    alt: "Screenshot of react native app with a credit card in dark mode",
-    position: "--position: 2",
+    uri: '/interfaces-mobile/rn-credit-dark.webp',
+    alt: 'Screenshot of react native app with a credit card in dark mode',
+    position: '--position: 2',
   },
   {
-    uri: "/interfaces-mobile/rn-form-light.webp",
-    alt: "Screenshot of react native app with a form in light mode",
-    position: "--position: 3",
+    uri: '/interfaces-mobile/rn-form-light.webp',
+    alt: 'Screenshot of react native app with a form in light mode',
+    position: '--position: 3',
   },
   {
-    uri: "/interfaces-mobile/rn-form-dark.webp",
-    alt: "Screenshot of react native app with a form in dark mode",
-    position: "--position: 4",
+    uri: '/interfaces-mobile/rn-form-dark.webp',
+    alt: 'Screenshot of react native app with a form in dark mode',
+    position: '--position: 4',
   },
   {
-    uri: "/interfaces-mobile/rn-tracking-light.webp",
-    alt: "Screenshot of react native app with a product tracking in light mode",
-    position: "--position: 5",
+    uri: '/interfaces-mobile/rn-tracking-light.webp',
+    alt: 'Screenshot of react native app with a product tracking in light mode',
+    position: '--position: 5',
   },
   {
-    uri: "/interfaces-mobile/rn-tracking-dark.webp",
-    alt: "Screenshot of react native app with a product tracking in dark mode",
-    position: "--position: 6",
+    uri: '/interfaces-mobile/rn-tracking-dark.webp',
+    alt: 'Screenshot of react native app with a product tracking in dark mode',
+    position: '--position: 6',
   },
   {
-    uri: "/interfaces-mobile/rn-map-blur.webp",
-    alt: "Screenshot of react native app with a map blured in light mode",
-    position: "--position: 7",
+    uri: '/interfaces-mobile/rn-map-blur.webp',
+    alt: 'Screenshot of react native app with a map blured in light mode',
+    position: '--position: 7',
   },
   {
-    uri: "/interfaces-mobile/rn-map-dark.webp",
-    alt: "Screenshot of react native app with a map an nearby branches in dark mode",
-    position: "--position: 8",
+    uri: '/interfaces-mobile/rn-map-dark.webp',
+    alt: 'Screenshot of react native app with a map an nearby branches in dark mode',
+    position: '--position: 8',
   },
   {
-    uri: "/interfaces-mobile/rn-alert.webp",
-    alt: "Screenshot of react native app with an alert",
-    position: "--position: 9",
+    uri: '/interfaces-mobile/rn-alert.webp',
+    alt: 'Screenshot of react native app with an alert',
+    position: '--position: 9',
   },
 ];
 ---
 
-<section class="mt-56 flex flex-col justify-center items-center" id="sp">
-  <section
-    class="w-full min-h-[60rem] px-0 pt-12 pb-32 flex gap-y-8 flex-col items-center justify-center bg-[#101010]"
-    style="container-type: inline-size;"
-  >
-    <section class="wrapperGradientTitle">
-      <div class="my-8 flex flex-row gap-4 relative">
-        <div class="pocketCardFirst">
-          <svg viewBox="0 0 24 24" fill="#aaa" height="32">
-            <path
-              fill-rule="evenodd"
-              d="M1.5 7.125c0-1.036.84-1.875 1.875-1.875h6c1.036 0 1.875.84 1.875 1.875v3.75c0 1.036-.84 1.875-1.875 1.875h-6A1.875 1.875 0 0 1 1.5 10.875v-3.75Zm12 1.5c0-1.036.84-1.875 1.875-1.875h5.25c1.035 0 1.875.84 1.875 1.875v8.25c0 1.035-.84 1.875-1.875 1.875h-5.25a1.875 1.875 0 0 1-1.875-1.875v-8.25ZM3 16.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875v2.25c0 1.035-.84 1.875-1.875 1.875h-5.25A1.875 1.875 0 0 1 3 18.375v-2.25Z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <div class="pocketCardThird">
-          <svg viewBox="0 0 24 24" fill="#aaa" height="32">
-            <path
-              fill-rule="evenodd"
-              d="M14.447 3.026a.75.75 0 0 1 .527.921l-4.5 16.5a.75.75 0 0 1-1.448-.394l4.5-16.5a.75.75 0 0 1 .921-.527ZM16.72 6.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 1 1-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 0 1 0-1.06Zm-9.44 0a.75.75 0 0 1 0 1.06L2.56 12l4.72 4.72a.75.75 0 0 1-1.06 1.06L.97 12.53a.75.75 0 0 1 0-1.06l5.25-5.25a.75.75 0 0 1 1.06 0Z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <div class="pocketCard">
-          <svg viewBox="0 0 24 24" fill="#aaa" height="50">
-            <path
-              fill-rule="evenodd"
-              d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"
-              clip-rule="evenodd"></path>
-            <path
-              d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z"
-            ></path>
-          </svg>
-        </div>
+<section class='pt-56 bg-a0 dark:bg-a950' id='projects'>
+  <section class='w-full flex flex-col' style='container-type: inline-size;'>
+    <header class='self-center w-[68%] flex flex-row relative justify-center'>
+      <div
+        class='ml-2 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 rotate-[70deg] bg-transparent'
+      >
+        <PiQrCodeDuotone className='text-4xl text-gray-300' />
       </div>
+      <div
+        class='-ml-4 -mt-10 scale-125 z-50 w-20 h-24 rounded-xl grid place-content-center border-[1px] border-transparent dark:border-solid dark:border-a930 bg-a0 shadow-2xl dark:bg-[linear-gradient(0deg,_#191919,_#272727)] overflow-hidden'
+      >
+        <PiRocketDuotone className='text-5xl text-black dark:text-blue-300' />
+      </div>
+      <div
+        class='-ml-4 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 -rotate-[70deg] bg-transparent'
+      >
+        <PiCodeDuotone className='text-4xl text-gray-300' />
+      </div>
+    </header>
+
+    <section
+      class='text-[5rem] flex flex-col items-center maskProjectsTitle dark:maskProjectsTitleDark'
+    >
       <h1>Projects</h1>
     </section>
 
     <article
-      class="h-[80%] py-[4.4rem] pb-0 relative grid gap-x-[1rem] gap-y-[2.2rem] grid-cols-[repeat(auto-fit,_minmax(21rem,_1fr))] w-full items-center justify-items-center bg-gradient-to-t from-[#101010] to-[#151515]"
+      class='mt-16 py-20 relative grid gap-x-[1rem] gap-y-[2.2rem] grid-cols-[repeat(auto-fit,_minmax(21rem,_1fr))] w-full items-center justify-items-center bg-gradient-to-t from-[#fff] to-[#fff] dark:bg-gradient-to-t dark:from-[#101010] dark:to-[#151515]'
     >
-      <div
-        class="absolute left-1/2 top-0 w-[90%] h-[1px] select-none pointer-events-none -translate-x-1/2 bg-gradient-to-r from-transparent via-[rgba(198,198,198,0.67)] to-transparent"
+      <header
+        class='absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 bg-gradient-to-r from-transparent via-[#cdccccab] to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-[#c6c6c6ab] dark:to-transparent'
       >
-      </div>
+      </header>
 
       <Project
-        description="it is a website to save your ideas. Easy, clean and fast"
-        urlImage="./fare-logo.svg"
-        name="Fare"
-        urlSite="https://valenciaarcega.github.io/fare/"
-        urlRepo="https://github.com/ValenciaArcega/fare"
+        description='it is a website to save your ideas. Easy, clean and fast'
+        urlImage='./fare-logo.svg'
+        name='Fare'
+        urlSite='https://valenciaarcega.github.io/fare/'
+        urlRepo='https://github.com/ValenciaArcega/fare'
       />
 
       <Project
-        description="it is a website to learn English with cards"
-        urlImage="./tolescro-logo.svg"
-        name="Tolescro"
-        urlSite="https://valenciaarcega.github.io/tolescro/"
-        urlRepo="https://github.com/ValenciaArcega/tolescro"
+        description='it is a website to learn English with cards'
+        urlImage='./tolescro-logo.svg'
+        name='Tolescro'
+        urlSite='https://valenciaarcega.github.io/tolescro/'
+        urlRepo='https://github.com/ValenciaArcega/tolescro'
       />
     </article>
   </section>
 </section>
 
-<section class="relative flex justify-center h-[70dvh] w-full bg-[#101010]">
-  <div class="scale-md h-12 w-12 mt-48 bg-[#04ddff] rounded-full"></div>
-  <div class="scale-md h-12 w-12 mt-48 bg-[#1899ff] rounded-full"></div>
+<section class='relative flex justify-center h-[70dvh] w-full bg-[#101010]'>
+  <div class='scale-md h-12 w-12 mt-48 bg-[#04ddff] rounded-full'></div>
+  <div class='scale-md h-12 w-12 mt-48 bg-[#1899ff] rounded-full'></div>
   <div
-    class="absolute pt-48 flex top-0 left-0 h-[100%] w-full backdrop-blur-2xl flex-col"
+    class='absolute pt-48 flex top-0 left-0 h-[100%] w-full backdrop-blur-2xl flex-col'
   >
-    <IconReact className="spin-scale" height="92" />
-    <h1 class="mt-4 text-3xl text-center text-[#fff] font-medium">
+    <IconReact className='spin-scale' height='88' />
+    <h1 class='mt-4 text-3xl text-center text-[#fff] font-medium'>
       The
-      <span class="text-[#00D8FF]">React Native</span> magic<span
-        class="text-[#00D8FF]">.</span
+      <span class='text-[#00D8FF]'>React Native</span> magic<span
+        class='text-[#00D8FF]'>.</span
       >
     </h1>
   </div>
 </section>
 
 <section
-  class="w-full h-[120dvh] bg-[#101010] text-center overflow-hidden relative"
+  class='w-full h-[120dvh] bg-[#101010] text-center overflow-hidden relative'
 >
-  <main class="slider" style={`--quantity: ${reactNativeImages.length}`}>
+  <main class='slider' style={`--quantity: ${reactNativeImages.length}`}>
     {
       reactNativeImages.map((item) => (
-        <article class="item" style={item.position}>
+        <article class='item' style={item.position}>
           <img src={item.uri} alt={item.alt} />
         </article>
       ))
@@ -154,100 +147,100 @@ const reactNativeImages: ImagesReactNative[] = [
   </main>
 </section>
 
-<section class="flex flex-col pb-16 bg-[#101010]">
-  <h2 class="mt-16 tracking-[-1px] text-5xl text-center text-white">
-    The <span class="text-[#a0b0ef]">big ones</span>.
+<section class='flex flex-col pb-16 bg-[#101010]'>
+  <h2 class='mt-16 tracking-[-1px] text-5xl text-center text-white'>
+    The <span class='text-[#a0b0ef]'>big ones</span>.
   </h2>
-  <p class="mt-2 px-6 text-lg text-center text-gray-400">
+  <p class='mt-2 px-6 text-lg text-center text-gray-400'>
     Web apps built with React and CSS (Tailwind & vanilla).
   </p>
 
-  <section class="wrapperSlider">
-    <aside class="sideLeftBlur"></aside>
+  <section class='wrapperSlider'>
+    <aside class='sideLeftBlur'></aside>
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-cloudServices.webp"
-      alt="UI Cloud services app"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-cloudServices.webp'
+      alt='UI Cloud services app'
     />
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-social.webp"
-      alt="UI Social media app"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-social.webp'
+      alt='UI Social media app'
     />
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-dating.webp"
-      alt="UI Dating app"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-dating.webp'
+      alt='UI Dating app'
     />
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-bank.webp"
-      alt="UI Bank app"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-bank.webp'
+      alt='UI Bank app'
     />
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-gadgets.webp"
-      alt="UI Gadgets shop app"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-gadgets.webp'
+      alt='UI Gadgets shop app'
     />
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-mechanic.webp"
-      alt="UI Mechanic tools shop app"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-mechanic.webp'
+      alt='UI Mechanic tools shop app'
     />
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-login01.webp"
-      alt="UI Login"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-login01.webp'
+      alt='UI Login'
     />
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-login02.webp"
-      alt="UI Register form"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-login02.webp'
+      alt='UI Register form'
     />
     <img
-      class="projectInSliderRight"
-      src="./interfaces-web/portfolio-UI-login03.webp"
-      alt="UI Register form"
+      class='projectInSliderRight'
+      src='./interfaces-web/portfolio-UI-login03.webp'
+      alt='UI Register form'
     />
-    <aside class="sideRightBlur"></aside>
+    <aside class='sideRightBlur'></aside>
   </section>
 
-  <p class="mt-6 px-6 text-lg text-center text-gray-400">
+  <p class='mt-6 px-6 text-lg text-center text-gray-400'>
     UI's built in Java with Swing and AWT.
   </p>
 
-  <section class="wrapperSlider">
-    <aside class="sideLeftBlur"></aside>
+  <section class='wrapperSlider'>
+    <aside class='sideLeftBlur'></aside>
     <img
-      class="projectInSliderLeft"
-      src="./interfaces-java/UI_space.webp"
-      alt="UI Space explorer in Java"
+      class='projectInSliderLeft'
+      src='./interfaces-java/UI_space.webp'
+      alt='UI Space explorer in Java'
     />
     <img
-      class="projectInSliderLeft"
-      src="./interfaces-java/UI_dentist.webp"
-      alt="UI Dentist booking in Java"
+      class='projectInSliderLeft'
+      src='./interfaces-java/UI_dentist.webp'
+      alt='UI Dentist booking in Java'
     />
     <img
-      class="projectInSliderLeft"
-      src="./interfaces-java/UI_weather.webp"
-      alt="UI Weather in Java"
+      class='projectInSliderLeft'
+      src='./interfaces-java/UI_weather.webp'
+      alt='UI Weather in Java'
     />
     <img
-      class="projectInSliderLeft"
-      src="./interfaces-java/UI_games.webp"
-      alt="UI Games store in Java"
+      class='projectInSliderLeft'
+      src='./interfaces-java/UI_games.webp'
+      alt='UI Games store in Java'
     />
     <img
-      class="projectInSliderLeft"
-      src="./interfaces-java/UI_weather_home.webp"
-      alt="UI Weather in Java"
+      class='projectInSliderLeft'
+      src='./interfaces-java/UI_weather_home.webp'
+      alt='UI Weather in Java'
     />
     <img
-      class="projectInSliderLeft"
-      src="./interfaces-java/UI_airport.webp"
-      alt="UI Airport ticket in Java"
+      class='projectInSliderLeft'
+      src='./interfaces-java/UI_airport.webp'
+      alt='UI Airport ticket in Java'
     />
-    <aside class="sideRightBlur"></aside>
+    <aside class='sideRightBlur'></aside>
   </section>
 </section>

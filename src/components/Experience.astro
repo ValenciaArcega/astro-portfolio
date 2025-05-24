@@ -3,44 +3,44 @@ import {
   HiOutlineAcademicCap,
   HiOutlineBriefcase,
   HiOutlineBookOpen,
-} from "react-icons/hi2";
+} from 'react-icons/hi2';
 
 const card =
-  "w-80 p-4 py-8 rounded-2xl relative flex-col bg-white dark:bg-gradient-to-t dark:from-black dark:to-[#171717]";
+  'w-80 p-4 py-8 rounded-2xl relative flex-col bg-white dark:bg-gradient-to-t dark:from-black dark:to-[#171717]';
 const wrIcon =
-  "absolute top-3 right-3 h-12 w-12 rounded-3xl flex items-center justify-center";
-const emphasis = "text-green-500 dark:text-green-200";
-const txtTitle = "text-[#aeaeae] font-medium text-sm dark:text-[#6a6a6a]";
-const txtDesc = "text-lg font-semibold mt-4";
-const txtFooter = "text-[#aeaeae] text-sm dark:text-gray-500 mt-1";
+  'absolute top-3 right-3 h-12 w-12 rounded-3xl flex items-center justify-center';
+const emphasis = 'text-green-500 dark:text-green-200';
+const txtTitle = 'text-[#aeaeae] font-medium text-sm dark:text-[#6a6a6a]';
+const txtDesc = 'text-lg font-semibold mt-4';
+const txtFooter = 'text-[#aeaeae] text-sm dark:text-gray-500 mt-1';
 const gradientCard =
-  "absolute left-1/2 top-0 w-[70%] h-[1px] select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-gradient-to-r from-transparent via-gray-200 dark:via-green-900 to-transparent";
+  'absolute left-1/2 top-0 w-[70%] h-[1px] select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-gradient-to-r from-transparent via-gray-200 dark:via-green-900 to-transparent';
 ---
 
 <section
-  class="mt-[16.3rem] grid place-items-center gap-y-[1rem] px-[1rem]"
-  id="ss"
+  id='experience'
+  class='mt-[16.3rem] grid place-items-center gap-y-[1rem] px-[1rem]'
 >
-  <h1 class="tracking-[-1px] text-5xl text-center">
-    Education <span class="text-p500 dark:text-p100"> & </span>Experience.
+  <h1 class='tracking-[-1px] text-5xl text-center'>
+    Education <span class='text-p500 dark:text-p100'> & </span>Experience.
   </h1>
-  <p class="text-center text-gray-500 leading-7">
-    Where study and experience are <span class="text-black dark:text-white"
+  <p class='text-center text-gray-500 leading-7'>
+    Where study and experience are <span class='text-black dark:text-white'
       >enhanced</span
-    >. The places where the <span class="text-black dark:text-white"
+    >. The places where the <span class='text-black dark:text-white'
       >mind
-    </span> is <span class="underline">formed</span>.
+    </span> is <span class='underline'>formed</span>.
   </p>
   <main
-    class="h-fit w-full md:w-[90%] mt-8 grid gap-12 items-center justify-items-center grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]"
+    class='h-fit w-full md:w-[90%] mt-8 grid gap-12 items-center justify-items-center grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]'
   >
     <article class={card}>
       <header class={gradientCard}></header>
 
-      <div class={wrIcon + " bg-green-100 dark:bg-[#103529]"}>
+      <div class={wrIcon + ' bg-green-100 dark:bg-[#103529]'}>
         <HiOutlineAcademicCap
           size={26}
-          className="text-green-600 dark:text-[#D9FDD3]"
+          className='text-green-600 dark:text-[#D9FDD3]'
         />
       </div>
 
@@ -53,12 +53,12 @@ const gradientCard =
     </article>
 
     <article class={card}>
-      <header class={gradientCard + " dark:via-orange-900"}></header>
+      <header class={gradientCard + ' dark:via-orange-900'}></header>
 
-      <div class={wrIcon + " bg-orange-100 dark:bg-[#34130f]"}>
+      <div class={wrIcon + ' bg-orange-100 dark:bg-[#34130f]'}>
         <HiOutlineBriefcase
           size={26}
-          className="text-orange-400 dark:text-[#ffc8c8]"
+          className='text-orange-400 dark:text-[#ffc8c8]'
         />
       </div>
 
@@ -70,12 +70,12 @@ const gradientCard =
     </article>
 
     <article class={card}>
-      <header class={gradientCard + " dark:via-sky-900"}></header>
+      <header class={gradientCard + ' dark:via-sky-900'}></header>
 
-      <div class={wrIcon + " bg-indigo-100 dark:bg-[#102135]"}>
+      <div class={wrIcon + ' bg-indigo-100 dark:bg-[#102135]'}>
         <HiOutlineBookOpen
           size={26}
-          className="text-indigo-400 dark:text-[#c8deff]"
+          className='text-indigo-400 dark:text-[#c8deff]'
         />
       </div>
 
