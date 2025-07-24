@@ -1,38 +1,36 @@
 ---
-import "../App.css";
-import Experience from "../components/Experience.astro";
-import Footer from "../components/Footer.astro";
-import Knowledges from "../components/Knowledges.astro";
-import Navbar from "../components/Navbar.astro";
-import Projects from "../components/Projects.astro";
-import Topbar from "../components/Topbar.astro";
-import Welcome from "../components/Welcome.astro";
+import '../App.css';
+import Experience from '../components/Experience.astro';
+import Footer from '../components/Footer.tsx';
+import Navbar from '../components/Navbar.astro';
+import Projects from '../components/Projects.astro';
+import Topbar from '../components/Topbar.astro';
+import Welcome from '../components/Welcome.astro';
 ---
 
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="utf-8" />
-    <meta name="google" content="notranslate" />
-    <meta http-equiv="Content-Language" content="en_US" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.webp" />
+    <meta charset='utf-8' />
+    <meta name='google' content='notranslate' />
+    <meta http-equiv='Content-Language' content='en_US' />
+    <link rel='icon' type='image/svg+xml' href='./favicon.webp' />
     <meta
-      name="description"
-      content="My portfolio. Who I am, where I studied, some of my skills and projects that I had been developed."
+      name='description'
+      content='My portfolio. Who I am, where I studied, some of my skills and projects that I had been developed.'
     />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
 
     <title>Valencia Arcega &mdash; Portfolio</title>
   </head>
   <body>
     <Welcome />
-    <Knowledges />
     <Projects />
     <Experience />
     <Footer />
     <Navbar />
     <Topbar />
 
-    <script src="../utils/appearance.ts"></script>
+    <script src='../utils/appearance.ts'></script>
   </body>
 </html>

@@ -1,6 +1,5 @@
 ---
 import '../css/Projects.css';
-import '../css/Slider.css';
 import { IconReact } from './icons/technologies';
 import { Project } from './projects/Project';
 import {
@@ -8,60 +7,12 @@ import {
   PiQrCodeDuotone,
   PiRocketDuotone,
 } from 'react-icons/pi';
+import { firstProjectsSet } from '@src/constants/slider-projects';
 
-type ImagesReactNative = {
-  uri: string;
-  alt: string;
-  position: string;
-};
-
-const reactNativeImages: ImagesReactNative[] = [
-  {
-    uri: '/interfaces-mobile/rn-credit-light.webp',
-    alt: 'Screenshot of react native app with a credit card in light mode',
-    position: '--position: 1',
-  },
-  {
-    uri: '/interfaces-mobile/rn-credit-dark.webp',
-    alt: 'Screenshot of react native app with a credit card in dark mode',
-    position: '--position: 2',
-  },
-  {
-    uri: '/interfaces-mobile/rn-form-light.webp',
-    alt: 'Screenshot of react native app with a form in light mode',
-    position: '--position: 3',
-  },
-  {
-    uri: '/interfaces-mobile/rn-form-dark.webp',
-    alt: 'Screenshot of react native app with a form in dark mode',
-    position: '--position: 4',
-  },
-  {
-    uri: '/interfaces-mobile/rn-tracking-light.webp',
-    alt: 'Screenshot of react native app with a product tracking in light mode',
-    position: '--position: 5',
-  },
-  {
-    uri: '/interfaces-mobile/rn-tracking-dark.webp',
-    alt: 'Screenshot of react native app with a product tracking in dark mode',
-    position: '--position: 6',
-  },
-  {
-    uri: '/interfaces-mobile/rn-map-blur.webp',
-    alt: 'Screenshot of react native app with a map blured in light mode',
-    position: '--position: 7',
-  },
-  {
-    uri: '/interfaces-mobile/rn-map-dark.webp',
-    alt: 'Screenshot of react native app with a map an nearby branches in dark mode',
-    position: '--position: 8',
-  },
-  {
-    uri: '/interfaces-mobile/rn-alert.webp',
-    alt: 'Screenshot of react native app with an alert',
-    position: '--position: 9',
-  },
-];
+const sideMaskLeft =
+  'absolute top-0 left-0 h-full w-[22%] sm:w-[30%] z-40 bg-[linear-gradient(to_right,_#fff_4%,_transparent)] dark:bg-[linear-gradient(to_right,_#121212_4%,_transparent)]';
+const sideMaskRight =
+  'absolute top-0 left-auto right-0 h-full w-[22%] sm:w-[30%] z-40 bg-[linear-gradient(to_left,_#fff_4%,_transparent)] dark:bg-[linear-gradient(to_left,_#121212_4%,_transparent)]';
 ---
 
 <section class='pt-56 bg-a0 dark:bg-a950' id='projects'>
@@ -117,16 +68,22 @@ const reactNativeImages: ImagesReactNative[] = [
   </section>
 </section>
 
-<section class='relative flex justify-center h-[70dvh] w-full bg-[#101010]'>
-  <div class='scale-md h-12 w-12 mt-48 bg-[#04ddff] rounded-full'></div>
-  <div class='scale-md h-12 w-12 mt-48 bg-[#1899ff] rounded-full'></div>
+<section
+  class='relative py-24 flex justify-center w-full bg-white dark:bg-[#101010] items-center'
+>
+  <!-- Circles behind blur view -->
+  <div class='h-12 w-12 bg-[#04ddff] rounded-full'></div>
+  <div class='h-12 w-12 bg-[#1899ff] rounded-full'></div>
+
   <div
-    class='absolute pt-48 flex top-0 left-0 h-[100%] w-full backdrop-blur-2xl flex-col'
+    class='absolute inset-0 flex backdrop-blur-2xl flex-col items-center justify-center'
   >
-    <IconReact className='spin-scale' height='88' />
-    <h1 class='mt-4 text-3xl text-center text-[#fff] font-medium'>
-      The
-      <span class='text-[#00D8FF]'>React Native</span> magic<span
+    <IconReact className='spin-scale' height='84' />
+    <h1
+      class='mt-4 text-3xl text-center text-black dark:text-white font-medium tracking-tight'
+    >
+      So much
+      <span class='text-[#00D8FF]'>Native</span> magic<span
         class='text-[#00D8FF]'>.</span
       >
     </h1>
@@ -134,113 +91,47 @@ const reactNativeImages: ImagesReactNative[] = [
 </section>
 
 <section
-  class='w-full h-[120dvh] bg-[#101010] text-center overflow-hidden relative'
+  class='w-full bg-white dark:bg-[#101010] text-center overflow-hidden relative'
 >
-  <main class='slider' style={`--quantity: ${reactNativeImages.length}`}>
+  <section class='wrapperSlider'>
+    <aside class={sideMaskLeft}></aside>
     {
-      reactNativeImages.map((item) => (
-        <article class='item' style={item.position}>
-          <img src={item.uri} alt={item.alt} />
-        </article>
+      firstProjectsSet.map((item) => (
+        <img
+          class='projectInSliderLeft !max-h-[464px]'
+          src={item.uri}
+          alt={item.alt}
+        />
       ))
     }
-  </main>
-</section>
-
-<section class='flex flex-col pb-16 bg-[#101010]'>
-  <h2 class='mt-16 tracking-[-1px] text-5xl text-center text-white'>
-    The <span class='text-[#a0b0ef]'>big ones</span>.
-  </h2>
-  <p class='mt-2 px-6 text-lg text-center text-gray-400'>
-    Web apps built with React and CSS (Tailwind & vanilla).
-  </p>
-
-  <section class='wrapperSlider'>
-    <aside class='sideLeftBlur'></aside>
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-cloudServices.webp'
-      alt='UI Cloud services app'
-    />
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-social.webp'
-      alt='UI Social media app'
-    />
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-dating.webp'
-      alt='UI Dating app'
-    />
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-bank.webp'
-      alt='UI Bank app'
-    />
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-gadgets.webp'
-      alt='UI Gadgets shop app'
-    />
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-mechanic.webp'
-      alt='UI Mechanic tools shop app'
-    />
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-login01.webp'
-      alt='UI Login'
-    />
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-login02.webp'
-      alt='UI Register form'
-    />
-    <img
-      class='projectInSliderRight'
-      src='./interfaces-web/portfolio-UI-login03.webp'
-      alt='UI Register form'
-    />
-    <aside class='sideRightBlur'></aside>
+    <aside class={sideMaskRight}></aside>
   </section>
 
-  <p class='mt-6 px-6 text-lg text-center text-gray-400'>
-    UI's built in Java with Swing and AWT.
-  </p>
+  <section class='wrapperSlider'>
+    <aside class={sideMaskLeft}></aside>
+    <!-- {
+      reactImages.map((item) => (
+        <img
+          class='projectInSliderRight !max-h-72'
+          src={item.uri}
+          alt={item.alt}
+        />
+      ))
+    } -->
+    <aside class={sideMaskRight}></aside>
+  </section>
 
   <section class='wrapperSlider'>
-    <aside class='sideLeftBlur'></aside>
-    <img
-      class='projectInSliderLeft'
-      src='./interfaces-java/UI_space.webp'
-      alt='UI Space explorer in Java'
-    />
-    <img
-      class='projectInSliderLeft'
-      src='./interfaces-java/UI_dentist.webp'
-      alt='UI Dentist booking in Java'
-    />
-    <img
-      class='projectInSliderLeft'
-      src='./interfaces-java/UI_weather.webp'
-      alt='UI Weather in Java'
-    />
-    <img
-      class='projectInSliderLeft'
-      src='./interfaces-java/UI_games.webp'
-      alt='UI Games store in Java'
-    />
-    <img
-      class='projectInSliderLeft'
-      src='./interfaces-java/UI_weather_home.webp'
-      alt='UI Weather in Java'
-    />
-    <img
-      class='projectInSliderLeft'
-      src='./interfaces-java/UI_airport.webp'
-      alt='UI Airport ticket in Java'
-    />
-    <aside class='sideRightBlur'></aside>
+    <aside class={sideMaskLeft}></aside>
+    <!-- {
+      javaImages.map((item) => (
+        <img
+          class='projectInSliderLeft !max-h-72'
+          src={item.uri}
+          alt={item.alt}
+        />
+      ))
+    } -->
+    <aside class={sideMaskRight}></aside>
   </section>
 </section>
