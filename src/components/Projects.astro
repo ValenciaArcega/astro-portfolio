@@ -7,7 +7,11 @@ import {
   PiQrCodeDuotone,
   PiRocketDuotone,
 } from 'react-icons/pi';
-import { firstProjectsSet } from '@src/constants/slider-projects';
+import {
+  firstProjectsSet,
+  secondProjectsSet,
+  thirdProjectsSet,
+} from '@src/constants/slider-projects';
 
 const sideMaskLeft =
   'absolute top-0 left-0 h-full w-[22%] sm:w-[30%] z-40 bg-[linear-gradient(to_right,_#fff_4%,_transparent)] dark:bg-[linear-gradient(to_right,_#121212_4%,_transparent)]';
@@ -15,7 +19,7 @@ const sideMaskRight =
   'absolute top-0 left-auto right-0 h-full w-[22%] sm:w-[30%] z-40 bg-[linear-gradient(to_left,_#fff_4%,_transparent)] dark:bg-[linear-gradient(to_left,_#121212_4%,_transparent)]';
 ---
 
-<section class='pt-56 bg-a0 dark:bg-a950' id='projects'>
+<section class='pt-44 bg-a0 dark:bg-a950' id='projects'>
   <section class='w-full flex flex-col' style='container-type: inline-size;'>
     <header class='self-center w-[68%] flex flex-row relative justify-center'>
       <div
@@ -26,7 +30,7 @@ const sideMaskRight =
       <div
         class='-ml-4 -mt-10 scale-125 z-50 w-20 h-24 rounded-xl grid place-content-center border-[1px] border-transparent dark:border-solid dark:border-a930 bg-a0 shadow-2xl dark:bg-[linear-gradient(0deg,_#191919,_#272727)] overflow-hidden'
       >
-        <PiRocketDuotone className='text-5xl text-black dark:text-blue-300' />
+        <PiRocketDuotone className='text-5xl text-black dark:text-blue-500' />
       </div>
       <div
         class='-ml-4 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 -rotate-[70deg] bg-transparent'
@@ -34,22 +38,21 @@ const sideMaskRight =
         <PiCodeDuotone className='text-4xl text-gray-300' />
       </div>
     </header>
-
-    <section
-      class='text-[5rem] flex flex-col items-center maskProjectsTitle dark:maskProjectsTitleDark'
+    <article
+      class='text-[2rem] mt-6 md:text-[5rem] text-center flex flex-col items-center md:maskProjectsTitle md:dark:maskProjectsTitleDark'
     >
-      <h1>Projects</h1>
-    </section>
+      <h1 class='dark:text-white tracking-tight'>In Production!</h1>
+    </article>
 
     <article
-      class='mt-16 py-20 relative grid gap-x-[1rem] gap-y-[2.2rem] grid-cols-[repeat(auto-fit,_minmax(21rem,_1fr))] w-full items-center justify-items-center bg-gradient-to-t from-[#fff] to-[#fff] dark:bg-gradient-to-t dark:from-[#101010] dark:to-[#151515]'
+      class='mt-16 pt-10 relative grid gap-x-[1rem] gap-y-[2.2rem] grid-cols-[repeat(auto-fit,_minmax(21rem,_1fr))] w-full items-center justify-items-center bg-gradient-to-t from-[#fff] to-[#fff] dark:bg-gradient-to-t dark:from-[#101010] dark:to-[#151515]'
     >
       <header
         class='absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 bg-gradient-to-r from-transparent via-[#cdccccab] to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-[#c6c6c6ab] dark:to-transparent'
       >
       </header>
 
-      <Project
+      <!-- <Project
         description='it is a website to save your ideas. Easy, clean and fast'
         urlImage='./fare-logo.svg'
         name='Fare'
@@ -63,75 +66,60 @@ const sideMaskRight =
         name='Tolescro'
         urlSite='https://valenciaarcega.github.io/tolescro/'
         urlRepo='https://github.com/ValenciaArcega/tolescro'
-      />
+      /> -->
     </article>
   </section>
 </section>
 
 <section
-  class='relative py-24 flex justify-center w-full bg-white dark:bg-[#101010] items-center'
+  class='relative py-32 flex justify-center w-full items-center dark:bg-[#101010]'
 >
   <!-- Circles behind blur view -->
   <div class='h-12 w-12 bg-[#04ddff] rounded-full'></div>
   <div class='h-12 w-12 bg-[#1899ff] rounded-full'></div>
 
   <div
-    class='absolute inset-0 flex backdrop-blur-2xl flex-col items-center justify-center'
+    class='absolute inset-0 flex gap-y-3 backdrop-blur-2xl flex-col items-center justify-center'
   >
     <IconReact className='spin-scale' height='84' />
     <h1
-      class='mt-4 text-3xl text-center text-black dark:text-white font-medium tracking-tight'
+      class='text-3xl text-center text-black dark:text-white font-medium tracking-tight'
     >
       So much
       <span class='text-[#00D8FF]'>Native</span> magic<span
         class='text-[#00D8FF]'>.</span
       >
     </h1>
+    <p class='text-gray-400 mt-2'>
+      A little taste of my work and the apps I had done.
+    </p>
   </div>
 </section>
 
 <section
-  class='w-full bg-white dark:bg-[#101010] text-center overflow-hidden relative'
+  class='dark:bg-gradient-to-b dark:from-[#101010] dark:to:black w-full text-center overflow-hidden relative'
 >
-  <section class='wrapperSlider'>
-    <aside class={sideMaskLeft}></aside>
+  <article class='wrapperSlider'>
     {
       firstProjectsSet.map((item) => (
         <img
-          class='projectInSliderLeft !max-h-[464px]'
+          class='projectInSliderLeft !max-h-[412px]'
           src={item.uri}
           alt={item.alt}
         />
       ))
     }
-    <aside class={sideMaskRight}></aside>
-  </section>
+  </article>
 
-  <section class='wrapperSlider'>
-    <aside class={sideMaskLeft}></aside>
-    <!-- {
-      reactImages.map((item) => (
+  <article class='wrapperSlider'>
+    {
+      secondProjectsSet.map((item) => (
         <img
-          class='projectInSliderRight !max-h-72'
+          class='projectInSliderRight !max-h-[412px]'
           src={item.uri}
           alt={item.alt}
         />
       ))
-    } -->
-    <aside class={sideMaskRight}></aside>
-  </section>
-
-  <section class='wrapperSlider'>
-    <aside class={sideMaskLeft}></aside>
-    <!-- {
-      javaImages.map((item) => (
-        <img
-          class='projectInSliderLeft !max-h-72'
-          src={item.uri}
-          alt={item.alt}
-        />
-      ))
-    } -->
-    <aside class={sideMaskRight}></aside>
-  </section>
+    }
+  </article>
 </section>

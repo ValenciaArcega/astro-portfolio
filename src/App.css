@@ -21,65 +21,26 @@
 }
 
 :root {
-	--mainColor: #4263eb;
-	--bg: #f2f2f7;
-	--bgWhite: #fff;
+	--bg: #fff;
 
 	--text-selection-background: #121212;
 	--text-selection-foreground: #fff;
 
-	--bgFirstCircle: #a3b5ff;
-	--bgSecondCircle: pink;
-	--bgCardSkill: #ffffff53;
-	--bgPocketCard: #fff;
-
-	/* --gradientConicWelcomeBubble: #ffffff3c; */
 	--gradientConicWelcomeBubble: conic-gradient(from 120deg,
 			#ddd 10%, #fff, #ddd 99%);
 	--borderGradientConicWelcomeBubble: none;
-
-	--borderCardSkill: #ffffff4b;
-	--borderPocketCard: #e7e7e7;
-
-	--frText: #181818;
-	--frCardSkill: #121212;
-
-	--colorDots: radial-gradient(#00000010 3%, transparent 0);
-
-	--white: white;
-
-	--shadowNewMorphis: 12px 12px 12px rgb(148 148 148 / 8%),
-		-7px -7px 10px #ffffff78;
 }
 
 #rootDarkMode {
-	--mainColor: #B1BFF7;
-	--bg: #101010;
-	--bgWhite: #1c1c1c;
+	--bg: #000;
 
 	--text-selection-background: #f2f2f7;
 	--text-selection-foreground: #181818;
-
-	--bgFirstCircle: #24437b;
-	--bgSecondCircle: #2e0e36;
-	--bgCardSkill: #28282853;
-	--bgPocketCard: linear-gradient(0deg, #0c0c0c, #212121);
 
 	--gradientConicWelcomeBubble: conic-gradient(from -45deg,
 			#171717 10%, #000, #171717 90%);
 	--borderGradientConicWelcomeBubble: conic-gradient(from 20deg,
 			transparent 60%, #6f6f6f, transparent);
-
-	--borderCardSkill: #45454553;
-	--borderCardContact: #4a4a4a;
-	--borderPocketCard: #212121;
-
-	--frCardSkill: #fff;
-	--frText: #fff;
-
-	--colorDots: radial-gradient(#ffffff1a 3%, transparent 0);
-	--shadowNewMorphis: 12px 12px 12px rgb(69 69 69 / 7%) inset,
-		-7px -7px 10px #4f4f4f1a inset;
 }
 
 * {
@@ -89,8 +50,9 @@
 }
 
 body {
-	font-family: "Inter", sans-serif;
+	font-family: "Inter", system-ui;
 	background: var(--bg);
+	overflow-x: hidden;
 }
 
 html {
@@ -102,16 +64,27 @@ html {
 	color: var(--text-selection-foreground);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	color: var(--frText);
-}
-
 .hidden {
 	display: none;
+}
+
+@keyframes enteringMenuNavBar {
+	0% {
+		transform: scale(0.2) translateX(64px) translateY(-64px);
+		opacity: 0;
+	}
+
+	60% {
+		transform: scale(1.15);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1) translateX(0) translateY(0);
+		opacity: 1;
+	}
+}
+
+.keyframe-entering-navbar {
+	animation: enteringMenuNavBar 0.5s ease;
 }
