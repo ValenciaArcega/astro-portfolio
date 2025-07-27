@@ -3,6 +3,7 @@ import '../css/Projects.css';
 import { IconReact } from './icons/technologies';
 import { Project } from './projects/Project';
 import {
+  PiAppStoreLogoDuotone,
   PiCodeDuotone,
   PiQrCodeDuotone,
   PiRocketDuotone,
@@ -23,19 +24,21 @@ const sideMaskRight =
   <section class='w-full flex flex-col' style='container-type: inline-size;'>
     <header class='self-center w-[68%] flex flex-row relative justify-center'>
       <div
-        class='ml-2 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 rotate-[70deg] bg-transparent'
+        class='ml-2 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 -rotate-[20deg] bg-transparent'
       >
-        <PiQrCodeDuotone className='text-4xl text-gray-300' />
+        <PiRocketDuotone className='text-5xl text-gray-300' />
       </div>
       <div
-        class='-ml-4 -mt-10 scale-125 z-50 w-20 h-24 rounded-xl grid place-content-center border-[1px] border-transparent dark:border-solid dark:border-a930 bg-a0 shadow-2xl dark:bg-[linear-gradient(0deg,_#191919,_#272727)] overflow-hidden'
+        class='-ml-4 -mt-10 scale-125 z-50 w-20 max-h-24 rounded-xl grid place-content-center border-[1px] border-transparent dark:border-solid dark:border-a930 bg-a0 shadow-2xl dark:bg-[linear-gradient(0deg,_#191919,_#272727)] overflow-hidden'
       >
-        <PiRocketDuotone className='text-5xl text-black dark:text-blue-500' />
+        <PiAppStoreLogoDuotone
+          className='text-6xl text-blue-400 dark:text-blue-500'
+        />
       </div>
       <div
-        class='-ml-4 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 -rotate-[70deg] bg-transparent'
+        class='-ml-4 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 rotate-[40deg] bg-transparent'
       >
-        <PiCodeDuotone className='text-4xl text-gray-300' />
+        <PiCodeDuotone className='text-5xl text-gray-300' />
       </div>
     </header>
     <article
@@ -90,7 +93,7 @@ const sideMaskRight =
         class='text-[#00D8FF]'>.</span
       >
     </h1>
-    <p class='text-gray-400 mt-2'>
+    <p class='text-gray-400 mt-2 px-[1rem] text-center'>
       A little taste of my work and the apps I had done.
     </p>
   </div>

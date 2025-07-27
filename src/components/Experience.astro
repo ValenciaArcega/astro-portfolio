@@ -6,15 +6,15 @@ import {
 } from 'react-icons/hi2';
 
 const card =
-  'w-80 p-4 py-8 rounded-2xl relative flex-col bg-white dark:bg-gradient-to-t dark:from-black dark:to-[#171717]';
-const wrIcon =
-  'absolute top-3 right-3 h-12 w-12 rounded-3xl flex items-center justify-center';
+  'max-w-[22rem] min-w-[22rem] w-[22rem] p-4 py-6 rounded-3xl relative flex-col dark:bg-gradient-to-t dark:from-black dark:to-[#171717]';
+const wrIcon = 'h-14 w-14 rounded-2xl flex items-center justify-center';
 const emphasis = 'text-green-500 dark:text-green-200';
-const txtTitle = 'text-[#aeaeae] font-medium text-sm dark:text-[#6a6a6a]';
-const txtDesc = 'text-lg font-semibold mt-4 dark:text-white';
-const txtFooter = 'text-[#aeaeae] text-sm dark:text-gray-500 mt-1';
+const txtTitle =
+  'mt-2 text-[#aeaeae] font-medium text-base dark:text-[#6a6a6a]';
+const txtDesc = 'text-xl font-semibold mt-4 dark:text-white';
+const txtFooter = 'text-[#aeaeae] text-sm dark:text-gray-500 mt-2';
 const gradientCard =
-  'absolute left-1/2 top-0 w-[70%] h-[1px] select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-gradient-to-r from-transparent via-gray-200 dark:via-green-900 to-transparent';
+  'absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-gradient-to-r from-transparent via-gray-200 dark:via-green-900 to-transparent';
 ---
 
 <section
@@ -37,9 +37,12 @@ const gradientCard =
     <article class={card}>
       <header class={gradientCard}></header>
 
-      <div class={wrIcon + ' bg-green-100 dark:bg-[#103529]'}>
+      <div
+        class={wrIcon +
+          ' bg-gradient-to-b from-green-100 to-green-200 dark:from-green-950 dark:to-green-950/20'}
+      >
         <HiOutlineAcademicCap
-          size={26}
+          size={32}
           className='text-green-600 dark:text-[#D9FDD3]'
         />
       </div>
@@ -55,9 +58,12 @@ const gradientCard =
     <article class={card}>
       <header class={gradientCard + ' dark:via-orange-900'}></header>
 
-      <div class={wrIcon + ' bg-orange-100 dark:bg-[#34130f]'}>
+      <div
+        class={wrIcon +
+          ' bg-gradient-to-b from-yellow-50 to-yellow-100 dark:from-orange-950 dark:to-orange-950/20'}
+      >
         <HiOutlineBriefcase
-          size={26}
+          size={32}
           className='text-orange-400 dark:text-[#ffc8c8]'
         />
       </div>
@@ -72,10 +78,13 @@ const gradientCard =
     <article class={card}>
       <header class={gradientCard + ' dark:via-sky-900'}></header>
 
-      <div class={wrIcon + ' bg-indigo-100 dark:bg-[#102135]'}>
+      <div
+        class={wrIcon +
+          ' bg-gradient-to-b from-purple-100 to-purple-200 dark:from-purple-950 dark:to-purple-950/20'}
+      >
         <HiOutlineBookOpen
-          size={26}
-          className='text-indigo-400 dark:text-[#c8deff]'
+          size={32}
+          className='text-purple-400 dark:text-purple-100'
         />
       </div>
 

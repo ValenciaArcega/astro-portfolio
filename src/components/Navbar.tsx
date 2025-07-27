@@ -6,6 +6,7 @@ import {
 	PiSunDuotone,
 	PiMoonDuotone,
 	PiDotsThreeCircleDuotone,
+	PiCirclesFourDuotone,
 } from 'react-icons/pi';
 
 const getInitialTheme = () => {
@@ -39,14 +40,14 @@ const Navbar = function () {
 
 	return (
 		<>
-			<nav className='fixed top-0 !z-50 left-0 px-10 h-12 w-full bg-white/40 dark:bg-[#121212]/10 backdrop-blur-lg border-b-[1px] border-b-gray-200 flex justify-between items-center'>
+			<nav className='fixed top-0 !z-50 left-0 md:px-10 px-5 h-12 w-full bg-white/70 dark:bg-[#121212]/80 backdrop-blur-xl border-b-[1px] border-b-gray-200 flex justify-between items-center'>
 				<img
 					src='./favicon.webp'
 					className='self-center justify-self-center h-7'
 					alt='Logo on Navigation Bar'
 				/>
 				<button className='bg-transparent border-none outline-none' onClick={() => setIsMenuVisible(true)}>
-					<PiDotsThreeCircleDuotone size={28} className='text-blue-500' />
+					<PiCirclesFourDuotone size={28} className='text-blue-500' />
 				</button>
 			</nav>
 			{isMenuVisible &&
@@ -57,7 +58,7 @@ const Navbar = function () {
 					>
 						<article
 							onClick={(e) => e.stopPropagation()}
-							className='keyframe-entering-navbar bg-white/40 dark:bg-black/20 backdrop-blur-3xl rounded-2xl shadow-lg shadow-black/5 fixed top-6 right-12 p-2'
+							className='keyframe-entering-navbar bg-white/40 dark:bg-black/20 backdrop-blur-3xl rounded-2xl shadow-lg shadow-black/5 fixed top-6 right-8 p-2'
 						>
 							<a href='#projects' className='no-underline border-none outline-none bg-transparent px-3 flex items-center justify-between h-10 w-[12rem] rounded-md text-base text-black dark:text-white hover:bg-blue-50 dark:hover:bg-blue-950/60'>
 								Projects
