@@ -14,6 +14,10 @@ export const firstProjectsSet: ImagesSlider[] = [
 		alt: 'Device with the feed screen of an space app.',
 	},
 	{
+		uri: '/apps-mobile/view-weather.webp',
+		alt: 'Device with the day weather overview of an weather app.',
+	},
+	{
 		uri: '/apps-mobile/view-ticket-dark.webp',
 		alt: 'Device with a ticket interface on dark mode for flight app.',
 	},
@@ -30,16 +34,16 @@ export const firstProjectsSet: ImagesSlider[] = [
 		alt: 'Device with a branches around on a delivery app.',
 	},
 	{
-		uri: '/apps-mobile/view-alert.webp',
-		alt: 'Device with a success alert on delivery app.',
-	},
-	{
 		uri: '/apps-mobile/view-gym-dark.webp',
 		alt: 'Device with a complete profile form on health app in dark mode.',
 	},
 ];
 
 export const secondProjectsSet: ImagesSlider[] = [
+	{
+		uri: '/apps-mobile/view-alert.webp',
+		alt: 'Device with a success alert on delivery app.',
+	},
 	{
 		uri: '/apps-mobile/view-gym.webp',
 		alt: 'Device with a complete profile form on health app.',
