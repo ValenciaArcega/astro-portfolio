@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     open: false,
-    port: 4321
+    port: 4321,
   },
   integrations: [react(), tailwind()]
 });

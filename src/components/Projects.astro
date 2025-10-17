@@ -1,23 +1,16 @@
 ---
 import '../css/Projects.css';
 import { IconReact } from './icons/technologies';
-import { Project } from './projects/Project';
+import Project from './Project';
 import {
   PiAppStoreLogoDuotone,
   PiCodeDuotone,
-  PiQrCodeDuotone,
   PiRocketDuotone,
 } from 'react-icons/pi';
 import {
   firstProjectsSet,
   secondProjectsSet,
-  thirdProjectsSet,
 } from '@src/constants/slider-projects';
-
-const sideMaskLeft =
-  'absolute top-0 left-0 h-full w-[22%] sm:w-[30%] z-40 bg-[linear-gradient(to_right,_#fff_4%,_transparent)] dark:bg-[linear-gradient(to_right,_#121212_4%,_transparent)]';
-const sideMaskRight =
-  'absolute top-0 left-auto right-0 h-full w-[22%] sm:w-[30%] z-40 bg-[linear-gradient(to_left,_#fff_4%,_transparent)] dark:bg-[linear-gradient(to_left,_#121212_4%,_transparent)]';
 ---
 
 <section class='pt-72 bg-a0 dark:bg-a950' id='projects'>
@@ -42,53 +35,58 @@ const sideMaskRight =
       </div>
     </header>
     <article
-      class='text-[2rem] mt-6 md:text-[5rem] text-center flex flex-col items-center md:maskProjectsTitle md:dark:maskProjectsTitleDark'
+      class='text-[2rem] mt-6 md:text-[3rem] text-center flex flex-col items-center md:maskProjectsTitle md:dark:maskProjectsTitleDark'
     >
       <h1 class='dark:text-white tracking-tight'>In Production!</h1>
     </article>
 
     <article
-      class='mt-16 pt-10 relative grid gap-x-[1rem] gap-y-[2.2rem] grid-cols-[repeat(auto-fit,_minmax(21rem,_1fr))] w-full items-center justify-items-center bg-gradient-to-t from-[#fff] to-[#fff] dark:bg-gradient-to-t dark:from-[#101010] dark:to-[#151515]'
+      class='mt-16 pt-10 relative grid gap-x-[1rem] gap-y-[2.2rem] grid-cols-[repeat(auto-fit,_minmax(21rem,_1fr))] w-full justify-items-center bg-gradient-to-t from-[#fff] to-[#fff] dark:bg-gradient-to-t dark:from-[#101010] dark:to-[#151515]'
     >
-      <!-- <main class='py-10'>
-        <article
-          class='w-[23rem] rounded-xl shadow-md shadow-black/10 dark:shadow-none p-4 bg-white'
-        >
-          <img
-            src='./logos/flego.png'
-            class='w-10'
-            alt='Flego application logo'
-          />
-          <h2
-            class='text-xl text-transparent bg-clip-text font-semibold tracking-tight bg-gradient-to-b from-a500 to-black'
-          >
-            Flego
-          </h2>
-        </article>
-      </main> -->
+      <Project
+        name='Flego'
+        platform='multiplatform'
+        tint='green'
+        urlAppStore='https://apps.apple.com/mx/app/flego-tu-flete-de-regreso/id6746598808'
+        urlPlayStore='https://play.google.com/store/apps/details?id=app.torreydlc.flego'
+        urlImage='./logos/flego.png'
+        authorsBackend='Edson Reyes & Josue Cazares'
+        poweredBy='Torrey DLC & BAACC Systems'
+      />
+      <Project
+        name='Connie'
+        platform='multiplatform'
+        tint='yellow'
+        urlAppStore='https://apps.apple.com/mx/app/connie-ia/id6747147819'
+        urlPlayStore='https://play.google.com/store/apps/details?id=app.baaccsystems.connieia'
+        urlImage='./logos/connie.png'
+        authorsBackend='Edson Reyes & David Herrera'
+        poweredBy='BAACC Systems'
+      />
+      <Project
+        name='Tolescro'
+        platform='web'
+        tint='blue'
+        urlImage='./tolescro-logo.svg'
+        urlWeb='https://valenciaarcega.github.io/tolescro/'
+        ankerRepo='https://github.com/ValenciaArcega/tolescro'
+      />
+    </article>
+  </section>
 
-      <header
-        class='absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 bg-gradient-to-r from-transparent via-[#cdccccab] to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-[#c6c6c6ab] dark:to-transparent'
-      >
-      </header>
+  <header
+    class='absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 bg-gradient-to-r from-transparent via-[#cdccccab] to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-[#c6c6c6ab] dark:to-transparent'
+  >
+  </header>
 
-      <!-- <Project
+  <!-- <Project
         description='it is a website to save your ideas. Easy, clean and fast'
         urlImage='./fare-logo.svg'
         name='Fare'
         urlSite='https://valenciaarcega.github.io/fare/'
         urlRepo='https://github.com/ValenciaArcega/fare'
       />
-
-      <Project
-        description='it is a website to learn English with cards'
-        urlImage='./tolescro-logo.svg'
-        name='Tolescro'
-        urlSite='https://valenciaarcega.github.io/tolescro/'
-        urlRepo='https://github.com/ValenciaArcega/tolescro'
-      /> -->
-    </article>
-  </section>
+-->
 </section>
 
 <section
