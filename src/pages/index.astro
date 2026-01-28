@@ -15,7 +15,7 @@ import Welcome from '../components/Welcome.astro';
     <link rel='icon' type='image/svg+xml' href='./favicon.webp' />
     <meta
       name='description'
-      content='My portfolio. Who I am, where I studied, some of my skills and projects that I had been developed.'
+      content='Who I am, some of my skills and projects that I had been created.'
     />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <meta name='generator' content={Astro.generator} />
@@ -27,6 +27,29 @@ import Welcome from '../components/Welcome.astro';
     <Projects />
     <Experience />
     <Footer />
-    <Navbar client:load />
+    <!-- <Navbar client:load /> -->
+    <nav
+      class='fixed top-8 z-50! px-4! h-16 bg-a950/80 backdrop-blur-xl rounded-full border border-a920 flex justify-between items-center left-[50%] translate-x-[-50%] w-fit gap-x-24'
+    >
+      <img
+        src='./favicon.webp'
+        class='self-center justify-self-center size-10'
+        alt='Logo on Navigation Bar'
+      />
+      <aside class='flex items-center gap-x-2'>
+        <a
+          href='#projects'
+          class='no-underline border-none outline-none px-5! transition-colors flex items-center justify-between h-10 rounded-full text-base text-white duration-300 hover:bg-white hover:text-black'
+        >
+          Projects
+        </a>
+        <a
+          href='#experience'
+          class='no-underline border-none outline-none px-5! transition-colors flex items-center justify-between h-10 rounded-full text-base text-white duration-300 hover:bg-white hover:text-black'
+        >
+          Experience
+        </a>
+      </aside>
+    </nav>
   </body>
 </html>

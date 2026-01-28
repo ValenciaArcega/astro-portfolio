@@ -17,19 +17,19 @@ import {
   <section class='w-full flex flex-col' style='container-type: inline-size;'>
     <header class='self-center w-[68%] flex flex-row relative justify-center'>
       <div
-        class='ml-2 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 -rotate-[20deg] bg-transparent'
+        class='ml-2 size-20 rounded-xl grid place-content-center border border-solid border-a200 dark:border-a900 -rotate-20 bg-transparent'
       >
         <PiRocketDuotone className='text-5xl text-gray-300' />
       </div>
       <div
-        class='-ml-4 -mt-10 scale-125 z-50 w-20 max-h-24 rounded-xl grid place-content-center bg-a0 shadow-2xl dark:bg-gradient-to-t dark:from-[#191919] dark:to-[#272727] overflow-hidden'
+        class='-ml-4 -mt-10 scale-125 z-50 w-20 max-h-24 rounded-xl grid place-content-center bg-a0 shadow-2xl dark:bg-linear-to-t dark:from-[#191919] dark:to-[#272727] overflow-hidden'
       >
         <PiAppStoreLogoDuotone
           className='text-6xl text-blue-400 dark:text-blue-500'
         />
       </div>
       <div
-        class='-ml-4 size-20 rounded-xl grid place-content-center border-[1px] border-solid border-a200 dark:border-a900 rotate-[40deg] bg-transparent'
+        class='-ml-4 size-20 rounded-xl grid place-content-center border border-solid border-a200 dark:border-a900 rotate-40 bg-transparent'
       >
         <PiCodeDuotone className='text-5xl text-gray-300' />
       </div>
@@ -41,7 +41,7 @@ import {
     </article>
 
     <article
-      class='mt-16 pt-10 relative grid gap-x-[1rem] gap-y-[2.2rem] grid-cols-[repeat(auto-fit,_minmax(21rem,_1fr))] w-full justify-items-center bg-gradient-to-t from-[#fff] to-[#fff] dark:bg-gradient-to-t dark:from-[#101010] dark:to-[#151515]'
+      class='mt-16 pt-10 relative grid gap-x-4 gap-y-[2.2rem] grid-cols-[repeat(auto-fit,minmax(21rem,1fr))] w-full justify-items-center bg-linear-to-t from-white to-white dark:bg-linear-to-t dark:from-[#101010] dark:to-[#151515]'
     >
       <Project
         name='Flego'
@@ -75,7 +75,7 @@ import {
   </section>
 
   <header
-    class='absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 bg-gradient-to-r from-transparent via-[#cdccccab] to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-[#c6c6c6ab] dark:to-transparent'
+    class='absolute left-1/2 top-0 w-[80%] h-px select-none pointer-events-none -translate-x-1/2 bg-linear-to-r from-transparent via-[#cdccccab] to-transparent dark:bg-linear-to-r dark:from-transparent dark:via-[#c6c6c6ab] dark:to-transparent'
   >
   </header>
 
@@ -108,20 +108,20 @@ import {
         class='text-[#00D8FF]'>.</span
       >
     </h1>
-    <p class='text-gray-400 mt-2 px-[1rem] text-center'>
+    <p class='text-gray-400 mt-2 px-4 text-center'>
       A little taste of my work and the apps I had done.
     </p>
   </div>
 </section>
 
 <section
-  class='dark:bg-gradient-to-b dark:from-[#101010] dark:to:black w-full text-center overflow-hidden relative'
+  class='dark:bg-linear-to-b dark:from-[#101010] dark:to:black w-full text-center overflow-hidden relative'
 >
   <article class='wrapperSlider'>
     {
       firstProjectsSet.map((item) => (
         <img
-          class='projectInSliderLeft !max-h-[412px]'
+          class='projectInSliderLeft max-h-103!'
           src={item.uri}
           alt={item.alt}
         />
@@ -133,7 +133,7 @@ import {
     {
       secondProjectsSet.map((item) => (
         <img
-          class='projectInSliderRight !max-h-[412px]'
+          class='projectInSliderRight max-h-103!'
           src={item.uri}
           alt={item.alt}
         />
