@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { PiAndroidLogoDuotone, PiAppleLogoDuotone, PiAppStoreLogoDuotone, PiAtomDuotone, PiBrainDuotone, PiButterflyDuotone, PiGithubLogoDuotone, PiGlobeSimpleDuotone, PiGooglePlayLogoDuotone, PiRocketLaunchDuotone, PiShootingStarDuotone } from "react-icons/pi";
+import { PiAndroidLogoDuotone, PiAppleLogoDuotone, PiAppStoreLogoDuotone, PiAtomDuotone, PiBrainDuotone, PiButterflyDuotone, PiGithubLogoDuotone, PiGlobeSimpleDuotone, PiGooglePlayLogoDuotone, PiRocketLaunchDuotone } from "react-icons/pi";
 
 const tintClasses: Record<string, string> = {
 	green: "text-green-600",
@@ -33,7 +33,7 @@ const Project = function (props: IProject) {
 		}`;
 
 	return <article
-		className='mb-12 mt-0 group bg-white dark:bg-transparent duration-500 w-[94%] sm:w-[25rem] min-h-[16rem] py-2 flex flex-col justify-center items-center relative rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 border-[1px] border-solid border-gray-100 dark:border-transparent'
+		className='mb-12 mt-0 group bg-white dark:bg-transparent duration-500 w-[94%] sm:w-100 min-h-64 py-2 flex flex-col justify-center items-center relative rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 border border-solid border-a910'
 	>
 		<svg
 			viewBox='0 0 200 200'
@@ -50,7 +50,7 @@ const Project = function (props: IProject) {
 			></path>
 		</svg>
 
-		<main className='z-20 flex flex-col px-6 py-4 w-full border-2 border-black'>
+		<main className='z-20 flex flex-col px-6 py-4 w-full'>
 			<div className='flex gap-x-2 absolute top-4 right-4'>
 				{props.platform === 'multiplatform'
 					? <>

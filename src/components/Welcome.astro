@@ -7,36 +7,11 @@ import {
   IconTypescript,
 } from './icons/technologies';
 import '../css/Welcome.css';
+
+const tecnologyWrapper =
+  'size-12 border border-a900 bg-linear-to-b from-a900 to-a950 rounded-full flex items-center justify-center';
 ---
 
-<!-- <script>
-  window.addEventListener('DOMContentLoaded', function () {
-    const img: HTMLElement = document.querySelector('.welcomeUserImg');
-    const height = img.clientHeight;
-    const width = img.clientWidth;
-
-    img.addEventListener('mousemove', function (e) {
-      const { layerX, layerY } = e;
-      const yRotation = ((layerX - width / 2) / width) * 46;
-      const xRotation = ((layerY - height / 2) / height) * 46;
-      const string = `
-        perspective(500px)
-        scale(1.1)
-        rotateX(${xRotation}deg)
-        rotateY(${yRotation}deg)`;
-
-      img.style.transform = string;
-    });
-
-    img.addEventListener('mouseout', function () {
-      img.style.transform = `
-    perspective(500px)
-    scale(1)
-    rotateX(0)
-    rotateY(0)`;
-    });
-  });
-</script> -->
 <section
   style={{ width: '100%', height: '600px', position: 'relative' }}
   class='min-h-screen dark:bg-a950 flex items-center justify-center'
@@ -61,26 +36,26 @@ import '../css/Welcome.css';
       class={`h-45.5 w-45.5 bg-contain bg-[url("/user.webp")] relative rounded-[30%_70%_24%76%/_65%_28%_72%_35%] welcomeUserImg`}
     >
       <div class='absolute bottom-4 left-0 -translate-x-1/2 top-auto'>
-        <div class='bubble shadow-[4px_4px_8px_1px_#0000003d]'>
-          <IconTypescript height='28' />
+        <div class={tecnologyWrapper}>
+          <IconTypescript height='24' />
         </div>
       </div>
 
       <div class='absolute top-[-1.2rem] left-1/4 -translate-x-1/2'>
-        <div class='bubble shadow-[4px_4px_8px_1px_#0000003d]'>
-          <IconReact height='28' />
+        <div class={tecnologyWrapper}>
+          <IconReact height='24' />
         </div>
       </div>
 
       <div class='absolute top-auto left-auto bottom-4 -right-2'>
-        <div class='bubble shadow-[4px_4px_8px_1px_#0000003d]'>
+        <div class={tecnologyWrapper}>
           <IconTailwind height='30' />
         </div>
       </div>
 
       <div class='absolute bottom-auto left-auto top-4 -right-2'>
-        <div class='bubble shadow-[4px_4px_8px_1px_#0000003d]'>
-          <IconCSS height='26' } />
+        <div class={tecnologyWrapper}>
+          <IconCSS height='24' } />
         </div>
       </div>
     </main>
@@ -114,63 +89,3 @@ import '../css/Welcome.css';
   >
   </div>
 </section>
-<!-- <section
-  class='min-h-[100dvh] h-[100vh] w-full flex justify-center items-center bg-[radial-gradient(#00000010_3%,#fff_0)] bg-[length:5rem_5rem] dark:bg-[radial-gradient(#292929de_3%,#121212_0)]'
->
-  <main
-    class='absolute top-0 left-0 flex items-center justify-center h-[100dvh] w-full'
-  >
-    <article class='w-[35rem] flex flex-col gap-2 justify-center items-center'>
-      <div
-        class={`h-[182px] w-[182px] bg-contain bg-[url("/user.webp")] relative rounded-[30%_70%_24%76%/_65%_28%_72%_35%] welcomeUserImg`}
-      >
-        <div class='absolute bottom-4 left-0 -translate-x-1/2 top-auto'>
-          <div class='bubble shadow-[4px_4px_8px_1px_#0000003d]'>
-            <IconTypescript height='28' />
-          </div>
-        </div>
-
-        <div class='absolute top-[-1.2rem] left-1/4 -translate-x-1/2'>
-          <div class='bubble shadow-[4px_4px_8px_1px_#0000003d]'>
-            <IconReact height='28' />
-          </div>
-        </div>
-
-        <div class='absolute top-auto left-auto bottom-4 right-[-.5rem]'>
-          <div class='bubble shadow-[4px_4px_8px_1px_#0000003d]'>
-            <IconTailwind height='30' />
-          </div>
-        </div>
-
-        <div class='absolute bottom-auto left-auto top-4 right-[-.5rem]'>
-          <div class='bubble shadow-[4px_4px_8px_1px_#0000003d]'>
-            <IconCSS height='26' } />
-          </div>
-        </div>
-      </div>
-
-      <div class='h-[60%] w-[95%] mt-2 text-center'>
-        <h1
-          class='font-mono text-[2.7rem] tracking-[-1.3px] text-black dark:text-white'
-        >
-          Hello <span class='text-blue-500 dark:text-blue-200'>World</span>!
-        </h1>
-        <p
-          class='mt-2 text-[1.45rem] tracking-[-1px] leading-[1.7] text-black dark:text-gray-300'
-        >
-          I<span class='text-blue-500 dark:text-blue-200'>'</span>m Angel. <span
-            class='animated-text'
-          >
-            Software Engineer</span
-          >
-          <span class='font-mono text-base text-gray-400 dark:text-white mx-1.5'
-            >&&</span
-          > Frontend developer, that loves to build gorgeous <span
-            class='text-blue-400 dark:text-blue-300'>software</span
-          >
-          experiences<span class='text-blue-400 dark:text-blue-200'>;</span>
-        </p>
-      </div>
-    </article>
-  </main>
-</section> -->

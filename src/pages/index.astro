@@ -1,10 +1,10 @@
 ---
 import '../App.css';
+import GradualBlurMemo from '@src/components/GradualBlur';
 import Experience from '../components/Experience.astro';
 import Footer from '../components/Footer.tsx';
-import Navbar from '../components/Navbar';
 import Projects from '../components/Projects.astro';
-import Welcome from '../components/Welcome.astro';
+import Welcome from '@src/components/Welcome.astro';
 ---
 
 <html lang='en'>
@@ -23,19 +23,58 @@ import Welcome from '../components/Welcome.astro';
     <title>Valencia Arcega &mdash; Portfolio</title>
   </head>
   <body>
+    <GradualBlurMemo
+      client:load
+      target='page'
+      position='bottom'
+      height='7rem'
+      strength={2}
+      divCount={5}
+      curve='bezier'
+      exponential
+      opacity={1}
+    />
     <Welcome />
     <Projects />
     <Experience />
     <Footer />
-    <!-- <Navbar client:load /> -->
-    <nav
-      class='fixed top-8 z-50! px-4! h-16 bg-a950/80 backdrop-blur-xl rounded-full border border-a920 flex justify-between items-center left-[50%] translate-x-[-50%] w-fit gap-x-24'
+
+    <!-- <div
+      class='fixed top-8 z-50! rounded-full flex justify-between items-center left-[50%] translate-x-[-50%] w-fit'
     >
-      <img
-        src='./favicon.webp'
-        class='self-center justify-self-center size-10'
-        alt='Logo on Navigation Bar'
-      />
+      <GlassSurface client:load width={402} height={64} borderRadius={50}>
+        <img
+          src='./favicon.webp'
+          class='self-center justify-self-center size-10'
+          alt='Logo on Navigation Bar'
+        />
+        <aside class='flex items-center gap-x-2 ml-20'>
+          <a
+            href='#projects'
+            class='no-underline border-none outline-none px-5! transition-all flex items-center justify-between h-10 rounded-full text-base text-white duration-500 bg-transparent hover:bg-white hover:text-black'
+          >
+            Projects
+          </a>
+          <a
+            href='#experience'
+            class='no-underline border-none outline-none px-5! transition-all flex items-center justify-between h-10 rounded-full text-base text-white duration-500 bg-transparent hover:bg-white hover:text-black'
+          >
+            Experience
+          </a>
+        </aside>
+      </GlassSurface>
+    </div> -->
+
+    <nav
+      class='fixed top-8 z-50! px-4! h-16 bg-a950/70 backdrop-blur-xl rounded-full border border-a920 flex justify-between items-center left-[50%] translate-x-[-50%] w-fit gap-x-24'
+    >
+      <a href='https://www.instagram.com/valenciaarcega/' target='_blank'>
+        <img
+          src='./favicon.webp'
+          class='self-center justify-self-center size-10'
+          alt='Personal logo at navigation bar'
+        />
+      </a>
       <aside class='flex items-center gap-x-2'>
         <a
           href='#projects'

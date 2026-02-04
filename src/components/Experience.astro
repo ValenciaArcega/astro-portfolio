@@ -13,13 +13,13 @@ const txtTitle =
   'mt-2 text-[#aeaeae] font-medium text-base dark:text-[#6a6a6a]';
 const txtDesc = 'text-xl font-semibold mt-4 dark:text-white';
 const txtFooter = 'text-[#aeaeae] text-sm dark:text-gray-500 mt-2';
-const gradientCard =
+const lineGradient =
   'absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-gradient-to-r from-transparent via-gray-200 dark:via-green-900 to-transparent';
 ---
 
 <section
   id='experience'
-  class='mt-[16.3rem] grid place-items-center gap-y-[1rem] px-[1rem]'
+  class='mt-[16.3rem] grid place-items-center gap-y-4 px-4'
 >
   <h1 class='tracking-[-1px] text-5xl text-center text-black dark:text-white'>
     Education <span class='text-blue-500 dark:text-blue-200'>
@@ -35,11 +35,11 @@ const gradientCard =
     class='h-fit w-full md:w-[90%] mt-8 grid gap-12 items-center justify-items-center grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]'
   >
     <article class={card}>
-      <header class={gradientCard}></header>
+      <header class={lineGradient}></header>
 
       <div
         class={wrIcon +
-          ' bg-gradient-to-b from-green-100 to-green-200 dark:from-green-950 dark:to-green-950/20'}
+          ' bg-linear-to-b from-green-100 to-green-200 dark:from-green-950 dark:to-green-950/20'}
       >
         <HiOutlineAcademicCap
           size={32}
@@ -56,11 +56,11 @@ const gradientCard =
     </article>
 
     <article class={card}>
-      <header class={gradientCard + ' dark:via-orange-900'}></header>
+      <header class={lineGradient + ' dark:via-orange-900'}></header>
 
       <div
         class={wrIcon +
-          ' bg-gradient-to-b from-yellow-50 to-yellow-100 dark:from-orange-950 dark:to-orange-950/20'}
+          ' bg-linear-to-brom-yellow-50 to-yellow-100 dark:from-orange-950 dark:to-orange-950/20'}
       >
         <HiOutlineBriefcase
           size={32}
@@ -76,11 +76,11 @@ const gradientCard =
     </article>
 
     <article class={card}>
-      <header class={gradientCard + ' dark:via-sky-900'}></header>
+      <header class={lineGradient + ' dark:via-sky-900'}></header>
 
       <div
         class={wrIcon +
-          ' bg-gradient-to-b from-purple-100 to-purple-200 dark:from-purple-950 dark:to-purple-950/20'}
+          ' bg-linear-to-b from-purple-100 to-purple-200 dark:from-purple-950 dark:to-purple-950/20'}
       >
         <HiOutlineBookOpen
           size={32}
