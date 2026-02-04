@@ -37,9 +37,9 @@ import '../css/Welcome.css';
     });
   });
 </script> -->
-<div
+<section
   style={{ width: '100%', height: '600px', position: 'relative' }}
-  class='min-h-screen dark:bg-black flex items-center justify-center'
+  class='min-h-screen dark:bg-a950 flex items-center justify-center'
 >
   <DotGrid
     client:load
@@ -57,7 +57,7 @@ import '../css/Welcome.css';
   <article
     class='w-140 flex flex-col absolute gap-2 justify-center items-center'
   >
-    <div
+    <main
       class={`h-45.5 w-45.5 bg-contain bg-[url("/user.webp")] relative rounded-[30%_70%_24%76%/_65%_28%_72%_35%] welcomeUserImg`}
     >
       <div class='absolute bottom-4 left-0 -translate-x-1/2 top-auto'>
@@ -83,9 +83,9 @@ import '../css/Welcome.css';
           <IconCSS height='26' } />
         </div>
       </div>
-    </div>
+    </main>
 
-    <div class='h-[60%] w-[95%] mt-2 text-center'>
+    <footer class='h-[60%] w-[95%] mt-2 text-center'>
       <h1
         class='font-mono text-[2.7rem] tracking-[-1.3px] text-black dark:text-white'
       >
@@ -106,9 +106,14 @@ import '../css/Welcome.css';
         >
         experiences<span class='text-blue-400 dark:text-blue-200'>;</span>
       </p>
-    </div>
+    </footer>
   </article>
-</div>
+
+  <div
+    class='bg-linear-to-b w-full from-transparent to-a950 absolute bottom-0 right-0 h-32 z-50'
+  >
+  </div>
+</section>
 <!-- <section
   class='min-h-[100dvh] h-[100vh] w-full flex justify-center items-center bg-[radial-gradient(#00000010_3%,#fff_0)] bg-[length:5rem_5rem] dark:bg-[radial-gradient(#292929de_3%,#121212_0)]'
 >
