@@ -9,7 +9,7 @@ const Footer = function () {
 				href="https://www.linkedin.com/in/luis-angel-valencia-arcega-4827b9239"
 			>
 				<PiLinkedinLogoDuotone
-					className='text-black dark:text-gray-400 hover:text-blue-400! transition-colors duration-700'
+					className='text-gray-400 hover:text-blue-400! transition-colors duration-700'
 					size={48} />
 			</a>
 			<a
@@ -18,11 +18,11 @@ const Footer = function () {
 				href="https://github.com/ValenciaArcega"
 			>
 				<PiGithubLogoDuotone
-					className='text-black dark:text-gray-400 hover:text-blue-400! transition-colors duration-700'
+					className='text-gray-400 hover:text-blue-400! transition-colors duration-700'
 					size={48} />
 			</a>
 		</main>
-		<p className="text-base text-black dark:text-white">2025. Valencia Arcega</p>
+		<p className="text-base text-white">2026. Valencia Arcega</p>
 	</footer>;
 
 };

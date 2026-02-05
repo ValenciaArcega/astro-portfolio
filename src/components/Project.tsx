@@ -25,24 +25,22 @@ const Project = function (props: IProject) {
 	const tint = props.tint;
 
 	const tintColor = tintClasses[tint] || "text-gray-600";
-	const ankerStore = `w-[46%] text-black dark:text-white visited:text-black flex items-center gap-x-2 px-3 rounded-xl duration-700 underline hover:cursor-pointer ${tint === 'green'
-		? 'hover:text-green-500 dark:hover:text-green-300'
+	const ankerStore = `w-[46%] text-white visited:text-black flex items-center gap-x-2 px-3 rounded-xl duration-700 underline hover:cursor-pointer ${tint === 'green'
+		? 'hover:text-green-300'
 		: tint === 'yellow'
-			? 'hover:text-yellow-500 dark:hover:text-yellow-300'
-			: 'hover:text-blue-500 dark:hover:text-blue-300'
-		}`;
+			? 'hover:text-yellow-300'
+			: 'hover:text-blue-300'}`;
 
 	return <article
-		className='mb-12 mt-0 group bg-white dark:bg-transparent duration-500 w-[94%] sm:w-100 min-h-64 py-2 flex flex-col justify-center items-center relative rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 border border-solid border-a910'
+		className='mb-12 mt-0 group bg-transparent duration-500 w-[94%] sm:w-100 min-h-64 py-2 flex flex-col justify-center items-center relative rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 border border-solid border-a910'
 	>
 		<svg
 			viewBox='0 0 200 200'
-			className={`absolute blur z-10 duration-700 group-hover:blur-none dark:group-hover:blur-sm group-hover:scale-105 ${tint === 'green'
-				? 'fill-teal-50 dark:fill-teal-500/10'
+			className={`absolute blur z-10 duration-700 group-hover:blur-sm group-hover:scale-105 ${tint === 'green'
+				? 'fill-teal-500/10'
 				: tint === 'yellow'
-					? 'fill-yellow-500/10 dark:fill-yellow-500/10'
-					: 'fill-blue-300/20 dark:fill-blue-500/10'
-				}`}
+					? 'fill-yellow-500/10'
+					: 'fill-blue-500/10'}`}
 		>
 			<path
 				transform='translate(100 100)'
@@ -54,8 +52,8 @@ const Project = function (props: IProject) {
 			<div className='flex gap-x-2 absolute top-4 right-4'>
 				{props.platform === 'multiplatform'
 					? <>
-						<PiAppleLogoDuotone size={25} className='text-gray-600 dark:text-gray-200' />
-						<PiAndroidLogoDuotone size={28} className='text-green-500 dark:text-green-300' />
+						<PiAppleLogoDuotone size={25} className='text-gray-200' />
+						<PiAndroidLogoDuotone size={28} className='text-green-300' />
 					</>
 					: props.platform === 'android'
 						? <PiAndroidLogoDuotone size={28} className={clsx(tintColor)} />
@@ -73,7 +71,7 @@ const Project = function (props: IProject) {
 					className='w-9' />
 			</div>
 			<h1
-				className='font-semibold text-black dark:text-white mt-2 text-4xl customTitle tracking-wider'
+				className='font-semibold text-white mt-2 text-4xl customTitle tracking-wider'
 			>
 				{props.name}
 			</h1>
@@ -84,7 +82,7 @@ const Project = function (props: IProject) {
 					</p>
 					<div className='flex items-center gap-x-2 mt-6'>
 						<PiAtomDuotone size={24} className={clsx(tintColor)} />
-						<p className='text-black dark:text-white text-sm'>Developed by {props.authorsFrontend ?? 'Angel Valencia'}</p>
+						<p className='text-white text-sm'>Developed by {props.authorsFrontend ?? 'Angel Valencia'}</p>
 					</div>
 				</>
 				: <>
@@ -95,7 +93,7 @@ const Project = function (props: IProject) {
 						<PiAtomDuotone size={24} className={clsx(tintColor)} />
 
 						<div
-							className='flex justify-between w-full items-center text-black dark:text-white'
+							className='flex justify-between w-full items-center text-white'
 						>
 							<span>App</span>
 							<p className='text-xs'>{props.authorsFrontend ?? 'Angel Valencia'}</p>
@@ -104,7 +102,7 @@ const Project = function (props: IProject) {
 					<div className='flex items-center gap-x-2 mt-2'>
 						<PiBrainDuotone size={24} className={clsx(tintColor)} />
 						<div
-							className='flex justify-between w-full items-center text-black dark:text-white'
+							className='flex justify-between w-full items-center text-white'
 						>
 							<span>Backend</span>
 							<p className='text-xs'>{props.authorsBackend}</p>
@@ -112,7 +110,7 @@ const Project = function (props: IProject) {
 					</div>
 					{props.poweredBy && <div className='flex items-center gap-x-2 mt-8'>
 						<PiButterflyDuotone size={24} className={clsx(tintColor)} />
-						<p className='text-gray-600 dark:text-white text-xs'>Powered by {props.poweredBy}</p>
+						<p className='text-white text-xs'>Powered by {props.poweredBy}</p>
 					</div>}
 				</>}
 
