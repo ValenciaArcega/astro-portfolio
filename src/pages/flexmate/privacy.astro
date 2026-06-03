@@ -1,299 +1,200 @@
 ---
-import '../../App.css';
+import "../../App.css";
 
-const lastUpdated = '17 de Mayo de 2026';
-const appName = 'Flexmate';
-const contactEmail = 'tu-correo@dominio.com';
+const lastUpdated = "02 de Junio de 2026";
+const appName = "Flexmate";
+const contactEmail = "dev.valenciaarcega@gmail.com";
 
-const cardClass =
-  'rounded-[28px] border border-zinc-800 bg-zinc-900/40 p-6 shadow-xl shadow-black/10';
-const sectionTitleClass =
-  'mb-4 text-2xl font-semibold tracking-tight text-white';
-const subTitleClass = 'mb-2 text-lg font-semibold text-zinc-100';
-const paragraphClass = 'mb-4 leading-8 text-zinc-300';
-const listClass = 'mb-4 list-disc space-y-2 pl-6 text-zinc-300';
-const linkClass =
-  'text-blue-400 underline underline-offset-4 transition hover:text-blue-300';
+const privacyPoints = [
+  {
+    number: "01",
+    title: "Tus datos de entrenamiento permanecen en tu dispositivo",
+    description:
+      "La aplicación está diseñada para funcionar principalmente sin conexión a internet. Tus rutinas, récords, estadísticas y progreso se almacenan localmente en tu dispositivo para ofrecer una experiencia rápida, privada y disponible en cualquier momento.",
+  },
+  {
+    number: "02",
+    title: "Información necesaria para crear una cuenta",
+    description:
+      "Al crear una cuenta se almacenan únicamente tu nombre completo, correo electrónico y contraseña. El correo electrónico se utiliza exclusivamente para iniciar sesión y recuperar el acceso a tu cuenta cuando sea necesario. La contraseña se almacena de forma protegida y no puede ser consultada por los administradores de la aplicación.",
+  },
+  {
+    number: "03",
+    title: "Respaldo opcional en la nube",
+    description:
+      "Si decides sincronizar o respaldar tu información, tus datos de entrenamiento, estadísticas y fotografía de perfil, si la agregas, se almacenarán en servidores destinados al respaldo de información para que puedan recuperarse en el futuro. Este respaldo es completamente opcional y la aplicación puede utilizarse sin él.",
+  },
+  {
+    number: "04",
+    title: "Transparencia sobre el almacenamiento de datos",
+    description:
+      "Los datos respaldados en la nube no se almacenan con cifrado de contenido. Aunque se aplican medidas razonables de seguridad para proteger la información, los datos almacenados podrían ser accesibles para tareas de administración y mantenimiento del sistema y no se recomienda guardar información personal sensible dentro de la aplicación.",
+  },
+  {
+    number: "05",
+    title: "La información no se comparte ni se vende",
+    description:
+      "La información almacenada en la aplicación y en los respaldos opcionales no se vende, alquila ni comparte con terceros para fines comerciales. Su único propósito es proporcionar las funciones de la aplicación y permitir la recuperación de los datos cuando así se solicite.",
+  },
+];
 ---
 
-<html lang='es'>
+<html lang="es">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>Aviso de Privacidad</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/flexmate.png" />
+    <title>Aviso de Privacidad | {appName}</title>
   </head>
 
   <body>
-    <main class='min-h-screen bg-zinc-950 text-zinc-100'>
-      <section class='mx-auto max-w-4xl px-6 py-16 sm:py-24'>
+    <main
+      class="relative min-h-screen overflow-hidden bg-zinc-950 text-zinc-100"
+    >
+      <div
+        class="pointer-events-none absolute left-1/2 top-0 h-90 w-90 -translate-x-1/2 rounded-full bg-blue-500/10 blur-[90px] sm:h-130 sm:w-130 sm:blur-[120px]"
+      >
+      </div>
+
+      <div
+        class="pointer-events-none absolute -right-32 top-72 h-80 w-[320px] rounded-full bg-violet-500/10 blur-[100px] sm:h-105 sm:w-105"
+      >
+      </div>
+
+      <section
+        class="relative mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-20 lg:py-24"
+      >
         <div
-          class='mb-10 inline-flex rounded-full border border-zinc-800 bg-zinc-900/70 px-4 py-2 text-sm text-zinc-400'
+          class="mb-8 inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/70 px-4 py-2 text-xs text-zinc-400 shadow-2xl shadow-black/20 backdrop-blur sm:mb-10 sm:text-sm"
         >
+          <span
+            class="h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_16px_rgba(96,165,250,0.9)]"
+          ></span>
           {appName} Privacy
         </div>
 
-        <header class='mb-14'>
+        <header class="mb-14">
           <h1
-            class='relative inline-block text-4xl font-bold tracking-tight text-white sm:text-6xl'
+            class="relative inline-block text-5xl font-bold tracking-tight text-white sm:text-6xl"
           >
             Aviso de Privacidad
 
             <svg
-              class='absolute -bottom-4 left-0 w-full'
-              viewBox='0 0 320 24'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-              aria-hidden='true'
-              preserveAspectRatio='none'
+              class="absolute -bottom-4 left-0 w-full sm:-bottom-10 md:-bottom-6 lg:-bottom-4"
+              viewBox="0 0 320 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="none"
             >
               <defs>
                 <linearGradient
-                  id='title-gradient'
-                  x1='0%'
-                  y1='0%'
-                  x2='100%'
-                  y2='0%'
+                  id="title-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
                 >
-                  <stop offset='0%' stop-color='#3B82F6'></stop>
-                  <stop offset='50%' stop-color='#60A5FA'></stop>
-                  <stop offset='100%' stop-color='#a855f7'></stop>
+                  <stop offset="0%" stop-color="#3B82F6"></stop>
+                  <stop offset="50%" stop-color="#60A5FA"></stop>
+                  <stop offset="100%" stop-color="#a855f7"></stop>
                 </linearGradient>
               </defs>
 
               <path
-                d='M4 18C40 10 80 6 120 10C170 15 220 24 316 8'
-                stroke='url(#title-gradient)'
-                stroke-width='7'
-                stroke-linecap='round'
-                class='drop-shadow-[0_0_12px_rgba(59,130,246,0.35)]'></path>
+                d="M4 18C40 10 80 6 120 10C170 15 220 24 316 8"
+                stroke="url(#title-gradient)"
+                stroke-width="7"
+                stroke-linecap="round"
+                class="drop-shadow-[0_0_12px_rgba(59,130,246,0.35)]"></path>
             </svg>
           </h1>
 
-          <p class='mt-5 max-w-2xl text-lg leading-8 text-zinc-400'>
-            Este documento explica cómo se recopila, utiliza, almacena y protege
-            la información personal de los usuarios de
-            <span class='text-zinc-200'>{appName}</span>.
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
+            Conoce de forma clara y transparente cómo se almacena, utiliza y
+            protege la información asociada al uso de
+            <span class="text-zinc-200">{appName}</span>.
           </p>
 
-          <p class='mt-6 text-sm text-zinc-500'>
+          <p class="mt-6 text-sm text-zinc-500">
             Última actualización:
-            <span class='text-zinc-300'>{lastUpdated}</span>
+            <span class="text-zinc-300">{lastUpdated}</span>
           </p>
         </header>
 
-        <!-- <article class='space-y-8'>
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>
-              1. Responsable del tratamiento de los datos
-            </h2>
+        <section class="grid gap-5">
+          {
+            privacyPoints.map((point) => (
+              <article class="group relative overflow-hidden rounded-[28px] border-2 border-white/10 bg-white/3 p-5 shadow-2xl shadow-black/20 backdrop-blur transition duration-700 hover:border-blue-400/30 hover:bg-white/5 sm:rounded-4xl sm:p-8">
+                <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-blue-400/50 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
 
-            <p class={paragraphClass}>
-              El responsable del tratamiento de los datos personales es el
-              desarrollador de la App, en adelante, el “Responsable”, quien
-              determina los fines y medios del tratamiento de la información
-              personal conforme a la legislación aplicable en materia de
-              protección de datos.
-            </p>
-          </section>
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
+                  <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-blue-400/20 bg-blue-400/10 text-sm font-bold text-blue-300 shadow-lg shadow-blue-500/10 sm:h-14 sm:w-14">
+                    {point.number}
+                  </div>
 
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>2. Datos personales recopilados</h2>
+                  <div>
+                    <h2 class="text-lg font-semibold tracking-tight text-white sm:text-2xl">
+                      {point.title}
+                    </h2>
 
-            <p class={paragraphClass}>
-              La App recopila únicamente los datos estrictamente necesarios para
-              su funcionamiento:
-            </p>
+                    <p class="mt-3 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
+                      {point.description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </section>
 
-            <ul class={listClass}>
-              <li>Nombre completo del usuario.</li>
-              <li>Correo electrónico.</li>
-              <li>Imagen de perfil, avatar, en formato base64.</li>
-              <li>
-                Registros de uso generados por el usuario, como entrenamientos,
-                ejercicios, récords y datos relacionados.
-              </li>
-            </ul>
-          </section>
-
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>
-              3. Forma de recopilación y almacenamiento
-            </h2>
-
-            <div class='space-y-6'>
-              <div>
-                <h3 class={subTitleClass}>3.1 Uso local, modo offline</h3>
-
-                <p class={paragraphClass}>
-                  La App permite que el usuario realice todas sus operaciones de
-                  manera local y offline. La información generada, como
-                  entrenamientos, ejercicios, récords, entre otros, se almacena
-                  localmente en el dispositivo del usuario mediante
-                  almacenamiento interno seguro.
-                </p>
-              </div>
-
-              <div>
-                <h3 class={subTitleClass}>3.2 Sincronización manual</h3>
-
-                <p class={paragraphClass}>
-                  La información local únicamente se envía a los servidores del
-                  Responsable cuando el usuario decide voluntariamente utilizar
-                  la función de sincronización. Sin esta acción, los datos
-                  permanecen exclusivamente en el dispositivo del usuario.
-                </p>
-              </div>
-
-              <div>
-                <h3 class={subTitleClass}>3.3 Almacenamiento en servidores</h3>
-
-                <p class={paragraphClass}>
-                  Cuando el usuario sincroniza su información:
-                </p>
-
-                <ul class={listClass}>
-                  <li>
-                    Los datos básicos del usuario, nombre, correo electrónico y
-                    avatar, se almacenan en una base de datos SQL Server.
-                  </li>
-
-                  <li>
-                    Los registros de entrenamientos, ejercicios y demás
-                    información generada se almacenan en campos estructurados,
-                    formato JSON, asociados al perfil del usuario.
-                  </li>
-                </ul>
-              </div>
+        <section
+          class="mt-8 rounded-[28px] border border-amber-400/20 bg-amber-400/6 p-5 shadow-2xl shadow-black/20 sm:rounded-4xl sm:p-8"
+        >
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-start">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-amber-300/20 bg-amber-300/10 text-amber-200"
+            >
+              ✦
             </div>
-          </section>
 
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>
-              4. Finalidades del tratamiento de los datos
-            </h2>
+            <div>
+              <h2
+                class="text-lg font-semibold tracking-tight text-white sm:text-xl"
+              >
+                Nota importante
+              </h2>
 
-            <p class={paragraphClass}>
-              Los datos personales se utilizan únicamente para los siguientes
-              fines:
-            </p>
+              <p
+                class="mt-3 max-w-3xl text-sm leading-7 text-zinc-300 sm:text-base sm:leading-8"
+              >
+                Aunque aplicamos medidas razonables para proteger la información
+                almacenada, ningún sistema informático puede garantizar una
+                seguridad absoluta.
+              </p>
+            </div>
+          </div>
+        </section>
 
-            <ul class={listClass}>
-              <li>Permitir la identificación del usuario dentro de la App.</li>
+        <footer
+          class="mt-12 border-t border-white/10 pt-8 text-sm leading-7 text-zinc-500 sm:mt-14"
+        >
+          <p>
+            Para cualquier duda relacionada con este aviso de privacidad, puede
+            contactarse a
+            <a
+              href={`mailto:${contactEmail}`}
+              class="text-blue-400 underline underline-offset-4 transition hover:text-blue-300"
+            >
+              {contactEmail}
+            </a>.
+          </p>
 
-              <li>
-                Gestionar la autenticación y recuperación de cuenta, incluyendo
-                el envío de tokens para restablecimiento de contraseña.
-              </li>
-
-              <li>
-                Sincronizar y respaldar la información del usuario cuando este
-                lo solicite.
-              </li>
-
-              <li>
-                Mejorar la experiencia de uso y el correcto funcionamiento de la
-                App.
-              </li>
-            </ul>
-
-            <p class={paragraphClass}>
-              En ningún caso los datos personales se utilizan para fines
-              publicitarios ni se comercializan.
-            </p>
-          </section>
-
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>5. Uso del correo electrónico</h2>
-
-            <p class={paragraphClass}>
-              El correo electrónico del usuario se utiliza exclusivamente para:
-            </p>
-
-            <ul class={listClass}>
-              <li>Envío de enlaces o tokens de recuperación de contraseña.</li>
-
-              <li>
-                Verificación de identidad cuando sea necesario para la seguridad
-                de la cuenta.
-              </li>
-            </ul>
-
-            <p class={paragraphClass}>
-              No se envían correos promocionales ni comunicaciones ajenas al
-              funcionamiento de la App.
-            </p>
-          </section>
-
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>
-              6. Protección y seguridad de la información
-            </h2>
-
-            <p class={paragraphClass}>
-              El Responsable implementa medidas técnicas y organizativas
-              razonables para proteger los datos personales contra accesos no
-              autorizados, pérdida, alteración o divulgación indebida, tanto en
-              el almacenamiento local como en los servidores.
-            </p>
-          </section>
-
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>7. Conservación de los datos</h2>
-
-            <p class={paragraphClass}>Los datos personales se conservarán:</p>
-
-            <ul class={listClass}>
-              <li>Mientras el usuario mantenga una cuenta activa en la App.</li>
-
-              <li>
-                Hasta que el usuario solicite la eliminación de su cuenta o deje
-                de utilizar el servicio, según lo permitido por la legislación
-                aplicable.
-              </li>
-            </ul>
-          </section>
-
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>8. Derechos del usuario</h2>
-
-            <p class={paragraphClass}>El usuario tiene derecho a:</p>
-
-            <ul class={listClass}>
-              <li>Acceder a sus datos personales.</li>
-
-              <li>
-                Solicitar la rectificación de información incorrecta o
-                desactualizada.
-              </li>
-
-              <li>Solicitar la eliminación de sus datos personales.</li>
-
-              <li>
-                Limitar u oponerse al tratamiento de sus datos, cuando sea
-                legalmente aplicable.
-              </li>
-            </ul>
-
-            <p class={paragraphClass}>
-              Para ejercer estos derechos, el usuario podrá comunicarse al
-              correo:
-              <a href={`mailto:${contactEmail}`} class={linkClass}>
-                {contactEmail}
-              </a>.
-            </p>
-          </section>
-
-          <section class={cardClass}>
-            <h2 class={sectionTitleClass}>9. Cambios al Aviso de Privacidad</h2>
-
-            <p class={paragraphClass}>
-              El Responsable se reserva el derecho de modificar el presente
-              Aviso de Privacidad en cualquier momento. Cualquier cambio será
-              publicado en la página web correspondiente y entrará en vigor a
-              partir de su publicación.
-            </p>
-          </section>
-        </article> -->
+          <p class="mt-4">
+            © {new Date().getFullYear()}
+            {appName}. Todos los derechos reservados.
+          </p>
+        </footer>
       </section>
     </main>
   </body>
