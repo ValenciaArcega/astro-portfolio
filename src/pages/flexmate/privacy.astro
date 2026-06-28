@@ -45,6 +45,14 @@ const privacyPoints = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/flexmate.png" />
     <title>Aviso de Privacidad | {appName}</title>
+    <style>
+      @keyframes fancy-fade {
+        0% { opacity: 0; transform: translateY(50px) scale(0.92); filter: blur(6px); }
+        100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+      }
+      .reveal { opacity: 0; transform: translateY(50px) scale(0.92); filter: blur(6px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+      .reveal.visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+    </style>
   </head>
 
   <body>
@@ -73,7 +81,7 @@ const privacyPoints = [
           {appName} Privacy
         </div>
 
-        <header class="mb-14">
+        <header class="mb-14 reveal">
           <h1
             class="relative inline-block text-5xl font-bold tracking-tight text-white sm:text-6xl"
           >
@@ -122,7 +130,7 @@ const privacyPoints = [
           </p>
         </header>
 
-        <section class="grid gap-5">
+        <section class="grid gap-5 reveal">
           {
             privacyPoints.map((point) => (
               <article class="group relative overflow-hidden rounded-[28px] border-2 border-white/10 bg-white/3 p-5 shadow-2xl shadow-black/20 backdrop-blur transition duration-700 hover:border-blue-400/30 hover:bg-white/5 sm:rounded-4xl sm:p-8">
@@ -149,7 +157,7 @@ const privacyPoints = [
         </section>
 
         <section
-          class="mt-8 rounded-[28px] border border-amber-400/20 bg-amber-400/6 p-5 shadow-2xl shadow-black/20 sm:rounded-4xl sm:p-8"
+          class="mt-8 rounded-[28px] border border-amber-400/20 bg-amber-400/6 p-5 shadow-2xl shadow-black/20 sm:rounded-4xl sm:p-8 reveal"
         >
           <div class="flex flex-col gap-4 sm:flex-row sm:items-start">
             <div
@@ -197,5 +205,18 @@ const privacyPoints = [
         </footer>
       </section>
     </main>
+
+    <script>
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>
