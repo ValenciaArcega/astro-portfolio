@@ -44,14 +44,31 @@ const privacyPoints = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/flexmate.png" />
-    <title>Aviso de Privacidad | {appName}</title>
+    <title>{appName} — Aviso de Privacidad</title>
     <style>
       @keyframes fancy-fade {
-        0% { opacity: 0; transform: translateY(50px) scale(0.92); filter: blur(6px); }
-        100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        0% {
+          opacity: 0;
+          transform: translateY(50px) scale(0.92);
+          filter: blur(6px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
       }
-      .reveal { opacity: 0; transform: translateY(50px) scale(0.92); filter: blur(6px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
-      .reveal.visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px) scale(0.92);
+        filter: blur(6px);
+        transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
     </style>
   </head>
 
@@ -207,16 +224,19 @@ const privacyPoints = [
     </main>
 
     <script>
-      const reveals = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      reveals.forEach(el => observer.observe(el));
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      reveals.forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>

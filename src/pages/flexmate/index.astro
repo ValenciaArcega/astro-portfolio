@@ -227,6 +227,48 @@ const languages = [
       .image-stack:has(:hover) img:nth-child(5) {
         transform: rotate(6deg);
       }
+      .hero-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        pointer-events: none;
+      }
+      .hero-orb--blue {
+        width: 500px;
+        height: 500px;
+        background: rgba(59, 130, 246, 0.08);
+        top: -10%;
+        left: -10%;
+        animation: orbFloat 12s ease-in-out infinite;
+      }
+      .hero-orb--orange {
+        width: 400px;
+        height: 400px;
+        background: rgba(251, 146, 60, 0.15);
+        bottom: 8%;
+        right: 8%;
+        animation: orbFloat 15s ease-in-out infinite reverse;
+      }
+      .hero-orb--small {
+        width: 250px;
+        height: 250px;
+        background: rgba(99, 102, 241, 0.1);
+        top: 50%;
+        left: 50%;
+        animation: orbFloat 10s ease-in-out infinite 2s;
+      }
+      @keyframes orbFloat {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(40px, -30px) scale(1.05);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.95);
+        }
+      }
     </style>
   </head>
   <body class="m-0 bg-white text-gray-900 antialiased">
@@ -234,6 +276,9 @@ const languages = [
       <section
         class="relative min-h-dvh flex flex-col items-center justify-center overflow-hidden bg-white"
       >
+        <div class="hero-orb hero-orb--blue"></div>
+        <div class="hero-orb hero-orb--orange"></div>
+        <div class="hero-orb hero-orb--small"></div>
         <header class="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <div class="mx-auto w-44 h-44 animate-fade-up logo-pulse">
             <img
@@ -243,11 +288,11 @@ const languages = [
             />
           </div>
           <h1
-            class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900"
+            class="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900"
           >
             {
               "Flexmate".split("").map((char, i) => (
-                <span class="letter-in" style={`animation-delay: ${i * 0.06}s`}>
+                <span class="letter-in" style={`animation-delay: ${i * 0.09}s`}>
                   {char === " " ? " " : char}
                 </span>
               ))
@@ -382,7 +427,7 @@ const languages = [
               languages.map((lang, i) => (
                 <button
                   data-index={i}
-                  class={`px-5 py-2.5 bg-white rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-100 transition-all duration-500 ${lang.hover} hover:scale-110 cursor-pointer`}
+                  class={`px-5 py-2.5 bg-white rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-100 transition-all duration-500 ${lang.hover} hover:scale-110`}
                 >
                   {lang.native}
                 </button>
@@ -443,7 +488,11 @@ const languages = [
                 Download it now!
               </p>
               <p class="text-xs sm:text-sm text-gray-400 leading-snug max-w-sm">
-                Crafted with love by Angel Valencia Arcega.
+                Crafted with love by <a
+                  class="underline"
+                  href="https://www.linkedin.com/in/luis-angel-valencia-arcega-4827b9239"
+                  target="_blank">Angel Valencia Arcega.</a
+                >
               </p>
             </header>
 
@@ -490,6 +539,7 @@ const languages = [
             <nav class="flex items-center gap-5">
               <a
                 href="/flexmate/privacy"
+                target="_blank"
                 class="hover:text-gray-600 hover:underline transition-colors duration-300"
                 >Privacy Policy</a
               >
