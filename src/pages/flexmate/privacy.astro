@@ -1,50 +1,50 @@
 ---
 import "../../App.css";
 
-const lastUpdated = "02 de Junio de 2026";
+const lastUpdated = "July 7, 2026";
 const appName = "Flexmate";
 const contactEmail = "dev.valenciaarcega@gmail.com";
 
 const privacyPoints = [
   {
     number: "01",
-    title: "Tus datos de entrenamiento permanecen en tu dispositivo",
+    title: "Your training data stays on your device",
     description:
-      "La aplicación está diseñada para funcionar principalmente sin conexión a internet. Tus rutinas, récords, estadísticas y progreso se almacenan localmente en tu dispositivo para ofrecer una experiencia rápida, privada y disponible en cualquier momento.",
+      "The app is designed to work primarily offline. Your routines, records, statistics, and progress are stored locally on your device to provide a fast, private experience available at any time.",
   },
   {
     number: "02",
-    title: "Información necesaria para crear una cuenta",
+    title: "Information required to create an account",
     description:
-      "Al crear una cuenta se almacenan únicamente tu nombre completo, correo electrónico y contraseña. El correo electrónico se utiliza exclusivamente para iniciar sesión y recuperar el acceso a tu cuenta cuando sea necesario. La contraseña se almacena de forma protegida y no puede ser consultada por los administradores de la aplicación.",
+      "When you create an account, only your full name, email address, and password are stored. Your email is used exclusively to log in and recover access to your account when needed. Your password is stored securely and cannot be viewed by the app's administrators.",
   },
   {
     number: "03",
-    title: "Respaldo opcional en la nube",
+    title: "Automatic backup to protect your data",
     description:
-      "Si decides sincronizar o respaldar tu información, tus datos de entrenamiento, estadísticas y fotografía de perfil, si la agregas, se almacenarán en servidores destinados al respaldo de información para que puedan recuperarse en el futuro. Este respaldo es completamente opcional y la aplicación puede utilizarse sin él.",
+      "To prevent data loss when switching devices or reinstalling the app, your training data and statistics are periodically and automatically backed up to dedicated servers. You can also manually trigger a backup from the app at any time. This mechanism allows you to recover your information when needed.",
   },
   {
     number: "04",
-    title: "Transparencia sobre el almacenamiento de datos",
+    title: "Transparency about data storage",
     description:
-      "Los datos respaldados en la nube no se almacenan con cifrado de contenido. Aunque se aplican medidas razonables de seguridad para proteger la información, los datos almacenados podrían ser accesibles para tareas de administración y mantenimiento del sistema y no se recomienda guardar información personal sensible dentro de la aplicación.",
+      "Backed-up data is not stored with content-level encryption. The stored data may be accessible for system administration and maintenance tasks, and it is recommended not to store sensitive personal information within the app.",
   },
   {
     number: "05",
-    title: "La información no se comparte ni se vende",
+    title: "Your information is not shared or sold",
     description:
-      "La información almacenada en la aplicación y en los respaldos opcionales no se vende, alquila ni comparte con terceros para fines comerciales. Su único propósito es proporcionar las funciones de la aplicación y permitir la recuperación de los datos cuando así se solicite.",
+      "The information stored in the app and in backups is not sold, rented, or shared with third parties for commercial purposes. Its sole purpose is to provide the app's functionality and to allow data recovery when requested.",
   },
 ];
 ---
 
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/flexmate.png" />
-    <title>{appName} — Aviso de Privacidad</title>
+    <title>{appName} — Privacy Policy</title>
     <style>
       @keyframes fancy-fade {
         0% {
@@ -102,7 +102,7 @@ const privacyPoints = [
           <h1
             class="relative inline-block text-5xl font-bold tracking-tight text-white sm:text-6xl"
           >
-            Aviso de Privacidad
+            Privacy Policy
 
             <svg
               class="absolute -bottom-4 left-0 w-full sm:-bottom-10 md:-bottom-6 lg:-bottom-4"
@@ -136,15 +136,14 @@ const privacyPoints = [
           </h1>
 
           <p class="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
-            Conoce de forma clara y transparente cómo se almacena, utiliza y
-            protege la información asociada al uso de
-            <span class="text-zinc-200">{appName}</span>.
+            Learn clearly and transparently how information associated with the use of
+            <span class="text-zinc-200">{appName}</span> is stored, used, and protected.
           </p>
 
-          <p class="mt-6 text-sm text-zinc-500">
-            Última actualización:
-            <span class="text-zinc-300">{lastUpdated}</span>
-          </p>
+            <p class="mt-6 text-sm text-zinc-500">
+              Last updated:
+              <span class="text-zinc-300">{lastUpdated}</span>
+            </p>
         </header>
 
         <section class="grid gap-5 reveal">
@@ -187,15 +186,14 @@ const privacyPoints = [
               <h2
                 class="text-lg font-semibold tracking-tight text-white sm:text-xl"
               >
-                Nota importante
+                Important note
               </h2>
 
               <p
                 class="mt-3 max-w-3xl text-sm leading-7 text-zinc-300 sm:text-base sm:leading-8"
               >
-                Aunque aplicamos medidas razonables para proteger la información
-                almacenada, ningún sistema informático puede garantizar una
-                seguridad absoluta.
+                While we implement reasonable measures to protect stored
+                information, no computer system can guarantee absolute security.
               </p>
             </div>
           </div>
@@ -205,8 +203,7 @@ const privacyPoints = [
           class="mt-12 border-t border-white/10 pt-8 text-sm leading-7 text-zinc-500 sm:mt-14"
         >
           <p>
-            Para cualquier duda relacionada con este aviso de privacidad, puede
-            contactarse a
+            For any questions regarding this privacy policy, please contact
             <a
               href={`mailto:${contactEmail}`}
               class="text-blue-400 underline underline-offset-4 transition hover:text-blue-300"
@@ -217,7 +214,7 @@ const privacyPoints = [
 
           <p class="mt-4">
             © {new Date().getFullYear()}
-            {appName}. Todos los derechos reservados.
+            {appName}. All rights reserved.
           </p>
         </footer>
       </section>

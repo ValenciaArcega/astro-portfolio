@@ -24,14 +24,14 @@ const languages = [
     hover: "hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200",
   },
   {
-    native: "日本語",
-    code: "jp",
-    hover: "hover:bg-amber-50 hover:text-amber-600 hover:border-amber-200",
-  },
-  {
     native: "Русский",
     code: "ru",
     hover: "hover:bg-violet-50 hover:text-violet-600 hover:border-violet-200",
+  },
+  {
+    native: "日本語",
+    code: "jp",
+    hover: "hover:bg-amber-50 hover:text-amber-600 hover:border-amber-200",
   },
   {
     native: "Español",
@@ -120,17 +120,22 @@ const languages = [
         display: inline-block;
         opacity: 0;
         filter: blur(12px);
+        -webkit-filter: blur(12px);
+        transform: translateY(8px) translateZ(0);
         animation: letterFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        will-change: opacity, filter, transform;
       }
       @keyframes letterFadeIn {
         from {
           opacity: 0;
           filter: blur(12px);
+          -webkit-filter: blur(12px);
           transform: translateY(8px);
         }
         to {
           opacity: 1;
           filter: blur(0);
+          -webkit-filter: blur(0);
           transform: translateY(0);
         }
       }
