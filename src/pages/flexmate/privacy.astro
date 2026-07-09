@@ -1,40 +1,70 @@
 ---
 import "../../App.css";
 
-const lastUpdated = "July 7, 2026";
+const lastUpdated = "July 9, 2026";
 const appName = "Flexmate";
 const contactEmail = "dev.valenciaarcega@gmail.com";
 
 const privacyPoints = [
   {
     number: "01",
-    title: "Your training data stays on your device",
+    title: "Your training data, stored locally and backed up automatically",
     description:
-      "The app is designed to work primarily offline. Your routines, records, statistics, and progress are stored locally on your device to provide a fast, private experience available at any time.",
+      "The app is designed to work primarily offline. Your routines, records, statistics, and progress are stored locally on your device to provide a fast, private experience available at any time. In addition, this data is periodically and automatically backed up to our servers to prevent data loss when switching devices or reinstalling the app.",
   },
   {
     number: "02",
-    title: "Information required to create an account",
+    title: "Adults-only application",
     description:
-      "When you create an account, only your full name, email address, and password are stored. Your email is used exclusively to log in and recover access to your account when needed. Your password is stored securely and cannot be viewed by the app's administrators.",
+      "Flexmate is intended for use by adults only, consistent with the age rating assigned to the App in the App Store and Google Play. The App does not knowingly collect information from individuals under the age of majority in their country of residence. By creating an account, you confirm that you are an adult under applicable law.",
   },
   {
     number: "03",
+    title: "Information required to create an account",
+    description:
+      "When you create an account, only your full name, email address, and password are stored. Your email is used exclusively to log in and recover access to your account when needed. Your password is stored securely and cannot be viewed by the app's administrators. Additionally, uploading a profile photo is optional and is not required during registration — if you choose to add one from the Edit Profile screen, it is stored in our database and used solely to display alongside your name within the App.",
+  },
+  {
+    number: "04",
+    title: "Delete your account",
+    description:
+      "Flexmate allows you to permanently delete your account and associated data directly from the App. You may delete your account at any time from Settings within the App (Account > Delete Account). Deleting your account permanently removes your profile information, saved routines, activity logs, and profile photo from both our servers and the device on which you requested the deletion.",
+  },
+  {
+    number: "05",
     title: "Automatic backup to protect your data",
     description:
       "To prevent data loss when switching devices or reinstalling the app, your training data and statistics are periodically and automatically backed up to dedicated servers. You can also manually trigger a backup from the app at any time. This mechanism allows you to recover your information when needed.",
   },
   {
-    number: "04",
+    number: "06",
     title: "Transparency about data storage",
     description:
-      "Backed-up data is not stored with content-level encryption. The stored data may be accessible for system administration and maintenance tasks, and it is recommended not to store sensitive personal information within the app.",
+      "Backed-up data is not stored with content-level encryption. The stored data may be accessible for system administration and maintenance tasks, as with any online storage system, we recommend avoiding storing sensitive personal information within the app beyond what is necessary for its core functionality.",
   },
   {
-    number: "05",
+    number: "07",
     title: "Your information is not shared or sold",
     description:
-      "The information stored in the app and in backups is not sold, rented, or shared with third parties for commercial purposes. Its sole purpose is to provide the app's functionality and to allow data recovery when requested.",
+      "The information stored in the app and in backups is not sold, rented, or shared with third parties for commercial purposes. Its sole purpose is to provide the app's functionality.",
+  },
+  {
+    number: "08",
+    title: "Not medical advice",
+    description:
+      "Consult a healthcare professional before starting any exercise routine. This App is not a substitute for professional advice. Before starting any exercise program, you should consult a physician or qualified health professional, especially if you have a pre-existing medical condition, injury, or are unsure about your physical ability to perform certain exercises. \nYou are solely responsible for evaluating your own physical condition and for any decision to start, continue, or stop a workout routine. Flexmate does not assume responsibility for injuries, health complications, or damages resulting from the use of information, routines, or records stored in the App.",
+  },
+  {
+    number: "09",
+    title: "Acceptable use",
+    description:
+      "You agree not to: \n(a) attempt to gain unauthorized access to the App's systems or other users' accounts;\n(b) reverse-engineer or decompile the App beyond what is permitted by applicable law; \n(c) use the App for any purpose that violates applicable laws or regulations.",
+  },
+  {
+    number: "10",
+    title: "Changes to this policy",
+    description:
+      "We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. Material changes will be communicated within the App or through other reasonable means. We encourage you to review this page periodically to stay informed about how we protect your information.",
   },
 ];
 ---
@@ -136,14 +166,15 @@ const privacyPoints = [
           </h1>
 
           <p class="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
-            Learn clearly and transparently how information associated with the use of
+            Learn clearly and transparently how information associated with the
+            use of
             <span class="text-zinc-200">{appName}</span> is stored, used, and protected.
           </p>
 
-            <p class="mt-6 text-sm text-zinc-500">
-              Last updated:
-              <span class="text-zinc-300">{lastUpdated}</span>
-            </p>
+          <p class="mt-6 text-sm text-zinc-500">
+            Last updated:
+            <span class="text-zinc-300">{lastUpdated}</span>
+          </p>
         </header>
 
         <section class="grid gap-5 reveal">
@@ -162,7 +193,10 @@ const privacyPoints = [
                       {point.title}
                     </h2>
 
-                    <p class="mt-3 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
+                    <p
+                      style="white-space: pre-wrap"
+                      class="mt-3 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8"
+                    >
                       {point.description}
                     </p>
                   </div>
