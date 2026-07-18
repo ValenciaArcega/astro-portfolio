@@ -1,128 +1,342 @@
 ---
-import '../css/Projects.css';
-import { IconReact } from './icons/technologies';
-import Project from './Project';
+import "../css/Projects.css";
+import { IconReact } from "./icons/technologies";
 import {
+  PiAndroidLogoDuotone,
+  PiAppleLogoDuotone,
   PiAppStoreLogoDuotone,
+  PiAtomDuotone,
+  PiBrainDuotone,
+  PiButterflyDuotone,
   PiCodeDuotone,
+  PiGithubLogoDuotone,
+  PiGlobeSimpleDuotone,
+  PiGooglePlayLogoDuotone,
   PiRocketDuotone,
-} from 'react-icons/pi';
+  PiRocketLaunchDuotone,
+} from "react-icons/pi";
 import {
   firstProjectsSet,
   secondProjectsSet,
-} from '@src/constants/slider-projects';
+} from "@src/constants/slider-projects";
+
+const twCard =
+  "mb-12 mt-0 group bg-transparent duration-500 w-[94%] sm:w-96 min-h-64 py-2 flex flex-col items-center relative rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 border border-solid border-a910";
+const twCardMain = "z-20 flex flex-col px-6 py-4 w-full";
+const twTag =
+  "inline-block px-3 py-1 w-fit rounded-full text-xs font-medium border";
+const twName =
+  "font-semibold text-white mt-2 text-4xl customTitle tracking-wider";
+const twSubtext = "text-sm text-gray-400 mt-4";
+const twRow = "text-xs flex items-center gap-x-2 mt-2";
+const twRowBetween = "flex justify-between w-full items-center text-white";
+const twFooter = "flex justify-between mt-16";
+const twLink =
+  "w-[46%] text-white visited:text-purple-400 flex items-center gap-x-2 px-3 rounded-xl duration-700 underline hover:cursor-pointer";
+
+const blobPath =
+  "M39.5,-49.6C54.8,-43.2,73.2,-36.5,78.2,-24.6C83.2,-12.7,74.8,4.4,69,22.5C63.3,40.6,60.2,59.6,49.1,64.8C38.1,70,19,61.5,0.6,60.7C-17.9,59.9,-35.9,67,-47.2,61.9C-58.6,56.7,-63.4,39.5,-70,22.1C-76.6,4.7,-84.9,-12.8,-81.9,-28.1C-79,-43.3,-64.6,-56.3,-49.1,-62.5C-33.6,-68.8,-16.8,-68.3,-2.3,-65.1C12.1,-61.9,24.2,-55.9,39.5,-49.6Z";
 ---
 
-<section class='pt-52' id='projects'>
-  <section class='w-full flex flex-col' style='container-type: inline-size;'>
-    <header class='self-center w-[68%] flex flex-row relative justify-center'>
+<section class="pt-52" id="projects">
+  <section class="w-full flex flex-col" style="container-type: inline-size;">
+    <header class="self-center w-[68%] flex flex-row relative justify-center">
       <div
-        class='ml-2 w-20 h-28 rounded-xl grid place-content-center border border-solid border-a900 -rotate-12 bg-transparent'
+        class="ml-2 w-20 h-28 rounded-xl grid place-content-center border border-solid border-a900 -rotate-12 bg-transparent"
       >
-        <PiRocketDuotone className='text-5xl text-gray-300' />
+        <PiRocketDuotone className="text-5xl text-gray-300" />
       </div>
       <div
-        class='-ml-4 -mt-3 scale-125 z-50 w-20 max-h-24 rounded-xl grid place-content-center shadow-2xl bg-linear-to-t from-a930 to-a900 overflow-hidden border border-a700'
+        class="-ml-4 -mt-3 scale-125 z-50 w-20 max-h-24 rounded-xl grid place-content-center shadow-2xl bg-linear-to-t from-a930 to-a900 overflow-hidden border border-a700"
       >
-        <PiAppStoreLogoDuotone className='text-6xl text-blue-500' />
+        <PiAppStoreLogoDuotone className="text-6xl text-blue-500" />
       </div>
       <div
-        class='-ml-4 w-20 h-28 rounded-xl grid place-content-center border border-solid border-a900 rotate-20 bg-transparent'
+        class="-ml-4 w-20 h-28 rounded-xl grid place-content-center border border-solid border-a900 rotate-20 bg-transparent"
       >
-        <PiCodeDuotone className='text-5xl text-gray-300 rotate-44' />
+        <PiCodeDuotone className="text-5xl text-gray-300 rotate-44" />
       </div>
     </header>
 
     <article
-      class='text-[2rem] mt-6 md:text-[3rem] text-center flex flex-col items-center md:maskProjectsTitle md:dark:maskProjectsTitleDark'
+      class="text-[2rem] mt-6 md:text-[3rem] text-center flex flex-col items-center md:maskProjectsTitle md:dark:maskProjectsTitleDark"
     >
-      <h1 class='font-medium text-white tracking-tight'>In Production!</h1>
+      <h1 class="font-medium text-white tracking-tight">In Production!</h1>
     </article>
 
     <article
-      class='mt-16 pt-32 relative grid gap-x-4 gap-y-[2.2rem] grid-cols-[repeat(auto-fit,minmax(21rem,1fr))] w-full justify-items-center bg-linear-to-t from-[#101010] to-[#151515]'
+      class="mt-8 pt-24 px-8 relative flex flex-wrap gap-4 w-full justify-around bg-linear-to-t from-[#101010] to-[#151515]"
     >
       <header
-        class='absolute left-1/2 top-0 w-[80%] h-px select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-linear-to-r from-transparent via-gray-500 to-transparent'
+        class="absolute left-1/2 top-0 w-[80%] h-px select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-linear-to-r from-transparent via-gray-500 to-transparent"
       >
       </header>
-      <Project
-        name='Flego'
-        platform='multiplatform'
-        tint='green'
-        urlAppStore='https://apps.apple.com/mx/app/flego-tu-flete-de-regreso/id6746598808'
-        urlPlayStore='https://play.google.com/store/apps/details?id=app.torreydlc.flego'
-        urlImage='./logos/flego.png'
-        authorsBackend='Edson Reyes & Josue Cazares'
-        poweredBy='Torrey DLC & BAACC Systems'
-      />
-      <Project
-        name='Connie'
-        platform='multiplatform'
-        tint='yellow'
-        urlAppStore='https://apps.apple.com/mx/app/connie-ia/id6747147819'
-        urlPlayStore='https://play.google.com/store/apps/details?id=app.baaccsystems.connieia'
-        urlImage='./logos/connie.png'
-        authorsBackend='Edson Reyes & David Herrera'
-        poweredBy='BAACC Systems'
-      />
-      <Project
-        name='Tolescro'
-        platform='web'
-        tint='blue'
-        urlImage='./tolescro-logo.svg'
-        urlWeb='https://valenciaarcega.github.io/tolescro/'
-        ankerRepo='https://github.com/ValenciaArcega/tolescro'
-      />
+
+      <!-- Flexmate -->
+      <article class={twCard}>
+        <svg
+          viewBox="0 0 200 200"
+          class="absolute blur z-10 duration-700 group-hover:blur-sm group-hover:scale-105"
+          style="fill: rgba(59, 130, 246, 0.05)"
+        >
+          <path transform="translate(100 100)" d={blobPath}></path>
+        </svg>
+        <main class={twCardMain}>
+          <div class="flex gap-x-2 absolute top-4 right-4">
+            <PiAppleLogoDuotone size={25} className="text-gray-200" />
+            <PiAndroidLogoDuotone size={28} className="text-green-300" />
+          </div>
+          <span
+            class={`${twTag} bg-blue-500/15 text-blue-400 border-blue-500/30`}
+          >
+            Gym app
+          </span>
+          <h1 class={twName}>Flexmate</h1>
+          <p class={twSubtext}>The brains behind the keyboard.</p>
+          <div class={twRow}>
+            <PiAtomDuotone size={24} className="text-blue-500" />
+            <div class={twRowBetween}>
+              <span>App</span>
+              <p>Angel Valencia Arcega</p>
+            </div>
+          </div>
+          <div class={twRow}>
+            <PiBrainDuotone size={24} className="text-blue-500" />
+            <div class={twRowBetween}>
+              <span>Backend</span>
+              <p>Edson Reyes</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-x-2 mt-8">
+            <PiButterflyDuotone size={24} className="text-blue-500" />
+            <p class="text-white text-xs">Powered by Angel Valencia Arcega</p>
+          </div>
+          <footer class={twFooter}>
+            <a
+              target="_blank"
+              href="https://apps.apple.com/us/app/flexmate/id6788123810"
+              class={`${twLink} hover:text-blue-300`}
+            >
+              <PiAppStoreLogoDuotone size={24} />
+              Download
+            </a>
+            <a
+              target="_blank"
+              href="https://apps.apple.com/us/app/flexmate/id6788123810"
+              class={`${twLink} hover:text-blue-300`}
+            >
+              <PiGooglePlayLogoDuotone size={24} />
+              Download
+            </a>
+          </footer>
+        </main>
+      </article>
+
+      <!-- Connie -->
+      <article class={twCard}>
+        <svg
+          viewBox="0 0 200 200"
+          class="absolute blur z-10 duration-700 group-hover:blur-sm group-hover:scale-105"
+          style="fill: rgba(234, 179, 8, 0.05)"
+        >
+          <path transform="translate(100 100)" d={blobPath}></path>
+        </svg>
+        <main class={twCardMain}>
+          <div class="flex gap-x-2 absolute top-4 right-4">
+            <PiAppleLogoDuotone size={25} className="text-gray-200" />
+            <PiAndroidLogoDuotone size={28} className="text-green-300" />
+          </div>
+          <span
+            class={`${twTag} bg-yellow-500/15 text-yellow-400 border-yellow-500/30`}
+          >
+            Chat with Artificial Intelligence
+          </span>
+          <h1 class={twName}>Connie</h1>
+          <p class={twSubtext}>The brains behind the keyboard.</p>
+          <div class={twRow}>
+            <PiAtomDuotone size={24} className="text-yellow-500" />
+            <div class={twRowBetween}>
+              <span>App</span>
+              <p>Angel Valencia Arcega</p>
+            </div>
+          </div>
+          <div class={twRow}>
+            <PiBrainDuotone size={24} className="text-yellow-500" />
+            <div class={twRowBetween}>
+              <span>Backend</span>
+              <p>Edson Reyes & David Herrera</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-x-2 mt-8">
+            <PiButterflyDuotone size={24} className="text-yellow-500" />
+            <p class="text-white text-xs">Powered by BAACC Systems</p>
+          </div>
+          <footer class={twFooter}>
+            <a
+              target="_blank"
+              href="https://apps.apple.com/mx/app/connie-ia/id6747147819"
+              class={`${twLink} hover:text-yellow-300`}
+            >
+              <PiAppStoreLogoDuotone size={24} />
+              Download
+            </a>
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=app.baaccsystems.connieia"
+              class={`${twLink} hover:text-yellow-300`}
+            >
+              <PiGooglePlayLogoDuotone size={24} />
+              Download
+            </a>
+          </footer>
+        </main>
+      </article>
+
+      <!-- Flego -->
+      <article class={twCard}>
+        <svg
+          viewBox="0 0 200 200"
+          class="absolute blur z-10 duration-700 group-hover:blur-sm group-hover:scale-105"
+          style="fill: rgba(20, 184, 166, 0.05)"
+        >
+          <path transform="translate(100 100)" d={blobPath}></path>
+        </svg>
+        <main class={twCardMain}>
+          <div class="flex gap-x-2 absolute top-4 right-4">
+            <PiAppleLogoDuotone size={25} className="text-gray-200" />
+            <PiAndroidLogoDuotone size={28} className="text-green-300" />
+          </div>
+          <span
+            class={`${twTag} bg-green-500/15 text-green-400 border-green-500/30`}
+            >Freight transport app</span
+          >
+          <h1 class={twName}>Flego</h1>
+          <p class={twSubtext}>The brains behind the keyboard.</p>
+          <div class={twRow}>
+            <PiAtomDuotone size={24} className="text-green-600" />
+            <div class={twRowBetween}>
+              <span>App</span>
+              <p>Angel Valencia Arcega</p>
+            </div>
+          </div>
+          <div class={twRow}>
+            <PiBrainDuotone size={24} className="text-green-600" />
+            <div class={twRowBetween}>
+              <span>Backend</span>
+              <p>Edson Reyes & Josue Cazares</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-x-2 mt-8">
+            <PiButterflyDuotone size={24} className="text-green-600" />
+            <p class="text-white text-xs">
+              Powered by TORREY DLC & BAACC Systems
+            </p>
+          </div>
+          <footer class={twFooter}>
+            <a
+              target="_blank"
+              href="https://apps.apple.com/mx/app/flego-tu-flete-de-regreso/id6746598808"
+              class={`${twLink} hover:text-green-300`}
+            >
+              <PiAppStoreLogoDuotone size={24} />
+              Download
+            </a>
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=app.torreydlc.flego"
+              class={`${twLink} hover:text-green-300`}
+            >
+              <PiGooglePlayLogoDuotone size={24} />
+              Download
+            </a>
+          </footer>
+        </main>
+      </article>
+
+      <!-- Tolescro -->
+      <article class={twCard}>
+        <svg
+          viewBox="0 0 200 200"
+          class="absolute blur z-10 duration-700 group-hover:blur-sm group-hover:scale-105"
+          style="fill: rgba(59, 130, 246, 0.05)"
+        >
+          <path transform="translate(100 100)" d={blobPath}></path>
+        </svg>
+        <main class={twCardMain}>
+          <div class="flex gap-x-2 absolute top-4 right-4">
+            <PiGlobeSimpleDuotone size={28} className="text-blue-500" />
+          </div>
+          <span
+            class={`${twTag} bg-blue-500/15 text-blue-400 border-blue-500/30`}
+          >
+            Learn English while scrolling
+          </span>
+          <h1 class={twName}>Tolescro</h1>
+          <p class={twSubtext}>Behind the keyboard</p>
+          <div class="flex items-center gap-x-2 mt-6">
+            <PiAtomDuotone size={24} className="text-blue-500" />
+            <p class="text-white text-sm">Developed by Angel Valencia Arcega</p>
+          </div>
+          <footer class={twFooter}>
+            <a
+              target="_blank"
+              href="https://github.com/ValenciaArcega/tolescro"
+              class={`${twLink} hover:text-blue-300`}
+            >
+              <PiGithubLogoDuotone size={24} />
+              Give a Star
+            </a>
+            <a
+              target="_blank"
+              href="https://valenciaarcega.github.io/tolescro/"
+              class={`${twLink} hover:text-blue-300`}
+            >
+              <PiRocketLaunchDuotone size={24} />
+              Launch
+            </a>
+          </footer>
+        </main>
+      </article>
     </article>
   </section>
 
   <header
-    class='absolute left-1/2 top-0 w-[80%] h-px select-none pointer-events-none -translate-x-1/2 bg-linear-to-r from-transparent via-[#c6c6c6ab] to-transparent'
+    class="absolute left-1/2 top-0 w-[80%] h-px select-none pointer-events-none -translate-x-1/2 bg-linear-to-r from-transparent via-[#c6c6c6ab] to-transparent"
   >
   </header>
-
-  <!-- <Project
-        description='it is a website to save your ideas. Easy, clean and fast'
-        urlImage='./fare-logo.svg'
-        name='Fare'
-        urlSite='https://valenciaarcega.github.io/fare/'
-        urlRepo='https://github.com/ValenciaArcega/fare'
-      />
--->
 </section>
 
 <section
-  class='relative py-32 flex justify-center w-full items-center bg-[#101010]'
+  class="relative py-32 flex justify-center w-full items-center bg-[#101010]"
 >
   <!-- Circles behind blur view -->
-  <div class='h-12 w-12 bg-[#04ddff] rounded-full'></div>
-  <div class='h-12 w-12 bg-[#1899ff] rounded-full'></div>
+  <div class="h-12 w-12 bg-[#04ddff] rounded-full"></div>
+  <div class="h-12 w-12 bg-[#1899ff] rounded-full"></div>
 
   <div
-    class='absolute inset-0 flex gap-y-3 backdrop-blur-2xl flex-col items-center justify-center'
+    class="absolute inset-0 flex gap-y-3 backdrop-blur-2xl flex-col items-center justify-center"
   >
-    <IconReact className='spin-scale' height='84' />
-    <h1 class='text-3xl text-center text-white font-medium tracking-tight'>
+    <IconReact className="spin-scale" height="84" />
+    <h1 class="text-3xl text-center text-white font-medium tracking-tight">
       So much
-      <span class='text-[#00D8FF]'>Native</span> magic<span
-        class='text-[#00D8FF]'>.</span
+      <span class="text-[#00D8FF]">Native</span> magic<span
+        class="text-[#00D8FF]">.</span
       >
     </h1>
-    <p class='text-gray-400 mt-2 px-4 text-center'>
+    <p class="text-gray-400 mt-2 px-4 text-center">
       A little taste of my work and the apps I had done.
     </p>
   </div>
 </section>
 
 <section
-  class='bg-linear-to-b from-[#101010] to:black w-full text-center overflow-hidden relative'
+  class="bg-linear-to-b from-[#101010] to:black w-full text-center overflow-hidden relative"
 >
-  <article class='wrapperSlider'>
+  <article class="wrapperSlider">
     {
       firstProjectsSet.map((item) => (
         <img
-          class='projectInSliderLeft max-h-103!'
+          class="projectInSliderLeft max-h-103!"
           src={item.uri}
           alt={item.alt}
         />
@@ -130,11 +344,11 @@ import {
     }
   </article>
 
-  <article class='wrapperSlider'>
+  <article class="wrapperSlider">
     {
       secondProjectsSet.map((item) => (
         <img
-          class='projectInSliderRight max-h-103!'
+          class="projectInSliderRight max-h-103!"
           src={item.uri}
           alt={item.alt}
         />

@@ -49,10 +49,6 @@ export const secondProjectsSet: ImagesSlider[] = [
 		alt: 'Device with a complete profile form on health app.',
 	},
 	{
-		uri: '/apps-web/view-bank.webp',
-		alt: 'Screenshot of Bank web application.',
-	},
-	{
 		uri: '/apps-web/view-cloud.webp',
 		alt: 'Screenshot of Cloud storage web application.',
 	},
