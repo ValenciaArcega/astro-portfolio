@@ -10,12 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.2",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.15",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.4.0",
+    "astro-icon": "^1.1.5",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.3",
+    "@iconify-json/ph": "^1.2.2"
   }
 }

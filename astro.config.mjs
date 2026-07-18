@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
+import icon from 'astro-icon';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -14,7 +14,7 @@ export default defineConfig({
     port: 4321,
   },
 
-  integrations: [react()],
+  integrations: [icon()],
 
   vite: {
     plugins: [tailwindcss()]

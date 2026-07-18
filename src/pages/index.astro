@@ -3,7 +3,7 @@ import "../App.css";
 import Welcome from "@src/components/Welcome.astro";
 import Projects from "@src/components/Projects.astro";
 import Experience from "@src/components/Experience.astro";
-import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
+import { Icon } from 'astro-icon/components';
 ---
 
 <html lang="en">
@@ -34,8 +34,9 @@ import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
           target="_blank"
           href="https://www.linkedin.com/in/luis-angel-valencia-arcega-4827b9239"
         >
-          <PiLinkedinLogoDuotone
-            className="text-gray-400 hover:text-blue-400! transition-colors duration-700"
+          <Icon
+            name="ph:linkedin-logo-duotone"
+            class="text-gray-400 hover:text-blue-400! transition-colors duration-700"
             size={48}
           />
         </a>
@@ -44,8 +45,9 @@ import { PiGithubLogoDuotone, PiLinkedinLogoDuotone } from "react-icons/pi";
           target="_blank"
           href="https://github.com/ValenciaArcega"
         >
-          <PiGithubLogoDuotone
-            className="text-gray-400 hover:text-blue-400! transition-colors duration-700"
+          <Icon
+            name="ph:github-logo-duotone"
+            class="text-gray-400 hover:text-blue-400! transition-colors duration-700"
             size={48}
           />
         </a>

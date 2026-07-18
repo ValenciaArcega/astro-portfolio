@@ -1,9 +1,5 @@
 ---
-import {
-  HiOutlineAcademicCap,
-  HiOutlineBriefcase,
-  HiOutlineBookOpen,
-} from "react-icons/hi2";
+import { Icon } from 'astro-icon/components';
 
 const card =
   "max-w-[22rem] min-w-[22rem] w-[22rem] p-4 py-6 rounded-3xl relative flex-col bg-gradient-to-t from-black to-[#171717]";
@@ -31,7 +27,7 @@ const lineGradient =
       <header class={lineGradient}></header>
 
       <div class={wrIcon + " bg-linear-to-b from-green-950 to-green-950/20"}>
-        <HiOutlineAcademicCap size={32} className="text-[#D9FDD3]" />
+        <Icon name="heroicons:academic-cap" size={32} class="text-[#D9FDD3]" />
       </div>
 
       <p class={txtTitle}>University</p>
@@ -46,7 +42,7 @@ const lineGradient =
       <header class={lineGradient + " via-orange-900"}></header>
 
       <div class={wrIcon + " bg-linear-to-b from-orange-950 to-orange-950/20"}>
-        <HiOutlineBriefcase size={32} className="text-[#ffc8c8]" />
+        <Icon name="heroicons:briefcase" size={32} class="text-[#ffc8c8]" />
       </div>
 
       <p class={txtTitle}>Current job</p>
@@ -60,7 +56,7 @@ const lineGradient =
       <header class={lineGradient + " via-sky-900"}></header>
 
       <div class={wrIcon + " bg-linear-to-b from-purple-950 to-purple-950/20"}>
-        <HiOutlineBookOpen size={32} className="text-purple-100" />
+        <Icon name="heroicons:book-open" size={32} class="text-purple-100" />
       </div>
 
       <p class={txtTitle}>Self-taught</p>

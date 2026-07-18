@@ -1,15 +1,5 @@
 ---
-import {
-	PiAndroidLogoDuotone,
-	PiAppleLogoDuotone,
-	PiAppStoreLogoDuotone,
-	PiAtomDuotone,
-	PiBrainDuotone,
-	PiButterflyDuotone,
-	PiCodeDuotone,
-	PiGooglePlayLogoDuotone,
-	PiRocketDuotone,
-} from "react-icons/pi";
+import { Icon } from 'astro-icon/components';
 import {
 	firstProjectsSet,
 	secondProjectsSet,
@@ -41,17 +31,17 @@ const blobPath =
 			<div
 				class="ml-2 w-20 h-28 rounded-xl grid place-content-center border border-solid border-a900 -rotate-12 bg-transparent"
 			>
-				<PiRocketDuotone className="text-5xl text-gray-300" />
+				<Icon name="ph:rocket-duotone" class="text-5xl text-gray-300" />
 			</div>
 			<div
 				class="-ml-4 -mt-3 scale-125 z-50 w-20 max-h-24 rounded-xl grid place-content-center shadow-2xl bg-linear-to-t from-a930 to-a900 overflow-hidden border border-a700"
 			>
-				<PiAppStoreLogoDuotone className="text-6xl text-blue-500" />
+				<Icon name="ph:app-store-logo-duotone" class="text-6xl text-blue-500" />
 			</div>
 			<div
 				class="-ml-4 w-20 h-28 rounded-xl grid place-content-center border border-solid border-a900 rotate-20 bg-transparent"
 			>
-				<PiCodeDuotone className="text-5xl text-gray-300 rotate-44" />
+				<Icon name="ph:code-duotone" class="text-5xl text-gray-300 rotate-44" />
 			</div>
 		</header>
 
@@ -82,13 +72,13 @@ const blobPath =
 				</svg>
 				<main class={twCardMain}>
 					<div class="flex gap-x-2 absolute top-4 right-4">
-						<PiAppleLogoDuotone
+						<Icon name="ph:apple-logo-duotone"
 							size={25}
-							className="text-gray-200"
+							class="text-gray-200"
 						/>
-						<PiAndroidLogoDuotone
+						<Icon name="ph:android-logo-duotone"
 							size={28}
-							className="text-green-300"
+							class="text-green-300"
 						/>
 					</div>
 					<div>
@@ -100,9 +90,9 @@ const blobPath =
 						<h1 class={twName}>Flexmate</h1>
 						<p class={twSubtext}>The brains behind the keyboard.</p>
 						<div class={twRow}>
-							<PiAtomDuotone
+							<Icon name="ph:atom-duotone"
 								size={24}
-								className="text-blue-500"
+								class="text-blue-500"
 							/>
 							<div class={twRowBetween}>
 								<span>App</span>
@@ -110,9 +100,9 @@ const blobPath =
 							</div>
 						</div>
 						<div class={twRow}>
-							<PiBrainDuotone
+							<Icon name="ph:brain-duotone"
 								size={24}
-								className="text-blue-500"
+								class="text-blue-500"
 							/>
 							<div class={twRowBetween}>
 								<span>Backend</span>
@@ -127,7 +117,7 @@ const blobPath =
 							href="https://apps.apple.com/us/app/flexmate/id6788123810"
 							class={`${twLink} hover:text-blue-300`}
 						>
-							<PiAppStoreLogoDuotone size={24} />
+							<Icon name="ph:app-store-logo-duotone" size={24} />
 							Download
 						</a>
 						<a
@@ -135,7 +125,7 @@ const blobPath =
 							href="https://apps.apple.com/us/app/flexmate/id6788123810"
 							class={`${twLink} hover:text-blue-300`}
 						>
-							<PiGooglePlayLogoDuotone size={24} />
+							<Icon name="ph:google-play-logo-duotone" size={24} />
 							Download
 						</a>
 					</footer>
@@ -153,13 +143,13 @@ const blobPath =
 				</svg>
 				<main class={twCardMain}>
 					<div class="flex gap-x-2 absolute top-4 right-4">
-						<PiAppleLogoDuotone
+						<Icon name="ph:apple-logo-duotone"
 							size={25}
-							className="text-gray-200"
+							class="text-gray-200"
 						/>
-						<PiAndroidLogoDuotone
+						<Icon name="ph:android-logo-duotone"
 							size={28}
-							className="text-green-300"
+							class="text-green-300"
 						/>
 					</div>
 					<span
@@ -170,23 +160,23 @@ const blobPath =
 					<h1 class={twName}>Connie</h1>
 					<p class={twSubtext}>The brains behind the keyboard.</p>
 					<div class={twRow}>
-						<PiAtomDuotone size={24} className="text-yellow-500" />
+						<Icon name="ph:atom-duotone" size={24} class="text-yellow-500" />
 						<div class={twRowBetween}>
 							<span>App</span>
 							<p>Angel Valencia Arcega</p>
 						</div>
 					</div>
 					<div class={twRow}>
-						<PiBrainDuotone size={24} className="text-yellow-500" />
+						<Icon name="ph:brain-duotone" size={24} class="text-yellow-500" />
 						<div class={twRowBetween}>
 							<span>Backend</span>
 							<p>Edson Reyes & David Herrera</p>
 						</div>
 					</div>
 					<div class="flex items-center gap-x-2 mt-8">
-						<PiButterflyDuotone
+						<Icon name="ph:butterfly-duotone"
 							size={24}
-							className="text-yellow-500"
+							class="text-yellow-500"
 						/>
 						<p class="text-white text-xs">
 							Powered by BAACC Systems
@@ -198,7 +188,7 @@ const blobPath =
 							href="https://apps.apple.com/mx/app/connie-ia/id6747147819"
 							class={`${twLink} hover:text-yellow-300`}
 						>
-							<PiAppStoreLogoDuotone size={24} />
+							<Icon name="ph:app-store-logo-duotone" size={24} />
 							Download
 						</a>
 						<a
@@ -206,7 +196,7 @@ const blobPath =
 							href="https://play.google.com/store/apps/details?id=app.baaccsystems.connieia"
 							class={`${twLink} hover:text-yellow-300`}
 						>
-							<PiGooglePlayLogoDuotone size={24} />
+							<Icon name="ph:google-play-logo-duotone" size={24} />
 							Download
 						</a>
 					</footer>
@@ -224,13 +214,13 @@ const blobPath =
 				</svg>
 				<main class={twCardMain}>
 					<div class="flex gap-x-2 absolute top-4 right-4">
-						<PiAppleLogoDuotone
+						<Icon name="ph:apple-logo-duotone"
 							size={25}
-							className="text-gray-200"
+							class="text-gray-200"
 						/>
-						<PiAndroidLogoDuotone
+						<Icon name="ph:android-logo-duotone"
 							size={28}
-							className="text-green-300"
+							class="text-green-300"
 						/>
 					</div>
 					<span
@@ -240,23 +230,23 @@ const blobPath =
 					<h1 class={twName}>Flego</h1>
 					<p class={twSubtext}>The brains behind the keyboard.</p>
 					<div class={twRow}>
-						<PiAtomDuotone size={24} className="text-green-600" />
+						<Icon name="ph:atom-duotone" size={24} class="text-green-600" />
 						<div class={twRowBetween}>
 							<span>App</span>
 							<p>Angel Valencia Arcega</p>
 						</div>
 					</div>
 					<div class={twRow}>
-						<PiBrainDuotone size={24} className="text-green-600" />
+						<Icon name="ph:brain-duotone" size={24} class="text-green-600" />
 						<div class={twRowBetween}>
 							<span>Backend</span>
 							<p>Edson Reyes & Josue Cazares</p>
 						</div>
 					</div>
 					<div class="flex items-center gap-x-2 mt-8">
-						<PiButterflyDuotone
+						<Icon name="ph:butterfly-duotone"
 							size={24}
-							className="text-green-600"
+							class="text-green-600"
 						/>
 						<p class="text-white text-xs">
 							Powered by TORREY DLC & BAACC Systems
@@ -268,7 +258,7 @@ const blobPath =
 							href="https://apps.apple.com/mx/app/flego-tu-flete-de-regreso/id6746598808"
 							class={`${twLink} hover:text-green-300`}
 						>
-							<PiAppStoreLogoDuotone size={24} />
+							<Icon name="ph:app-store-logo-duotone" size={24} />
 							Download
 						</a>
 						<a
@@ -276,7 +266,7 @@ const blobPath =
 							href="https://play.google.com/store/apps/details?id=app.torreydlc.flego"
 							class={`${twLink} hover:text-green-300`}
 						>
-							<PiGooglePlayLogoDuotone size={24} />
+							<Icon name="ph:google-play-logo-duotone" size={24} />
 							Download
 						</a>
 					</footer>
