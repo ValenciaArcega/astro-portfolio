@@ -5,6 +5,8 @@ dist/
 
 # dependencies
 node_modules/
+bun.lock
+package-lock.json
 
 # logs
 npm-debug.log*
@@ -13,7 +15,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 
-# environment variables
+# environment
 .env
 .env.production
 

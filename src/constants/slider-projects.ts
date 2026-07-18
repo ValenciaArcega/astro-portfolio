@@ -1,4 +1,7 @@
-import type { ImagesSlider } from '@src/types/assets';
+type ImagesSlider = {
+	uri: string;
+	alt: string;
+};
 
 export const firstProjectsSet: ImagesSlider[] = [
 	{
@@ -16,10 +19,6 @@ export const firstProjectsSet: ImagesSlider[] = [
 	{
 		uri: '/apps-mobile/view-weather.webp',
 		alt: 'Device with the day weather overview of an weather app.',
-	},
-	{
-		uri: '/apps-mobile/view-ticket-dark.webp',
-		alt: 'Device with a ticket interface on dark mode for flight app.',
 	},
 	{
 		uri: '/apps-mobile/view-ticket.webp',
@@ -72,7 +71,4 @@ export const secondProjectsSet: ImagesSlider[] = [
 		uri: '/apps-web/view-store.webp',
 		alt: 'Screenshot of a gadgets store web application.',
 	},
-];
-
-export const thirdProjectsSet: ImagesSlider[] = [
 ];
