@@ -85,10 +85,6 @@ const languages = [
       .animate-fade-up {
         animation: fade-up 0.8s ease-out forwards;
       }
-      .animate-fade-up-delay-1 {
-        animation: fade-up 0.8s ease-out 0.15s forwards;
-        opacity: 0;
-      }
       .animate-fade-up-delay-2 {
         animation: fade-up 0.8s ease-out 0.3s forwards;
         opacity: 0;
@@ -175,24 +171,6 @@ const languages = [
           black 94%,
           transparent 100%
         );
-      }
-      .float-bubble {
-        animation: floatUp 3s ease-in-out infinite;
-      }
-      .float-bubble:nth-child(2) {
-        animation-delay: 0.8s;
-      }
-      .float-bubble:nth-child(3) {
-        animation-delay: 1.6s;
-      }
-      @keyframes floatUp {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-6px);
-        }
       }
       .img-enter {
         opacity: 0;
@@ -426,7 +404,6 @@ const languages = [
 
           <div
             class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto mb-16 lang-grid"
-            id="language-list"
           >
             {
               languages.map((lang, i) => (

@@ -3,38 +3,35 @@ import {
   HiOutlineAcademicCap,
   HiOutlineBriefcase,
   HiOutlineBookOpen,
-} from 'react-icons/hi2';
+} from "react-icons/hi2";
 
 const card =
-  'max-w-[22rem] min-w-[22rem] w-[22rem] p-4 py-6 rounded-3xl relative flex-col bg-gradient-to-t from-black to-[#171717]';
-const wrIcon = 'h-14 w-14 rounded-2xl flex items-center justify-center';
-const emphasis = 'text-green-200';
-const txtTitle = 'mt-2 font-medium text-base text-[#6a6a6a]';
-const txtDesc = 'text-xl font-semibold mt-4 text-white';
-const txtFooter = 'text-sm text-gray-500 mt-2';
+  "max-w-[22rem] min-w-[22rem] w-[22rem] p-4 py-6 rounded-3xl relative flex-col bg-gradient-to-t from-black to-[#171717]";
+const wrIcon = "h-14 w-14 rounded-2xl flex items-center justify-center";
+const emphasis = "text-green-200";
+const txtTitle = "mt-2 font-medium text-base text-[#6a6a6a]";
+const txtDesc = "text-xl font-semibold mt-4 text-white";
+const txtFooter = "text-sm text-gray-500 mt-2";
 const lineGradient =
-  'absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-gradient-to-r from-transparent via-green-900 to-transparent';
+  "absolute left-1/2 top-0 w-[80%] h-[1px] select-none pointer-events-none -translate-x-1/2 translate-y-1/2 self-center bg-gradient-to-r from-transparent via-green-900 to-transparent";
 ---
 
-<section
-  id='experience'
-  class='mt-[16.3rem] grid place-items-center gap-y-4 px-4'
->
-  <h1 class='tracking-[-1px] text-5xl text-center text-white'>
-    Education <span class='text-blue-200'> & </span>Experience.
+<section class="mt-[16.3rem] grid place-items-center gap-y-4 px-4">
+  <h1 class="tracking-[-1px] text-5xl text-center text-white">
+    Education <span class="text-blue-200"> & </span>Experience.
   </h1>
-  <p class='text-center text-gray-400 leading-7'>
-    Where study and experience are <span class='text-white'>enhanced</span>. The
+  <p class="text-center text-gray-400 leading-7">
+    Where study and experience are <span class="text-white">enhanced</span>. The
     places where the mind is formed.
   </p>
   <main
-    class='h-fit w-full md:w-[90%] mt-8 grid gap-12 items-center justify-items-center grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]'
+    class="h-fit w-full md:w-[90%] mt-8 grid gap-12 items-center justify-items-center grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]"
   >
     <article class={card}>
       <header class={lineGradient}></header>
 
-      <div class={wrIcon + ' bg-linear-to-b from-green-950 to-green-950/20'}>
-        <HiOutlineAcademicCap size={32} className='text-[#D9FDD3]' />
+      <div class={wrIcon + " bg-linear-to-b from-green-950 to-green-950/20"}>
+        <HiOutlineAcademicCap size={32} className="text-[#D9FDD3]" />
       </div>
 
       <p class={txtTitle}>University</p>
@@ -46,10 +43,10 @@ const lineGradient =
     </article>
 
     <article class={card}>
-      <header class={lineGradient + ' via-orange-900'}></header>
+      <header class={lineGradient + " via-orange-900"}></header>
 
-      <div class={wrIcon + ' bg-linear-to-b from-orange-950 to-orange-950/20'}>
-        <HiOutlineBriefcase size={32} className='text-[#ffc8c8]' />
+      <div class={wrIcon + " bg-linear-to-b from-orange-950 to-orange-950/20"}>
+        <HiOutlineBriefcase size={32} className="text-[#ffc8c8]" />
       </div>
 
       <p class={txtTitle}>Current job</p>
@@ -60,10 +57,10 @@ const lineGradient =
     </article>
 
     <article class={card}>
-      <header class={lineGradient + ' via-sky-900'}></header>
+      <header class={lineGradient + " via-sky-900"}></header>
 
-      <div class={wrIcon + ' bg-linear-to-b from-purple-950 to-purple-950/20'}>
-        <HiOutlineBookOpen size={32} className='text-purple-100' />
+      <div class={wrIcon + " bg-linear-to-b from-purple-950 to-purple-950/20"}>
+        <HiOutlineBookOpen size={32} className="text-purple-100" />
       </div>
 
       <p class={txtTitle}>Self-taught</p>

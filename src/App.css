@@ -67,3 +67,142 @@ html {
 	font-weight: 400;
 	font-style: normal;
 }
+
+/* ===== Welcome ===== */
+
+.animated-text {
+  position: relative;
+  border-radius: 0.6rem;
+  display: inline-block;
+}
+
+.animated-text:before {
+  content: "";
+  width: 12rem;
+  height: 1.5rem;
+  position: absolute;
+  border-radius: 0.6rem;
+  filter: blur(22px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.animated-text:before,
+.animated-text {
+  -moz-animation: color-animation 2s linear infinite;
+  -o-animation: color-animation 2s linear infinite;
+  -webkit-animation: color-animation 2s linear infinite;
+  animation: color-animation 2s linear infinite;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-image: linear-gradient(-225deg,
+      #609af8 30%,
+      #35c4dc 60%,
+      #b975f9 80%);
+}
+
+.animated-text {
+  position: relative;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes color-animation {
+
+  40%,
+  to {
+    background-position: -200%;
+  }
+}
+
+/* ===== Projects ===== */
+
+.wrapperSlider {
+  width: 100%;
+  padding: 0 2rem;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 2rem;
+  position: relative;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.projectInSliderRight,
+.projectInSliderLeft {
+  -webkit-animation: slide-to-right 20s linear infinite alternate;
+  animation: slide-to-right 20s linear infinite alternate;
+  max-height: 400px;
+}
+
+.projectInSliderLeft {
+  -webkit-animation: slide-to-left 20s linear infinite alternate;
+  animation: slide-to-left 20s linear infinite alternate;
+}
+
+@keyframes slide-to-right {
+  0% {
+    left: 0;
+    transform: translateX(200%);
+  }
+
+  100% {
+    left: 100%;
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes slide-to-left {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    left: 100%;
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 700px) {
+
+  .projectInSliderRight,
+  .projectInSliderLeft {
+    -webkit-animation: none;
+    animation: none;
+    max-height: 400px;
+  }
+
+  .projectInSliderLeft {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .wrapperSlider {
+    position: relative;
+    gap: 0 1.3rem;
+    padding-inline: 3rem;
+    justify-content: flex-start;
+  }
+}
+
+.spin-scale {
+  animation: spinAndScale infinite 10s alternate-reverse;
+}
+
+@keyframes spinAndScale {
+  from {
+    scale: 0.7;
+    rotate: 0deg;
+  }
+
+  to {
+    scale: 1;
+    rotate: 360deg;
+  }
+}
