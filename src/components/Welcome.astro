@@ -1,5 +1,4 @@
 ---
-import DotGrid from "@src/views/DotGrid.tsx";
 import {
   IconCSS,
   IconReact,
@@ -13,22 +12,8 @@ const tecnologyWrapper =
 ---
 
 <section
-  style={{ width: "100%", height: "600px", position: "relative" }}
-  class="min-h-screen bg-a950 flex items-center justify-center"
+  class="min-h-screen bg-linear-to-b from-a930 to-a950 flex items-center justify-center relative"
 >
-  <DotGrid
-    client:load
-    dotSize={5}
-    gap={15}
-    baseColor="#271E37"
-    activeColor="#5227FF"
-    proximity={120}
-    shockRadius={250}
-    shockStrength={5}
-    resistance={750}
-    returnDuration={1.5}
-    className="absolute! inset-0!"
-  />
   <article
     class="w-140 flex flex-col absolute gap-2 justify-center items-center"
   >
