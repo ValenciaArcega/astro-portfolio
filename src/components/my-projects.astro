@@ -1,17 +1,17 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 import {
 	firstProjectsSet,
 	secondProjectsSet,
 } from "@src/constants/slider-projects";
 
 const twCard =
-	"mb-12 mt-0 group bg-transparent duration-500 w-[94%] sm:w-96 min-h-64 py-3 flex flex-col items-center relative rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 border border-solid border-a910";
+	"mb-12 mt-0 group bg-transparent duration-500 w-[98%] sm:w-96 min-h-64 py-3 flex flex-col items-center relative rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 border border-solid border-[#212529]";
 const twCardMain = "flex-1 z-20 flex flex-col justify-between px-6 py-4 w-full";
 const twTag =
 	"inline-block px-3 py-1 w-fit rounded-full text-xs font-medium border";
 const twName =
-	"font-semibold text-white mt-2 text-4xl customTitle tracking-wider";
+	"font-semibold text-white mt-3 text-4xl customTitle tracking-wider";
 const twSubtext = "text-sm text-gray-400 mt-4";
 const twRow = "text-xs flex items-center gap-x-2 mt-2";
 const twRowBetween = "flex justify-between w-full items-center text-white";
@@ -29,19 +29,25 @@ const blobPath =
 			class="self-center w-[68%] flex flex-row relative justify-center"
 		>
 			<div
-				class="ml-2 w-20 h-28 rounded-xl grid place-content-center border border-solid border-a900 -rotate-12 bg-transparent"
+				class="ml-2 w-20 h-28 rounded-xl grid place-content-center border border-solid border-[#343a40] -rotate-12 bg-transparent"
 			>
 				<Icon name="ph:rocket-duotone" class="text-5xl text-gray-300" />
 			</div>
 			<div
-				class="-ml-4 -mt-3 scale-125 z-50 w-20 max-h-24 rounded-xl grid place-content-center shadow-2xl bg-linear-to-t from-a930 to-a900 overflow-hidden border border-a700"
+				class="-ml-4 -mt-3 scale-125 z-50 w-20 max-h-24 rounded-xl grid place-content-center shadow-2xl bg-linear-to-t from-[#1d1f21] to-[#343a40] overflow-hidden border border-[#555555]"
 			>
-				<Icon name="ph:app-store-logo-duotone" class="text-6xl text-blue-500" />
+				<Icon
+					name="ph:app-store-logo-duotone"
+					class="text-6xl text-blue-500"
+				/>
 			</div>
 			<div
-				class="-ml-4 w-20 h-28 rounded-xl grid place-content-center border border-solid border-a900 rotate-20 bg-transparent"
+				class="-ml-4 w-20 h-28 rounded-xl grid place-content-center border border-solid border-[#343a40] rotate-20 bg-transparent"
 			>
-				<Icon name="ph:code-duotone" class="text-5xl text-gray-300 rotate-44" />
+				<Icon
+					name="ph:code-duotone"
+					class="text-5xl text-gray-300 rotate-44"
+				/>
 			</div>
 		</header>
 
@@ -72,11 +78,13 @@ const blobPath =
 				</svg>
 				<main class={twCardMain}>
 					<div class="flex gap-x-2 absolute top-4 right-4">
-						<Icon name="ph:apple-logo-duotone"
+						<Icon
+							name="ph:apple-logo-duotone"
 							size={25}
 							class="text-gray-200"
 						/>
-						<Icon name="ph:android-logo-duotone"
+						<Icon
+							name="ph:android-logo-duotone"
 							size={28}
 							class="text-green-300"
 						/>
@@ -90,7 +98,8 @@ const blobPath =
 						<h1 class={twName}>Flexmate</h1>
 						<p class={twSubtext}>The brains behind the keyboard.</p>
 						<div class={twRow}>
-							<Icon name="ph:atom-duotone"
+							<Icon
+								name="ph:atom-duotone"
 								size={24}
 								class="text-blue-500"
 							/>
@@ -100,7 +109,8 @@ const blobPath =
 							</div>
 						</div>
 						<div class={twRow}>
-							<Icon name="ph:brain-duotone"
+							<Icon
+								name="ph:brain-duotone"
 								size={24}
 								class="text-blue-500"
 							/>
@@ -120,14 +130,17 @@ const blobPath =
 							<Icon name="ph:app-store-logo-duotone" size={24} />
 							Download
 						</a>
-						<a
+						<!-- <a
 							target="_blank"
 							href="https://apps.apple.com/us/app/flexmate/id6788123810"
 							class={`${twLink} hover:text-blue-300`}
 						>
-							<Icon name="ph:google-play-logo-duotone" size={24} />
+							<Icon
+								name="ph:google-play-logo-duotone"
+								size={24}
+							/>
 							Download
-						</a>
+						</a> -->
 					</footer>
 				</main>
 			</article>
@@ -143,11 +156,13 @@ const blobPath =
 				</svg>
 				<main class={twCardMain}>
 					<div class="flex gap-x-2 absolute top-4 right-4">
-						<Icon name="ph:apple-logo-duotone"
+						<Icon
+							name="ph:apple-logo-duotone"
 							size={25}
 							class="text-gray-200"
 						/>
-						<Icon name="ph:android-logo-duotone"
+						<Icon
+							name="ph:android-logo-duotone"
 							size={28}
 							class="text-green-300"
 						/>
@@ -160,21 +175,30 @@ const blobPath =
 					<h1 class={twName}>Connie</h1>
 					<p class={twSubtext}>The brains behind the keyboard.</p>
 					<div class={twRow}>
-						<Icon name="ph:atom-duotone" size={24} class="text-yellow-500" />
+						<Icon
+							name="ph:atom-duotone"
+							size={24}
+							class="text-yellow-500"
+						/>
 						<div class={twRowBetween}>
 							<span>App</span>
 							<p>Angel Valencia Arcega</p>
 						</div>
 					</div>
 					<div class={twRow}>
-						<Icon name="ph:brain-duotone" size={24} class="text-yellow-500" />
+						<Icon
+							name="ph:brain-duotone"
+							size={24}
+							class="text-yellow-500"
+						/>
 						<div class={twRowBetween}>
 							<span>Backend</span>
 							<p>Edson Reyes & David Herrera</p>
 						</div>
 					</div>
 					<div class="flex items-center gap-x-2 mt-8">
-						<Icon name="ph:butterfly-duotone"
+						<Icon
+							name="ph:butterfly-duotone"
 							size={24}
 							class="text-yellow-500"
 						/>
@@ -196,7 +220,10 @@ const blobPath =
 							href="https://play.google.com/store/apps/details?id=app.baaccsystems.connieia"
 							class={`${twLink} hover:text-yellow-300`}
 						>
-							<Icon name="ph:google-play-logo-duotone" size={24} />
+							<Icon
+								name="ph:google-play-logo-duotone"
+								size={24}
+							/>
 							Download
 						</a>
 					</footer>
@@ -214,11 +241,13 @@ const blobPath =
 				</svg>
 				<main class={twCardMain}>
 					<div class="flex gap-x-2 absolute top-4 right-4">
-						<Icon name="ph:apple-logo-duotone"
+						<Icon
+							name="ph:apple-logo-duotone"
 							size={25}
 							class="text-gray-200"
 						/>
-						<Icon name="ph:android-logo-duotone"
+						<Icon
+							name="ph:android-logo-duotone"
 							size={28}
 							class="text-green-300"
 						/>
@@ -230,21 +259,30 @@ const blobPath =
 					<h1 class={twName}>Flego</h1>
 					<p class={twSubtext}>The brains behind the keyboard.</p>
 					<div class={twRow}>
-						<Icon name="ph:atom-duotone" size={24} class="text-green-600" />
+						<Icon
+							name="ph:atom-duotone"
+							size={24}
+							class="text-green-600"
+						/>
 						<div class={twRowBetween}>
 							<span>App</span>
 							<p>Angel Valencia Arcega</p>
 						</div>
 					</div>
 					<div class={twRow}>
-						<Icon name="ph:brain-duotone" size={24} class="text-green-600" />
+						<Icon
+							name="ph:brain-duotone"
+							size={24}
+							class="text-green-600"
+						/>
 						<div class={twRowBetween}>
 							<span>Backend</span>
 							<p>Edson Reyes & Josue Cazares</p>
 						</div>
 					</div>
 					<div class="flex items-center gap-x-2 mt-8">
-						<Icon name="ph:butterfly-duotone"
+						<Icon
+							name="ph:butterfly-duotone"
 							size={24}
 							class="text-green-600"
 						/>
@@ -266,7 +304,10 @@ const blobPath =
 							href="https://play.google.com/store/apps/details?id=app.torreydlc.flego"
 							class={`${twLink} hover:text-green-300`}
 						>
-							<Icon name="ph:google-play-logo-duotone" size={24} />
+							<Icon
+								name="ph:google-play-logo-duotone"
+								size={24}
+							/>
 							Download
 						</a>
 					</footer>
@@ -282,18 +323,15 @@ const blobPath =
 </section>
 
 <section
-	class="relative pt-32 pb-24 flex justify-center w-full items-center bg-[#101010]"
+	class="relative pt-44 pb-2 flex justify-center w-full items-center bg-[#101010]"
 >
-	<div class="h-12 w-12 bg-[#04ddff] rounded-full"></div>
-	<div class="h-12 w-12 bg-[#1899ff] rounded-full"></div>
-
 	<div
-		class="absolute inset-0 flex gap-y-3 backdrop-blur-2xl flex-col items-center justify-center"
+		class="absolute inset-0 flex gap-y-3 flex-col items-center justify-center"
 	>
 		<svg
 			class="spin-scale"
 			viewBox="0 0 256 228"
-			height={84}
+			height={64}
 			preserveAspectRatio="xMidYMid"
 		>
 			<path
@@ -301,13 +339,13 @@ const blobPath =
 				fill="#00D8FF"></path>
 		</svg>
 		<h1 class="text-3xl text-center text-white font-medium tracking-tight">
-			So much
+			So much{" "}
 			<span class="text-[#00D8FF]">Native</span> magic<span
 				class="text-[#00D8FF]">.</span
 			>
 		</h1>
-		<p class="text-gray-400 mt-2 px-4 text-center">
-			A little taste of my work and the apps I had done.
+		<p class="text-gray-400 mt-0 px-4 text-center">
+			A little taste of my work and the apps/webs I had done.
 		</p>
 	</div>
 </section>

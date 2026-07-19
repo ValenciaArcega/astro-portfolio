@@ -1,121 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
 @import "tailwindcss";
 
-@theme {
-	--color-a0: #ffffff;
-	--color-a10: #f2f2f7;
-	--color-a50: #e9ecef;
-	--color-a100: #dee2e6;
-	--color-a200: #ced4da;
-	--color-a300: #adb5bd;
-	--color-a400: #868e96;
-	--color-a500: #777777;
-	--color-a600: #666666;
-	--color-a700: #555555;
-	--color-a800: #495057;
-	--color-a900: #343a40;
-	--color-a910: #212529;
-	--color-a920: #202224;
-	--color-a930: #1d1f21;
-	--color-a940: #191b1c;
-	--color-a950: #121212;
-	--color-a990: #0a0a0a;
-	--color-a1: #000000;
-}
-
 @layer utilities {
-	.maskProjectsTitle {
-		background: radial-gradient(circle farthest-corner at center center, #c0bebe 0%, #fff 44%);
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		color: transparent;
-	}
+  .maskProjectsTitle {
+    background: radial-gradient(circle farthest-corner at center center, #c0bebe 0%, #fff 44%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 
-	.maskProjectsTitleDark {
-		background: radial-gradient(circle farthest-corner at center center, #545454 0%, #181818 34%);
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		color: transparent;
-	}
+  .maskProjectsTitleDark {
+    background: radial-gradient(circle farthest-corner at center center, #545454 0%, #181818 34%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: "Inter", system-ui;
-	background: #121212;
-	overflow-x: hidden;
+  font-family: "Inter", system-ui;
+  background: #121212;
+  overflow-x: hidden;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::selection {
-	background-color: #fff;
-	color: #000;
+  background-color: #fff;
+  color: #000;
 }
 
 .customTitle {
-	font-family: "Righteous", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-}
-
-/* ===== Welcome ===== */
-
-.animated-text {
-  position: relative;
-  border-radius: 0.6rem;
-  display: inline-block;
-}
-
-.animated-text:before {
-  content: "";
-  width: 12rem;
-  height: 1.5rem;
-  position: absolute;
-  border-radius: 0.6rem;
-  filter: blur(22px);
-  opacity: 0.6;
-  z-index: 0;
-}
-
-.animated-text:before,
-.animated-text {
-  -moz-animation: color-animation 2s linear infinite;
-  -o-animation: color-animation 2s linear infinite;
-  -webkit-animation: color-animation 2s linear infinite;
-  animation: color-animation 2s linear infinite;
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  background-image: linear-gradient(-225deg,
-      #609af8 30%,
-      #35c4dc 60%,
-      #b975f9 80%);
-}
-
-.animated-text {
-  position: relative;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes color-animation {
-
-  40%,
-  to {
-    background-position: -200%;
-  }
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* ===== Projects ===== */
@@ -135,14 +62,14 @@ html {
 
 .projectInSliderRight,
 .projectInSliderLeft {
-  -webkit-animation: slide-to-right 20s linear infinite alternate;
-  animation: slide-to-right 20s linear infinite alternate;
+  -webkit-animation: slide-to-right 30s linear infinite alternate;
+  animation: slide-to-right 30s linear infinite alternate;
   max-height: 400px;
 }
 
 .projectInSliderLeft {
-  -webkit-animation: slide-to-left 20s linear infinite alternate;
-  animation: slide-to-left 20s linear infinite alternate;
+  -webkit-animation: slide-to-left 30s linear infinite alternate;
+  animation: slide-to-left 30s linear infinite alternate;
 }
 
 @keyframes slide-to-right {
