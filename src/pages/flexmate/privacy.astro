@@ -1,5 +1,5 @@
 ---
-import "../../App.css";
+import "@src/App.css";
 
 const lastUpdated = "July 9, 2026";
 const appName = "Flexmate";
@@ -73,7 +73,7 @@ const privacyPoints = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/flexmate.png" />
+    <link rel="icon" type="image/png" href="/flexmate/logo.png" />
     <title>{appName} — Privacy Policy</title>
     <style>
       @keyframes fancy-fade {
@@ -167,12 +167,11 @@ const privacyPoints = [
 
           <p class="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
             Learn clearly and transparently how information associated with the
-            use of
-            <span class="text-zinc-200">{appName}</span> is stored, used, and protected.
+            use of {appName} is stored, used, and protected.
           </p>
 
           <p class="mt-6 text-sm text-zinc-500">
-            Last updated:
+            Last updated:{" "}
             <span class="text-zinc-300">{lastUpdated}</span>
           </p>
         </header>
@@ -237,7 +236,7 @@ const privacyPoints = [
           class="mt-12 border-t border-white/10 pt-8 text-sm leading-7 text-zinc-500 sm:mt-14"
         >
           <p>
-            For any questions regarding this privacy policy, please contact
+            For any questions regarding this privacy policy, please contact{" "}
             <a
               href={`mailto:${contactEmail}`}
               class="text-blue-400 underline underline-offset-4 transition hover:text-blue-300"

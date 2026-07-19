@@ -1,9 +1,9 @@
-type ImagesSlider = {
+type Project = {
 	uri: string;
 	alt: string;
 };
 
-export const firstProjectsSet: ImagesSlider[] = [
+export const PROJECTS_MOBILE: Project[] = [
 	{
 		uri: '/apps-mobile/view-tracking.webp',
 		alt: 'Device with the tracking flow on delivery app.',
@@ -38,7 +38,7 @@ export const firstProjectsSet: ImagesSlider[] = [
 	},
 ];
 
-export const secondProjectsSet: ImagesSlider[] = [
+export const PROJECTS_WEB: Project[] = [
 	{
 		uri: '/apps-mobile/view-alert.webp',
 		alt: 'Device with a success alert on delivery app.',

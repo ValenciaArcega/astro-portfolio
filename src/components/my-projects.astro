@@ -1,9 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import {
-	firstProjectsSet,
-	secondProjectsSet,
-} from "@src/constants/slider-projects";
+import { PROJECTS_MOBILE, PROJECTS_WEB } from "@src/constants/slider-projects";
 
 const twCard =
 	"mb-12 mt-0 group bg-transparent duration-500 w-[98%] sm:w-96 min-h-64 py-3 flex flex-col items-center relative rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 border border-solid border-[#212529]";
@@ -355,7 +352,7 @@ const blobPath =
 >
 	<article class="wrapperSlider">
 		{
-			firstProjectsSet.map((item) => (
+			PROJECTS_MOBILE.map((item) => (
 				<img
 					class="projectInSliderLeft max-h-103!"
 					src={item.uri}
@@ -367,7 +364,7 @@ const blobPath =
 
 	<article class="wrapperSlider">
 		{
-			secondProjectsSet.map((item) => (
+			PROJECTS_WEB.map((item) => (
 				<img
 					class="projectInSliderRight max-h-103!"
 					src={item.uri}
