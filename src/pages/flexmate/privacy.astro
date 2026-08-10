@@ -1,7 +1,7 @@
 ---
 import "@src/App.css";
 
-const lastUpdated = "July 9, 2026";
+const lastUpdated = "August 9, 2026";
 const appName = "Flexmate";
 const contactEmail = "dev.valenciaarcega@gmail.com";
 
@@ -16,7 +16,7 @@ const privacyPoints = [
     number: "02",
     title: "Adults-only application",
     description:
-      "Flexmate is intended for use by adults only, consistent with the age rating assigned to the App in the App Store and Google Play. The App does not knowingly collect information from individuals under the age of majority in their country of residence. By creating an account, you confirm that you are an adult under applicable law.",
+      "The application is intended for use by adults only, consistent with the age rating assigned to the App in the App Store and Google Play. The App does not knowingly collect information from individuals under the age of majority in their country of residence. By creating an account, you confirm that you are an adult under applicable law.",
   },
   {
     number: "03",
@@ -28,7 +28,7 @@ const privacyPoints = [
     number: "04",
     title: "Delete your account",
     description:
-      "Flexmate allows you to permanently delete your account and associated data directly from the App. You may delete your account at any time from Settings within the App (Account > Delete Account). Deleting your account permanently removes your profile information, saved routines, activity logs, and profile photo from both our servers and the device on which you requested the deletion.",
+      "The application allows you to permanently delete your account and associated data directly from the App. You may delete your account at any time from Settings within the App (Account > Delete Account). Deleting your account permanently removes your profile information, saved routines, activity logs, and profile photo from both our servers and the device on which you requested the deletion.",
   },
   {
     number: "05",
@@ -52,7 +52,7 @@ const privacyPoints = [
     number: "08",
     title: "Not medical advice",
     description:
-      "Consult a healthcare professional before starting any exercise routine. This App is not a substitute for professional advice. Before starting any exercise program, you should consult a physician or qualified health professional, especially if you have a pre-existing medical condition, injury, or are unsure about your physical ability to perform certain exercises. \nYou are solely responsible for evaluating your own physical condition and for any decision to start, continue, or stop a workout routine. Flexmate does not assume responsibility for injuries, health complications, or damages resulting from the use of information, routines, or records stored in the App.",
+      "Consult a healthcare professional before starting any exercise routine. This App is not a substitute for professional advice. Before starting any exercise program, you should consult a physician or qualified health professional, especially if you have a pre-existing medical condition, injury, or are unsure about your physical ability to perform certain exercises. \nYou are solely responsible for evaluating your own physical condition and for any decision to start, continue, or stop a workout routine. The application does not assume responsibility for injuries, health complications, or damages resulting from the use of information, routines, or records stored in the App.",
   },
   {
     number: "09",
@@ -74,32 +74,7 @@ const privacyPoints = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/flexmate/logo.png" />
-    <title>{appName} — Privacy Policy</title>
-    <style>
-      @keyframes fancy-fade {
-        0% {
-          opacity: 0;
-          transform: translateY(50px) scale(0.92);
-          filter: blur(6px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-          filter: blur(0);
-        }
-      }
-      .reveal {
-        opacity: 0;
-        transform: translateY(50px) scale(0.92);
-        filter: blur(6px);
-        transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .reveal.visible {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
-      }
-    </style>
+    <title>Privacy Policy</title>
   </head>
 
   <body>
@@ -125,10 +100,11 @@ const privacyPoints = [
           <span
             class="h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_16px_rgba(96,165,250,0.9)]"
           ></span>
-          {appName} Privacy
+          Last updated:{" "}
+          <span class="text-zinc-300">{lastUpdated}</span>
         </div>
 
-        <header class="mb-14 reveal">
+        <header class="mb-14">
           <h1
             class="relative inline-block text-5xl font-bold tracking-tight text-white sm:text-6xl"
           >
@@ -169,14 +145,9 @@ const privacyPoints = [
             Learn clearly and transparently how information associated with the
             use of {appName} is stored, used, and protected.
           </p>
-
-          <p class="mt-6 text-sm text-zinc-500">
-            Last updated:{" "}
-            <span class="text-zinc-300">{lastUpdated}</span>
-          </p>
         </header>
 
-        <section class="grid gap-5 reveal">
+        <section class="grid gap-5">
           {
             privacyPoints.map((point) => (
               <article class="group relative overflow-hidden rounded-[28px] border-2 border-white/10 bg-white/3 p-5 shadow-2xl shadow-black/20 backdrop-blur transition duration-700 hover:border-blue-400/30 hover:bg-white/5 sm:rounded-4xl sm:p-8">
@@ -206,7 +177,7 @@ const privacyPoints = [
         </section>
 
         <section
-          class="mt-8 rounded-[28px] border border-amber-400/20 bg-amber-400/6 p-5 shadow-2xl shadow-black/20 sm:rounded-4xl sm:p-8 reveal"
+          class="mt-8 rounded-[28px] border border-amber-400/20 bg-amber-400/6 p-5 shadow-2xl shadow-black/20 sm:rounded-4xl sm:p-8"
         >
           <div class="flex flex-col gap-4 sm:flex-row sm:items-start">
             <div
@@ -246,27 +217,11 @@ const privacyPoints = [
           </p>
 
           <p class="mt-4">
-            © {new Date().getFullYear()}
+            © {new Date().getFullYear()}{" "}
             {appName}. All rights reserved.
           </p>
         </footer>
       </section>
     </main>
-
-    <script>
-      const reveals = document.querySelectorAll(".reveal");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.15 },
-      );
-      reveals.forEach((el) => observer.observe(el));
-    </script>
   </body>
 </html>
