@@ -26,7 +26,7 @@
 
 body {
   font-family: "Inter", system-ui;
-  background: #121212;
+  background: #101010;
   overflow-x: hidden;
 }
 
@@ -47,74 +47,420 @@ html {
 
 /* ===== Projects ===== */
 
-.wrapperSlider {
-  width: 100%;
-  padding: 0 2rem;
-  padding-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0 2rem;
+.interface-universe {
   position: relative;
-  overflow: scroll;
-  scrollbar-width: none;
+  isolation: isolate;
+  width: 100%;
+  min-height: 980px;
+  padding: 4rem 0 7rem;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(0, 216, 255, 0.07), transparent 34%),
+    #101010;
 }
 
-.projectInSliderRight,
-.projectInSliderLeft {
-  -webkit-animation: slide-to-right 30s linear infinite alternate;
-  animation: slide-to-right 30s linear infinite alternate;
-  max-height: 400px;
+.cosmic-stars {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  opacity: 0.55;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(96, 217, 255, 0.75) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.45) 0 0.7px, transparent 1px);
+  background-position: 13px 17px, 61px 83px, 29px 47px;
+  background-size: 97px 113px, 173px 191px, 61px 71px;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 20%, transparent 78%);
+  mask-image: radial-gradient(ellipse at center, #000 20%, transparent 78%);
+  animation: stars-drift 45s linear infinite;
 }
 
-.projectInSliderLeft {
-  -webkit-animation: slide-to-left 30s linear infinite alternate;
-  animation: slide-to-left 30s linear infinite alternate;
+.cosmic-streak {
+  position: absolute;
+  z-index: -2;
+  width: 9rem;
+  height: 1px;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, rgba(159, 230, 255, 0.9), transparent);
+  filter: drop-shadow(0 0 6px rgba(76, 201, 240, 0.75));
+  rotate: -28deg;
+  animation: shooting-star 9s ease-in-out infinite;
 }
 
-@keyframes slide-to-right {
+.cosmic-streak-one {
+  top: 23%;
+  left: 14%;
+}
+
+.cosmic-streak-two {
+  right: 12%;
+  bottom: 25%;
+  animation-delay: -4.5s;
+}
+
+.universe-heading {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: min(100% - 4rem, 76rem);
+  margin: 0 auto;
+}
+
+.universe-heading p {
+  margin-bottom: 0.65rem;
+  color: #60a5fa;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.universe-heading h2 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.universe-heading .universe-description {
+  max-width: 34rem;
+  margin-top: 1.25rem;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.universe-heading > span {
+  margin-bottom: 0.35rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #9ca3af;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ui-orbit-stage {
+  position: relative;
+  width: min(100%, 92rem);
+  height: 730px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+.interface-orb {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: min(38vw, 35rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(134, 230, 255, 0.18);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 33% 30%, rgba(255, 255, 255, 0.55), transparent 3%),
+    radial-gradient(circle at 38% 35%, #176b87 0, #12364d 24%, #181b3d 52%, #080a16 72%);
+  box-shadow:
+    inset -3rem -3rem 6rem rgba(0, 0, 0, 0.85),
+    inset 2rem 2rem 5rem rgba(69, 218, 255, 0.12),
+    0 0 5rem rgba(45, 179, 255, 0.2),
+    0 0 13rem rgba(75, 67, 255, 0.12);
+  transform: translate(-50%, -44%);
+  animation: orb-breathe 8s ease-in-out infinite alternate;
+}
+
+.interface-orb::before,
+.interface-orb::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+}
+
+.interface-orb::before {
+  inset: 8%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: repeating-radial-gradient(circle at 60% 30%, transparent 0 18px, rgba(255, 255, 255, 0.025) 19px 20px);
+}
+
+.interface-orb::after {
+  right: 12%;
+  bottom: 15%;
+  width: 18%;
+  aspect-ratio: 1;
+  background: rgba(96, 165, 250, 0.1);
+  filter: blur(9px);
+}
+
+.orb-core {
+  position: absolute;
+  top: 25%;
+  left: 24%;
+  width: 12%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #dff8ff;
+  box-shadow: 0 0 2rem #6ddcff, 0 0 5rem #307cff;
+}
+
+.orbit-ring {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(125, 211, 252, 0.13);
+  border-radius: 50%;
+  transform: translate(-50%, -45%) rotateX(68deg) rotateZ(-8deg);
+}
+
+.orbit-ring-one {
+  width: min(75vw, 64rem);
+  height: 34rem;
+  animation: ring-rotate 24s linear infinite;
+}
+
+.orbit-ring-two {
+  width: min(60vw, 51rem);
+  height: 27rem;
+  border-style: dashed;
+  animation: ring-rotate-reverse 31s linear infinite;
+}
+
+.ui-constellation {
+  position: absolute;
+  z-index: 2;
+  inset: 2.5rem 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem clamp(0.4rem, 1.25vw, 1.2rem);
+  align-items: center;
+}
+
+.ui-artifact {
+  --artifact-lift: 0px;
+  --artifact-tilt: 0deg;
+  --artifact-scale: 0.92;
+  position: relative;
+  margin: 0;
+  opacity: 1;
+  transform: translateY(var(--artifact-lift)) rotate(var(--artifact-tilt)) scale(var(--artifact-scale));
+  animation: artifact-drift 7s ease-in-out var(--artifact-delay) infinite alternate;
+  will-change: transform, opacity;
+}
+
+.ui-artifact:nth-child(4n + 1) {
+  --artifact-lift: -22px;
+  --artifact-tilt: -4deg;
+  --artifact-scale: 0.9;
+}
+
+.ui-artifact:nth-child(4n + 2) {
+  --artifact-lift: 20px;
+  --artifact-tilt: 3deg;
+  --artifact-scale: 1.02;
+}
+
+.ui-artifact:nth-child(4n + 3) {
+  --artifact-lift: -4px;
+  --artifact-tilt: -2deg;
+  --artifact-scale: 0.96;
+}
+
+.ui-artifact:nth-child(4n) {
+  --artifact-lift: 28px;
+  --artifact-tilt: 4deg;
+  --artifact-scale: 0.87;
+}
+
+.ui-artifact:nth-child(5n) {
+  z-index: 4;
+}
+
+.ui-artifact img {
+  display: block;
+  width: 100%;
+  max-height: 315px;
+  object-fit: contain;
+  filter: drop-shadow(0 1.2rem 1.3rem rgba(0, 0, 0, 0.55)) saturate(0.88);
+  transition: filter 500ms ease, scale 500ms ease;
+}
+
+.ui-artifact:hover {
+  z-index: 20;
+  opacity: 1;
+  animation-play-state: paused;
+}
+
+.ui-artifact:hover img {
+  scale: 1.1;
+  filter: drop-shadow(0 1.7rem 1.7rem rgba(0, 0, 0, 0.7)) saturate(1.1) brightness(1.06);
+}
+
+.swipe-hint {
+  display: none;
+}
+
+@keyframes artifact-drift {
   0% {
-    left: 0;
-    transform: translateX(200%);
+    transform: translateY(var(--artifact-lift)) rotate(var(--artifact-tilt)) scale(var(--artifact-scale));
   }
 
   100% {
-    left: 100%;
-    transform: translateX(-200%);
+    transform: translateY(calc(var(--artifact-lift) - 22px)) rotate(calc(var(--artifact-tilt) + 1.5deg)) scale(var(--artifact-scale));
   }
 }
 
-@keyframes slide-to-left {
-  0% {
-    left: 0;
-    transform: translateX(-100%);
+@keyframes orb-breathe {
+  from {
+    transform: translate(-50%, -44%) scale(0.96);
+    filter: saturate(0.85);
   }
 
-  100% {
-    left: 100%;
-    transform: translateX(100%);
+  to {
+    transform: translate(-50%, -44%) scale(1.04);
+    filter: saturate(1.2);
   }
 }
 
-@media (max-width: 700px) {
+@keyframes ring-rotate {
+  to {
+    transform: translate(-50%, -45%) rotateX(68deg) rotateZ(352deg);
+  }
+}
 
-  .projectInSliderRight,
-  .projectInSliderLeft {
-    -webkit-animation: none;
-    animation: none;
-    max-height: 400px;
+@keyframes ring-rotate-reverse {
+  from {
+    transform: translate(-50%, -45%) rotateX(68deg) rotateZ(360deg);
   }
 
-  .projectInSliderLeft {
-    -webkit-animation: none;
-    animation: none;
+  to {
+    transform: translate(-50%, -45%) rotateX(68deg) rotateZ(0deg);
+  }
+}
+
+@keyframes stars-drift {
+  to {
+    background-position: 110px 130px, -112px 274px, 90px -95px;
+  }
+}
+
+@keyframes shooting-star {
+  0%, 74% {
+    opacity: 0;
+    translate: -4rem 4rem;
   }
 
-  .wrapperSlider {
-    position: relative;
-    gap: 0 1.3rem;
-    padding-inline: 3rem;
-    justify-content: flex-start;
+  78% {
+    opacity: 0.9;
+  }
+
+  88%, 100% {
+    opacity: 0;
+    translate: 9rem -9rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .interface-universe {
+    min-height: auto;
+    padding: 3rem 0 5rem;
+  }
+
+  .universe-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: calc(100% - 2.5rem);
+  }
+
+  .universe-heading h2 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .ui-orbit-stage {
+    width: 100%;
+    height: 650px;
+    margin-top: 1rem;
+  }
+
+  .interface-orb {
+    width: min(88vw, 31rem);
+    transform: translate(-50%, -42%);
+  }
+
+  .orbit-ring-one {
+    width: 125vw;
+  }
+
+  .orbit-ring-two {
+    width: 100vw;
+  }
+
+  .ui-constellation {
+    inset: 0;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 5rem 16vw 4rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: 16vw;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .ui-constellation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ui-artifact,
+  .ui-artifact:nth-child(n) {
+    flex: 0 0 min(66vw, 270px);
+    z-index: 2;
+    opacity: 1;
+    transform: none;
+    animation: mobile-artifact 5s ease-in-out var(--artifact-delay) infinite alternate;
+    scroll-snap-align: center;
+  }
+
+  .ui-artifact img {
+    max-height: 470px;
+    filter: drop-shadow(0 1.5rem 1.4rem rgba(0, 0, 0, 0.7));
+  }
+
+  .swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: -1.5rem;
+    color: #6b7280;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes mobile-artifact {
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cosmic-stars,
+  .cosmic-streak,
+  .interface-orb,
+  .orbit-ring,
+  .ui-artifact {
+    animation: none;
   }
 }
 
